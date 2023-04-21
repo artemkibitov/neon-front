@@ -1,6 +1,7 @@
 import '../styles/main.css';
 
-function App({ Component, pageProps }) {
+const App = ({ Component, pageProps }) => {
+
   return <Component {...pageProps} />
 }
 
