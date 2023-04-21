@@ -6,18 +6,17 @@ import editorReducer from "@/components/Editor/reducer";
 import CPState from "@/components/Editor/reducer/state";
 import ControlPanel from "@/components/Editor/ControlPanel";
 import RenderView from "@/components/Editor/RenderView";
+import EditorContext from "@/components/Editor/editorContext";
 
-export default function Editor() {
-  const [controlPanelState, controlPanelReducer] = useReducer(
-    editorReducer,
-    CPState,
-    initialEditorState
-  );
+const Editor = () => {
+  const [state, dispatch] = useReducer(editorReducer, CPState, initialEditorState);
 
   return (
-    <div>
-      <ControlPanel editorReducer={ controlPanelReducer }/>
-      <RenderView lightText={ controlPanelState.text }/>
-    </div>
+    <EditorContext.Provider value={{ state, dispatch }}>
+      <ControlPanel />
+      <RenderView />
+    </EditorContext.Provider>
   )
-}
+};
+
+export default Editor;

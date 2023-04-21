@@ -1,6 +1,9 @@
-import React from "react";
+import React, {useContext} from "react";
+import EditorContext from "@/components/Editor/editorContext";
 
-export default function RenderView({lightText}) {
+const RenderView = () => {
+  const {state} = useContext(EditorContext);
+
   const textFormat = (text) => text.split('\n').map((line, i, arr) => (
       <React.Fragment key={i}>
         {line.length ? <p>{line}</p> : null}
@@ -10,7 +13,9 @@ export default function RenderView({lightText}) {
 
   return (
     <div>
-      {textFormat(lightText)}
+      {textFormat(state.text)}
     </div>
   )
-}
+};
+
+export default RenderView;
