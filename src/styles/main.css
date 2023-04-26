@@ -1,3 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&family=Roboto:wght@300;400;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.f-oswald {
+    font-family: 'Oswald', sans-serif;
+}
+
+.f-roboto {
+    font-family: 'Roboto', sans-serif;
+}
+
+.neon-bg {
+    background-image: url("/bg.jpg");
+    padding-top: 92%;
+    background-size: 100%;
+}
+
+.neon-text {
+    font-variant-ligatures: no-common-ligatures;
+    font-size: 60px;
+    white-space: nowrap;
+    color: white;
+    line-height: 115%;
+    text-shadow: rgb(255, 255, 255) 0px 0px 5px, rgb(255, 255, 255) 0px 0px 10px, rgb(255, 144, 255) 0px 0px 20px, rgb(255, 144, 255) 0px 0px 30px, rgb(255, 144, 255) 0px 0px 40px, rgb(255, 144, 255) 0px 0px 55px, rgb(255, 144, 255) 0px 0px 75px;
+    padding: 0 60px 0 60px;
+    margin: 15px 0 180px 0;
+}
+.neon-text p {
+    line-height: 115%;
+}
+.switch-tab-active {
+}
+
+.switch-tab-active::after {
+    content: " ";
+    display: block;
+    width: 0;
+    height: 0;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-left: 10px solid;
+    position: absolute;
+    top: 50%;
+    margin-top: -20px;
+    left: 100%;
+    z-index: 2;
+    @apply border-l-indigo-500
+}

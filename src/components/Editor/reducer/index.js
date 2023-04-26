@@ -1,5 +1,7 @@
 'use strict';
 
+import {priceFolding} from "@/components/Editor/reducer/util";
+
 const editorReducer = (state, action) => {
   switch (action.type) {
     case 'change_text': {
@@ -11,7 +13,8 @@ const editorReducer = (state, action) => {
     case 'select_size': {
       return {
         ...state,
-        size: action.size
+        size: action.size,
+        cost: priceFolding(state),
       };
     }
   }

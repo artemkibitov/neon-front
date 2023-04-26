@@ -1,5 +1,5 @@
 import { createContext } from "react";
 
-const EditorContext = createContext();
+const EditorContext = createContext(null, null);
 
 export default EditorContext;

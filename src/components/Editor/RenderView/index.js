@@ -1,20 +1,17 @@
-import React, {useContext} from "react";
+import React, {useContext, useRef} from "react";
 import EditorContext from "@/components/Editor/editorContext";
+import NeonText from "@/components/Editor/RenderView/NeonText";
 
 const RenderView = () => {
-  const {state} = useContext(EditorContext);
+  const wrapElementRef = useRef();
 
-  const textFormat = (text) => text.split('\n').map((line, i, arr) => (
-      <React.Fragment key={i}>
-        {line.length ? <p>{line}</p> : null}
-        {i !== arr.length - 1 && <br />}
-      </React.Fragment>
-    ));
+
 
   return (
-    <div>
-      {textFormat(state.text)}
-    </div>
+      <div ref={wrapElementRef} className={"neon-bg w-full bg-stone-950 relative"}>
+        <NeonText parentRef={wrapElementRef}/>
+        <div className={"h-6"}></div>
+      </div>
   )
 };
 
