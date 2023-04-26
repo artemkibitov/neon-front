@@ -1,7 +1,10 @@
 'use strict';
 
 const state = {
-  text: '',
+  text: {
+    position: 'left'||'center'||'right',
+    value: 'твій текст',
+  },
   size: null,
   font: '',
   backboard: null,

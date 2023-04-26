@@ -4,11 +4,23 @@ import {priceFolding} from "@/components/Editor/reducer/util";
 
 const editorReducer = (state, action) => {
   switch (action.type) {
-    case 'change_text': {
+    case 'change_text_value': {
       return {
         ...state,
-        text: action.text
+        text: {
+          position: state.text.position,
+          value: action.text,
+        }
       };
+    }
+    case 'change_text_position': {
+      return {
+        ...state,
+        text: {
+          position: action.position,
+          value: state.text.value,
+        }
+      }
     }
     case 'select_size': {
       return {

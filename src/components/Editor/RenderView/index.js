@@ -5,8 +5,6 @@ import NeonText from "@/components/Editor/RenderView/NeonText";
 const RenderView = () => {
   const wrapElementRef = useRef();
 
-
-
   return (
       <div ref={wrapElementRef} className={"neon-bg w-full bg-stone-950 relative"}>
         <NeonText parentRef={wrapElementRef}/>

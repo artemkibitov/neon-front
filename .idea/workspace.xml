@@ -2,21 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="df16b8f0-32e3-4efb-94c2-8bb40b2a5bc4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/Editor/ControlPanel/SwitchingTabs/Color/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Editor/ControlPanel/SwitchingTabs/Font/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Editor/DekstopStructure.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Editor/MobileStructure.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Editor/RenderView/NeonText/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Editor/useWindowWidth.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Editor/ControlPanel/SwitchingTabs/Text/data.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Editor/ControlPanel/SwitchingTabs/Text/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Editor/ControlPanel/SwitchingTabs/Text/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Editor/ControlPanel/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Editor/ControlPanel/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Editor/RenderView/NeonText/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Editor/RenderView/NeonText/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Editor/RenderView/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Editor/RenderView/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Editor/editorContext.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Editor/editorContext.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Editor/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Editor/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Editor/reducer/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Editor/reducer/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Editor/reducer/initial.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Editor/reducer/initial.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Editor/reducer/state.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Editor/reducer/state.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,7 +119,8 @@
       <workItem from="1682250610251" duration="5800000" />
       <workItem from="1682414586743" duration="810000" />
       <workItem from="1682435333465" duration="16579000" />
-      <workItem from="1682493514135" duration="2694000" />
+      <workItem from="1682493514135" duration="6280000" />
+      <workItem from="1682527570960" duration="5834000" />
     </task>
     <servers />
   </component>
