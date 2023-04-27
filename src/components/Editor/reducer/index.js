@@ -1,37 +1,16 @@
 'use strict';
-
-import {priceFolding} from "@/components/Editor/reducer/util";
+import actionProxy from './actions';
 
 const editorReducer = (state, action) => {
-  switch (action.type) {
-    case 'change_text_value': {
-      return {
-        ...state,
-        text: {
-          position: state.text.position,
-          value: action.text,
-        }
-      };
-    }
-    case 'change_text_position': {
-      return {
-        ...state,
-        text: {
-          position: action.position,
-          value: state.text.value,
-        }
-      }
-    }
-    case 'select_size': {
-      return {
-        ...state,
-        size: action.size,
-        cost: priceFolding(state),
-      };
+  if (typeof actionProxy[action.type] === 'function') {
+    try {
+      return actionProxy[action.type](state, action);
+    } catch (e) {
+      throw new Error(e)
     }
   }
 
-  throw Error('unknown action' + action.type);
-}
+  return state;
+};
 
 export default editorReducer;

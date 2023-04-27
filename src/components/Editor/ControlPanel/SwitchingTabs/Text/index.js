@@ -11,9 +11,8 @@ const Text = () => {
   const resetPlaceholder = () => setAreaPlaceholder('');
   const changeText = (e) => {
     const text = e.target.value;
-    const type = 'change_text_value';
+    const type = 'text_changeValue';
 
-    console.log(text);
     dispatch({type, text});
   };
 

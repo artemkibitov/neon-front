@@ -7,7 +7,7 @@ const RenderView = () => {
 
   return (
       <div ref={wrapElementRef} className={"neon-bg w-full bg-stone-950 relative"}>
-        <NeonText parentRef={wrapElementRef}/>
+        <NeonText parentElement={ wrapElementRef }/>
         <div className={"h-6"}></div>
       </div>
   )

@@ -12,9 +12,10 @@ import DekstopComp from "@/components/Editor/DekstopStructure";
 import MobileComp from "@/components/Editor/MobileStructure";
 import DekstopStructure from "@/components/Editor/DekstopStructure";
 import MobileStructure from "@/components/Editor/MobileStructure";
+import initialState from "@/components/Editor/reducer/state";
 
 const Editor = () => {
-  const [state, dispatch] = useReducer(editorReducer, CPState, initialEditorState);
+  const [state, dispatch] = useReducer(editorReducer, initialState);
   const windowWidth = useWindowWidth();
   const isMobile = windowWidth < 768;
 

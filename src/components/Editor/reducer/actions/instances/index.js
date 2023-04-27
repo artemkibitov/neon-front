@@ -1,8 +1,8 @@
 'use strict';
 import TextActions from "@/components/Editor/reducer/actions/instances/TextActions";
 
-const initialState = {
-  text: TextActions.structure
+const actions = {
+    text: new TextActions(),
 };
 
-export default initialState;
+export default actions;
