@@ -1,9 +1,13 @@
 'use strict';
 
-export default class BaseActions {
+export default class AbstractActions {
   _defaultKey = '';
 
   constructor(defaultKey = '') {
+    if (new.target === AbstractActions) {
+      throw new TypeError('You cannot create an instance of an abstract class');
+    }
+
     this._defaultKey = defaultKey;
   }
 
@@ -15,6 +19,10 @@ export default class BaseActions {
         ...updates,
       },
     };
+  }
+
+  static getInitialState() {
+    return {};
   }
 
   _destructFirstValue(object) {

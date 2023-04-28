@@ -2,17 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="df16b8f0-32e3-4efb-94c2-8bb40b2a5bc4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/Editor/reducer/actions/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Editor/reducer/actions/instances/BaseActions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Editor/reducer/actions/instances/SizeActions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Editor/reducer/actions/instances/TextActions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Editor/reducer/actions/instances/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Editor/ControlPanel/Size/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Editor/reducer/Api/actions/AbstractActions.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Editor/reducer/Api/actions/SizeActions.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Editor/reducer/Api/actions/TextActions.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Editor/reducer/actions/instances/ColorActions.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Editor/reducer/actions/instances/SizeFactory.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/neon-calc.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/neon-calc.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Editor/ControlPanel/SwitchingTabs/Text/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Editor/ControlPanel/SwitchingTabs/Text/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Editor/RenderView/NeonText/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Editor/RenderView/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Editor/RenderView/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Editor/ControlPanel/Size/data.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Editor/MobileStructure.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Editor/MobileStructure.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Editor/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Editor/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Editor/reducer/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Editor/reducer/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Editor/reducer/actions/instances/BaseActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Editor/reducer/actions/instances/AbstractActions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Editor/reducer/actions/instances/SizeActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Editor/reducer/actions/instances/SizeActions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Editor/reducer/actions/instances/TextActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Editor/reducer/actions/instances/TextActions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Editor/reducer/actions/instances/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Editor/reducer/actions/instances/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Editor/reducer/initial.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Editor/reducer/state.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Editor/reducer/state.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -54,7 +59,7 @@
     "node.js.selected.package.standard": "",
     "nodejs_interpreter_path": "node",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "settings.javascript.linters.eslint",
+    "settings.editor.selected.configurable": "preferences.sourceCode.TypeScript",
     "ts.external.directory.path": "/home/art/App/WebStorm-222.3739.57/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external",
     "vue.rearranger.settings.migration": "true"
   }
@@ -124,6 +129,9 @@
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration>$USER_HOME$/.subversion</configuration>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="df16b8f0-32e3-4efb-94c2-8bb40b2a5bc4" name="Changes" comment="" />
@@ -145,7 +153,8 @@
       <workItem from="1682527570960" duration="9309000" />
       <workItem from="1682590785727" duration="14211000" />
       <workItem from="1682611371903" duration="4105000" />
-      <workItem from="1682618270905" duration="1769000" />
+      <workItem from="1682618270905" duration="3773000" />
+      <workItem from="1682694356344" duration="18631000" />
     </task>
     <servers />
   </component>

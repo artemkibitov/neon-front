@@ -1,31 +1,33 @@
-'use strict';
-import BaseActions from "@/components/Editor/reducer/actions/instances/BaseActions";
+﻿'use strict';
+import AbstractActions from "@/components/Editor/reducer/actions/instances/AbstractActions";
 
-class TextActions extends BaseActions {
-  static structure;
-
-  static {
-    TextActions.structure = {
-      value: 'твій надпис',
-      position: 'left',
-    }
-  }
+class TextActions extends AbstractActions {
+  value = 'твій надпис';
+  position = 'left';
 
   constructor(defaultKey = 'text') {
     super(defaultKey);
   }
 
-  changeValue(state, { type, ...rest }) {
+  changeValue(state, {type, ...rest}) {
     const value = this._destructFirstValue(rest);
 
-    return this.updateState(this._defaultKey, state, { value });
+    return this.updateState(this._defaultKey, state, {value});
   }
 
-  changePosition(state, { type, ...rest }) {
+  changePosition(state, {type, ...rest}) {
     const position = this._destructFirstValue(rest);
 
-    return this.updateState(this._defaultKey, state, { position });
+    return this.updateState(this._defaultKey, state, {position});
   }
+
+  getInitialState() {
+    return {
+      value: this.value,
+      position: this.position,
+    }
+  }
+
 }
 
 export default TextActions;
