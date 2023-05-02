@@ -4,46 +4,75 @@ import SizeFactory from "@/components/Editor/reducer/actions/instances/SizeFacto
 
 class SizeActions extends AbstractActions {
   _sizeFactory;
-  variants;
+  option;
   selected;
 
-  constructor(defaultKey = 'size') {
+  constructor(sizeFactory, defaultKey = 'size') {
     super(defaultKey);
-    this._sizeFactory = new SizeFactory();
+    this._sizeFactory = sizeFactory;
   }
 
-  selectSize(state, {type, ...rest}) {
+  selectSize(state, { type, ...rest }) {
     const selected = this._destructFirstValue(rest);
 
-    return this.updateState(this._defaultKey, state, {selected});
+    return this.updateState(this._defaultKey, state, { selected });
   }
 
+  setOptionTotal(state, key, total) {
+    this.option[key].total = total;
 
-  getInitialState() {
+    this.updateState(this._defaultKey, state, { option: this.option })
+  }
+
+  calculateSize(state, { text }) {
+    const char = text.replace(/[\s\n]/g, "").length * cost;
+    const space = (text.match(/(?<=\S) (?=\S)/g) || []).length * (cost / 2);
+    const newLine = (text.match(/\n/g) || []).length * (cost * 0.15) * heightFactor;
+  }
+
+  calculatePrice(state, { type, ...rest }) {
+    const { cost, height } = option;
+    const heightFactor = height * 0.2;
+
+    const char = text.replace(/[\s\n]/g, "").length * cost;
+    const space = (text.match(/(?<=\S) (?=\S)/g) || []).length * (cost / 2);
+    const newLine = (text.match(/\n/g) || []).length * (cost * 0.15) * heightFactor;
+
+    return char + space + newLine;
+  }
+
+  getOption() {
+    return this.option;
+  }
+
+  getSelected() {
+    return this.selected;
+  }
+
+  getInitialState(text = '') {
     if (typeof this.variants === 'undefined' || !Object.keys(this.variants).length) {
-      this._createSizeVariants()._setSize()
+      this._createSizeOptions(text)._selectOption();
     }
 
-    return {
-      variants: this.variants,
-      selected: this.selected,
-    }
+    console.dir(this.option);
+    const [option, selected] = [this.option, this.selected];
+
+    return { option, selected }
   }
 
-  _createSizeVariants() {
-    this.variants = SizeFactory.createDefaultValue();
+  _createSizeOptions(text = '') {
+    this.option = this._sizeFactory.createDefaultValue(text);
 
     return this;
   }
 
-  _setSize(key = 's') {
-    if (!Object.hasOwn(this.variants, key)) throw new TypeError('this.variants is not has key');
+  _selectOption(key = 'm') {
+    if (!Object.hasOwn(this.option, key)) throw new TypeError(`variants is not has key: ${key}`);
 
-    this.selected = this.variants[key];
+    this.selected = this.option[key];
 
     return this;
   }
-
 }
 
 export default SizeActions;

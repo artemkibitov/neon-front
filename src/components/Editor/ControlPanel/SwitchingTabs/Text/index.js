@@ -1,6 +1,7 @@
 'use strict';
 import React, {useContext, useState} from "react";
 import EditorContext from "@/components/Editor/editorContext";
+import state from "@/components/Editor/reducer/state";
 
 const Text = () => {
   const {dispatch} = useContext(EditorContext)
@@ -8,12 +9,14 @@ const Text = () => {
     'Введи свій текст тут\nНатисніть Enter/Return для переходу до нового рядка'
   );
 
+  console.log(state);
   const resetPlaceholder = () => setAreaPlaceholder('');
   const changeText = (e) => {
     const text = e.target.value;
     const type = 'text_changeValue';
 
     dispatch({type, text});
+
   };
 
   return (

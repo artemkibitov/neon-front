@@ -3,9 +3,12 @@ import TextActions from "@/components/Editor/reducer/actions/instances/TextActio
 import SizeActions from "@/components/Editor/reducer/actions/instances/SizeActions";
 import actions from "@/components/Editor/reducer/actions/instances";
 
+const text = actions.text.getInitialState();
+
 const initialState = {
-  text: actions.text.getInitialState(),
-  size: actions.size.getInitialState(),
+  text,
+  size: actions.size.getInitialState(text.value),
+  price: actions.price.getInitialValue(),
 };
 
 export default initialState;

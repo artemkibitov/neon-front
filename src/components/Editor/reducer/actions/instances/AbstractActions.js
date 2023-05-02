@@ -2,6 +2,7 @@
 
 export default class AbstractActions {
   _defaultKey = '';
+  _proxy;
 
   constructor(defaultKey = '') {
     if (new.target === AbstractActions) {
@@ -19,6 +20,10 @@ export default class AbstractActions {
         ...updates,
       },
     };
+  }
+
+  initialize(proxyInstance) {
+    this._proxy = proxyInstance;
   }
 
   static getInitialState() {

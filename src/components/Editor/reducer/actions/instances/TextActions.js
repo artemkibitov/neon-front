@@ -9,23 +9,34 @@ class TextActions extends AbstractActions {
     super(defaultKey);
   }
 
-  changeValue(state, {type, ...rest}) {
-    const value = this._destructFirstValue(rest);
+  changeValue(state, { type, ...rest }) {
+    this.value = this._destructFirstValue(rest);
 
-    return this.updateState(this._defaultKey, state, {value});
+    return this.updateState(
+      this._defaultKey,
+      state,
+      {
+        value: this.value
+      }
+    );
   }
 
-  changePosition(state, {type, ...rest}) {
-    const position = this._destructFirstValue(rest);
+  changePosition(state, { type, ...rest }) {
+    this.position = this._destructFirstValue(rest);
 
-    return this.updateState(this._defaultKey, state, {position});
+    return this.updateState(
+      this._defaultKey,
+      state,
+      {
+        position: this.position
+      }
+    );
   }
 
   getInitialState() {
-    return {
-      value: this.value,
-      position: this.position,
-    }
+    const [value, position] = [this.value, this.position]
+
+    return { value, position };
   }
 
 }
