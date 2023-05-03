@@ -41,10 +41,8 @@ export default class AbstractActions {
 
           if (operation === 'get' || operation === 'set') {
             if (propName in target) {
-              // Если метод существует, используйте его
               return Reflect.get(target, propName, receiver);
             } else if (propertyName in target) {
-              // Если метода нет, но существует свойство с таким именем, используйте динамический доступ
               switch (operation) {
                 case 'get':
                   return () => target[propertyName];
@@ -54,7 +52,6 @@ export default class AbstractActions {
                   };
               }
             } else {
-              // Если нет ни метода, ни свойства с таким именем, выводите предупреждение
               console.warn(`Neither method "${propName}" nor property "${propertyName}" exists in the target object.`);
               return () => undefined;
             }
