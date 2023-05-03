@@ -41,17 +41,32 @@ export default class AbstractActions {
 
           switch (operation) {
             case 'get':
-              return () => target[propertyName];
+              if (propertyName in target) {
+                return () => target[propertyName];
+              } else {
+                console.warn(`Property "${propertyName}" does not exist in the target object.`);
+                return () => undefined;
+              }
             case 'set':
-              return (value) => {
-                target[propertyName] = value;
-              };
+              if (propertyName in target) {
+                return (value) => {
+                  target[propertyName] = value;
+                };
+              } else {
+                console.warn(
+                  `Property "${propertyName}" does not exist in the target object. It will not be set.`
+                );
+                return () => {};
+              }
+            default:
+              break;
           }
         }
         return Reflect.get(target, propName, receiver);
       },
     };
   }
+
 
   _destructFirstValue(object) {
     return Object.values(object).at(0);

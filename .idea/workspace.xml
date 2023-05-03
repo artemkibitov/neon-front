@@ -4,7 +4,6 @@
     <list default="true" id="df16b8f0-32e3-4efb-94c2-8bb40b2a5bc4" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Editor/reducer/actions/instances/AbstractActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Editor/reducer/actions/instances/AbstractActions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Editor/reducer/actions/instances/TextActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Editor/reducer/actions/instances/TextActions.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -145,7 +144,7 @@
       <workItem from="1682854912618" duration="5133000" />
       <workItem from="1683024739836" duration="9595000" />
       <workItem from="1683042551860" duration="10781000" />
-      <workItem from="1683070519838" duration="4649000" />
+      <workItem from="1683070519838" duration="5148000" />
     </task>
     <servers />
   </component>
