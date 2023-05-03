@@ -3,17 +3,20 @@ import TextActions from "@/components/Editor/reducer/actions/instances/TextActio
 import SizeActions from "@/components/Editor/reducer/actions/instances/SizeActions";
 import SizeFactory from "@/components/Editor/reducer/actions/instances/SizeFactory";
 import PriceActions from "@/components/Editor/reducer/actions/instances/PriceActions";
+import ActionContainer from "@/components/Editor/reducer/actions/ActionContainer";
 
 const createActions = () => {
-  const sizeFactory = new SizeFactory();
+  const actionContainer = new ActionContainer();
 
-  const text = new TextActions();
-  const size = new SizeActions(sizeFactory);
-  const price = new PriceActions(size, text);
+  actionContainer.addAction("TextActions", TextActions);
+  actionContainer.addAction("SizeActions", SizeActions, ["PriceActions", "TextActions"]);
+  actionContainer.addAction("PriceActions", PriceActions, ["SizeActions"]);
 
-  return { text, size, price };
+  actionContainer.initActions();
+
+  return actionContainer;
 };
 
-const actions = createActions();
+const actionContainer = createActions();
 
-export default actions;
+export default actionContainer;

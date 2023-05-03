@@ -4,12 +4,17 @@ import SizeFactory from "@/components/Editor/reducer/actions/instances/SizeFacto
 
 class SizeActions extends AbstractActions {
   _sizeFactory;
-  option;
-  selected;
+  _priceActions;
+  _textActions;
 
-  constructor(sizeFactory, defaultKey = 'size') {
-    super(defaultKey);
-    this._sizeFactory = sizeFactory;
+  selected;
+  option;
+
+  constructor(proxy, priceActions, textActions, defaultKey = 'size') {
+    super(defaultKey, proxy);
+    this._priceActions = priceActions;
+    this._textActions = textActions;
+    this._sizeFactory = new SizeFactory();
   }
 
   selectSize(state, { type, ...rest }) {
@@ -49,7 +54,7 @@ class SizeActions extends AbstractActions {
     return this.selected;
   }
 
-  getInitialState(text = '') {
+  initialState(text = '') {
     if (typeof this.variants === 'undefined' || !Object.keys(this.variants).length) {
       this._createSizeOptions(text)._selectOption();
     }

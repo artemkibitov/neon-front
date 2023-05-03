@@ -1,5 +1,6 @@
 'use strict';
 import actionProxy from './actions';
+import actionContainer from "@/components/Editor/reducer/actions/instances";
 
 const editorReducer = (state, action) => {
   if (typeof actionProxy[action.type] === 'function') {

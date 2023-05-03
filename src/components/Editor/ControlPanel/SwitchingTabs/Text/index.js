@@ -9,13 +9,14 @@ const Text = () => {
     'Введи свій текст тут\nНатисніть Enter/Return для переходу до нового рядка'
   );
 
-  console.log(state);
   const resetPlaceholder = () => setAreaPlaceholder('');
   const changeText = (e) => {
-    const text = e.target.value;
-    const type = 'text_changeValue';
+    const { value } = e.target;
 
-    dispatch({type, text});
+    dispatch({
+      type: "TextActions_changeValue",
+      value,
+    });
 
   };
 

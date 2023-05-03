@@ -10,7 +10,6 @@ const Size = () => {
     const { option } = size;
 
     dispatch({type: 'size_selectSize', selected: option[key] });
-    console.log('before:', size);
   }
 
   const neonSize = (text, option) => {
@@ -29,20 +28,21 @@ const Size = () => {
   };
 
   return (
-    <section>
-      {Object.entries(size.option).map(([key, option]) => {
-        const price = calculate(text.value, option);
-
-        return (
-          <div key={key} onClick={() => selectOption(key)}>
-            <div>
-              <p>{option.name}</p>
-              <p>{Math.round(price)}</p>
-            </div>
-          </div>
-        );
-      })}
-    </section>
+    1
+    // <section>
+    //   {Object.entries(size.option).map(([key, option]) => {
+    //     const price = calculate(text.value, option);
+    //
+    //     return (
+    //       <div key={key} onClick={() => selectOption(key)}>
+    //         <div>
+    //           <p>{option.name}</p>
+    //           <p>{Math.round(price)}</p>
+    //         </div>
+    //       </div>
+    //     );
+    //   })}
+    // </section>
   );
 };
 
