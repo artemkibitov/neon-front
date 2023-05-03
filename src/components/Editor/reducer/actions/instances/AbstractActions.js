@@ -53,7 +53,9 @@ export default class AbstractActions {
                   };
               }
             } else {
-              console.warn(`Neither method "${propName}" nor property "${propertyName}" exists in the target object.`);
+              console.warn(
+                `Neither method "${propName}" nor property "${propertyName}" exists in the target object.`
+              );
               return () => undefined;
             }
           }
