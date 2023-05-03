@@ -38,15 +38,16 @@ export default class AbstractActions {
         if (typeof propName === 'string') {
           const operation = propName.slice(0, 3);
           const propertyName = propName.slice(3).charAt(0).toLowerCase() + propName.slice(4);
+          const [get, set] = ['get', 'set'];
 
-          if (operation === 'get' || operation === 'set') {
+          if (operation === get || operation === set) {
             if (propName in target) {
               return Reflect.get(target, propName, receiver);
             } else if (propertyName in target) {
               switch (operation) {
-                case 'get':
+                case get:
                   return () => target[propertyName];
-                case 'set':
+                case set:
                   return (value) => {
                     target[propertyName] = value;
                   };
@@ -61,7 +62,6 @@ export default class AbstractActions {
       },
     };
   }
-
 
 
   _destructFirstValue(object) {
