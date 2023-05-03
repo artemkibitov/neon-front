@@ -39,33 +39,32 @@ export default class AbstractActions {
           const operation = propName.slice(0, 3);
           const propertyName = propName.slice(3).charAt(0).toLowerCase() + propName.slice(4);
 
-          switch (operation) {
-            case 'get':
-              if (propertyName in target) {
-                return () => target[propertyName];
-              } else {
-                console.warn(`Property "${propertyName}" does not exist in the target object.`);
-                return () => undefined;
+          if (operation === 'get' || operation === 'set') {
+            if (propName in target) {
+              // Если метод существует, используйте его
+              return Reflect.get(target, propName, receiver);
+            } else if (propertyName in target) {
+              // Если метода нет, но существует свойство с таким именем, используйте динамический доступ
+              switch (operation) {
+                case 'get':
+                  return () => target[propertyName];
+                case 'set':
+                  return (value) => {
+                    target[propertyName] = value;
+                  };
               }
-            case 'set':
-              if (propertyName in target) {
-                return (value) => {
-                  target[propertyName] = value;
-                };
-              } else {
-                console.warn(
-                  `Property "${propertyName}" does not exist in the target object. It will not be set.`
-                );
-                return () => {};
-              }
-            default:
-              break;
+            } else {
+              // Если нет ни метода, ни свойства с таким именем, выводите предупреждение
+              console.warn(`Neither method "${propName}" nor property "${propertyName}" exists in the target object.`);
+              return () => undefined;
+            }
           }
         }
         return Reflect.get(target, propName, receiver);
       },
     };
   }
+
 
 
   _destructFirstValue(object) {
