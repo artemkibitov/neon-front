@@ -35,15 +35,23 @@ export default class AbstractActions {
   _createProxyHandler() {
     return {
       get: (target, propName, receiver) => {
-        if (typeof propName === 'string' && propName.startsWith('get')) {
-          const actionName = propName.slice(3) + 'Actions';
-          return this._proxy?.getAction(actionName);
+        if (typeof propName === 'string') {
+          const operation = propName.slice(0, 3);
+          const propertyName = propName.slice(3).charAt(0).toLowerCase() + propName.slice(4);
+
+          switch (operation) {
+            case 'get':
+              return () => target[propertyName];
+            case 'set':
+              return (value) => {
+                target[propertyName] = value;
+              };
+          }
         }
         return Reflect.get(target, propName, receiver);
       },
     };
   }
-
 
   _destructFirstValue(object) {
     return Object.values(object).at(0);
