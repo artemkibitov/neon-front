@@ -3,10 +3,10 @@ import AbstractActions from "@/components/Editor/reducer/actions/instances/Abstr
 class PriceActions extends AbstractActions {
   _sizeActions;
   _textActions;
-  _price;
+  _sizeFactory;
 
-  constructor(sizeActions, textActions, defaultKey = 'price') {
-    super(defaultKey);
+  constructor(sizeActions, textActions) {
+    super('PriceActions');
 
     this._sizeActions = sizeActions;
     this._textActions = textActions;

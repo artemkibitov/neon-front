@@ -8,7 +8,7 @@ interface ITextState {
 declare class TextActions extends AbstractActions {
   constructor(defaultKey?: string);
 
-  changeValue(state: object, payload: { type: string; [key: string]: any; }): object;
+  changeValue(state: object, payload: { type: string; [key: string]: string; }): object;
 
   changePosition(
     state: object,
@@ -18,7 +18,6 @@ declare class TextActions extends AbstractActions {
     }
   ): object;
 
-  static getInitialState(): ITextState
 }
 
 

@@ -6,8 +6,8 @@ import actionContainer from "@/components/Editor/reducer/actions/instances";
 
 const initialState = {
   TextActions: actionContainer.getAction("TextActions").initialState(),
-  size: actionContainer.getAction("SizeActions").initialState(),
-  price: actionContainer.getAction("PriceActions").initialState(),
+  SizeActions: actionContainer.getAction("SizeActions").initialState(),
+  PriceActions: actionContainer.getAction("PriceActions").initialState(),
 };
 
 export default initialState;

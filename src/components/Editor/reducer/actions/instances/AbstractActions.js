@@ -1,17 +1,16 @@
 'use strict';
 
 export default class AbstractActions {
-  _defaultKey = '';
-  _proxy;
+  _defaultKey;
 
-  constructor(defaultKey = '', proxy) {
+  constructor(defaultKey = '') {
     if (new.target === AbstractActions) {
       throw new TypeError('You cannot create an instance of an abstract class');
     }
 
     this._defaultKey = defaultKey;
-    this._proxy = proxy;
-    return new Proxy(this, this._createProxyHandler(proxy));
+
+    return new Proxy(this, this._createProxyHandler());
   }
 
   updateState(key, state, updates) {
@@ -22,10 +21,6 @@ export default class AbstractActions {
         ...updates,
       },
     };
-  }
-
-  initialize(proxyInstance) {
-    this._proxy = proxyInstance;
   }
 
   static getInitialState() {

@@ -9,7 +9,14 @@ const createActions = () => {
   const actionContainer = new ActionContainer();
 
   actionContainer.addAction("TextActions", TextActions);
-  actionContainer.addAction("SizeActions", SizeActions, ["PriceActions", "TextActions"]);
+
+  actionContainer.addAction("SizeFactory", SizeFactory);
+  actionContainer.addAction(
+    "SizeActions",
+    SizeActions,
+    ["SizeFactory", "TextActions"]
+  );
+
   actionContainer.addAction("PriceActions", PriceActions, ["SizeActions"]);
 
   actionContainer.initActions();

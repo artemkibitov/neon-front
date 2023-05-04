@@ -18,7 +18,7 @@ class SizeFactory {
     }
   }
 
-  createDefaultValue(text) {
+  createDefaultValue(text = '') {
     return {
       ...this.createSize('s', 'компактний', 5, 7, 1, 350, undefined, text),
       ...this.createSize('m', 'середній', 8, 15, 2, 500, undefined, text),

@@ -5,8 +5,8 @@ class TextActions extends AbstractActions {
   value = 'твій надпис';
   position = 'left';
 
-  constructor(defaultKey = 'text') {
-    super(defaultKey);
+  constructor() {
+    super('TextActions');
   }
 
   changeValue(state, { value }) {
