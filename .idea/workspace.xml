@@ -2,7 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="df16b8f0-32e3-4efb-94c2-8bb40b2a5bc4" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/components/Editor/reducer/actions/instances/AbstractActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Editor/reducer/actions/instances/AbstractActions.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Editor/RenderView/NeonLines/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Editor/RenderView/NeonLines/styles.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Editor/RenderView/NeonText/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Editor/RenderView/NeonText/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Editor/RenderView/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Editor/RenderView/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Editor/Size/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Editor/Size/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Editor/reducer/actions/instances/SizeActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Editor/reducer/actions/instances/SizeActions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Editor/reducer/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Editor/reducer/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +51,7 @@
     &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
     &quot;nodejs_interpreter_path&quot;: &quot;node&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.JavaScript&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;Errors&quot;,
     &quot;ts.external.directory.path&quot;: &quot;/home/art/App/WebStorm-222.3739.57/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
@@ -144,6 +152,11 @@
       <workItem from="1683024739836" duration="9595000" />
       <workItem from="1683042551860" duration="10781000" />
       <workItem from="1683070519838" duration="5501000" />
+      <workItem from="1683106898108" duration="15185000" />
+      <workItem from="1683159000050" duration="1272000" />
+      <workItem from="1683196178861" duration="1860000" />
+      <workItem from="1683209808796" duration="12901000" />
+      <workItem from="1683313112384" duration="3823000" />
     </task>
     <servers />
   </component>

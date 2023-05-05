@@ -18,10 +18,20 @@ class SizeActions extends AbstractActions {
     this._textActions = textActions;
   }
 
-  selectSize(state, { type, ...rest }) {
-    const selected = this._destructFirstValue(rest);
+  selectSize(state, { type, key }) {
+    const selected = this.getOption(key);
+
+    this.setSelected(selected);
 
     return this.updateState(this._defaultKey, state, { selected });
+  }
+
+  getOption(key) {
+    if (!key || !this.option.hasOwnProperty(key)) {
+      return this.option;
+    }
+
+    return this.option[key];
   }
 
   setOptionTotal(state, key, total) {

@@ -4,17 +4,7 @@ import EditorContext from "@/components/Editor/editorContext";
 
 const Size = () => {
   const { state, dispatch } = useContext(EditorContext)
-  const { text, size } = state;
-
-  const selectOption = (key) => {
-    const { option } = size;
-
-    dispatch({type: 'size_selectSize', selected: option[key] });
-  }
-
-  const neonSize = (text, option) => {
-    {}
-  };
+  const { TextActions, SizeActions } = state;
 
   const calculate = (text, option) => {
     const { cost, height } = option;
@@ -28,21 +18,23 @@ const Size = () => {
   };
 
   return (
-    1
-    // <section>
-    //   {Object.entries(size.option).map(([key, option]) => {
-    //     const price = calculate(text.value, option);
-    //
-    //     return (
-    //       <div key={key} onClick={() => selectOption(key)}>
-    //         <div>
-    //           <p>{option.name}</p>
-    //           <p>{Math.round(price)}</p>
-    //         </div>
-    //       </div>
-    //     );
-    //   })}
-    // </section>
+    <section>
+      {Object.entries(SizeActions.option).map(([key, option]) => {
+        const price = calculate(TextActions.value, option);
+
+        return (
+          <div
+            key={key}
+            onClick={() => dispatch({ type: 'SizeActions_selectSize', key })}
+          >
+            <div>
+              <p>{option.name}</p>
+              <p>{Math.round(price)}</p>
+            </div>
+          </div>
+        );
+      })}
+    </section>
   );
 };
 
