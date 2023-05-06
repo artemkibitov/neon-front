@@ -26,6 +26,32 @@ class SizeActions extends AbstractActions {
     return this.updateState(this._defaultKey, state, { selected });
   }
 
+  calculateSizeState(state) {
+    this._calculateSize();
+
+    return this._updateSizeState(state, { option: this.option });
+  }
+
+
+  setOptionTotal(state, key, total) {
+    this.option[key].total = total;
+
+    this.updateState(this._defaultKey, state, { option: this.option })
+  }
+
+  initialState() {
+    if (typeof this.variants === 'undefined' || !Object.keys(this.variants).length) {
+      this._createSizeOptions()
+        ._calculateSize()
+        ._selectOption();
+    }
+
+    return {
+      option: this.option,
+      selected: this.selected
+    };
+  }
+
   getOption(key) {
     if (!key || !this.option.hasOwnProperty(key)) {
       return this.option;
@@ -34,41 +60,41 @@ class SizeActions extends AbstractActions {
     return this.option[key];
   }
 
-  setOptionTotal(state, key, total) {
-    this.option[key].total = total;
+  writeOption(key, option) {
+    this.option[key] = option;
 
-    this.updateState(this._defaultKey, state, { option: this.option })
+    return this;
   }
 
-  calculateSize(state, { ...rest }) {
+  _calculateSize() {
     const text = this._textActions.getValue();
+    const lines = text.split('\n');
+    const maxLineLength = lines.reduce((maxLength, line) => Math.max(maxLength, line.length), 0);
 
-    console.log(text);
+    for (const key in this.getOption()) {
+      const option = this.getOption(key);
+      const { length, height, space, heightSpace } = option;
 
-    return this.updateState(this._defaultKey, state);
-  }
+      option.signLength.length = Math.floor(maxLineLength * length + maxLineLength * space);
+      option.signLength.height = Math.floor(lines.length * height + (lines.length - 1) * heightSpace);
 
-  initialState() {
-    if (typeof this.variants === 'undefined' || !Object.keys(this.variants).length) {
-      this._createSizeOptions()._selectOption();
+      this.writeOption(key, option);
     }
 
-    const [option, selected] = [this.option, this.selected];
+    return this;
+  }
 
-    return { option, selected }
+  _updateSizeState(state, updates) {
+    return this.updateState(this._defaultKey, state, { updates })
   }
 
   _createSizeOptions() {
-    console.log(this);
-    // const text = this.container.hasTextActions() ? this.container.getTextActions().getValue() : '';
-    this.setOption(this._sizeFactory.createDefaultValue());
+    this.setOption(this._sizeFactory.createDefaultValue(this._textActions.getValue()));
 
-    console.log(this.getOption());
     return this;
   }
 
   _selectOption(key = 'm') {
-    console.log(this);
     if (!Object.hasOwn(this.getOption(), key)) throw new TypeError(`variants is not has key: ${key}`);
 
     this.setSelected(this.getOption()[key]);

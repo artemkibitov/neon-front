@@ -1,29 +1,21 @@
 'use strict';
 
 class SizeFactory {
-  createSize(key, name, length, height, space, cost, total, text = '') {
+  createSize(key, name, length, height, space, heightSpace, cost, text = '', total) {
+    text = text || '';
     const signLength = { height, length };
 
-    if (text.length) {
-      const lines = text.split('\n').length;
-      const textLength = text.length;
-      total = text.replace(/[\s\n]/g, "").length * cost;
-
-      signLength.height = height * lines;
-      signLength.length = length * textLength;
-    }
-
     return {
-      [key]: { name, length, height, space, cost, total: total || cost, signLength }
+      [key]: { name, length, height, space, cost, heightSpace, total: total || cost, signLength }
     }
   }
 
   createDefaultValue(text = '') {
     return {
-      ...this.createSize('s', 'компактний', 5, 7, 1, 350, undefined, text),
-      ...this.createSize('m', 'середній', 8, 15, 2, 500, undefined, text),
-      ...this.createSize('l', 'великий', 16, 27, 3, 1000, undefined, text),
-      ...this.createSize('xl', 'мега', 20, 32, 4, 1400, undefined, text),
+      ...this.createSize('s', 'компактний', 5, 7, 1, 2, 350, text),
+      ...this.createSize('m', 'середній', 8, 15, 2, 2.5, 500, text),
+      ...this.createSize('l', 'великий', 16, 27, 3, 3, 1000, text),
+      ...this.createSize('xl', 'мега', 20, 32, 4, 3.5, 1400, text),
     }
   }
 }

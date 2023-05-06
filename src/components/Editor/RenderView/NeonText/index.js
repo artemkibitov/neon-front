@@ -5,8 +5,7 @@ import NeonLines from "@/components/Editor/RenderView/NeonLines";
 const NeonText = forwardRef(({ parentElement }, ref) => {
   const { state } = useContext(EditorContext);
   const element = useRef();
-  const [neonFontSize, setNeonFontSize] = useState(70);
-  console.log(state);
+  const [neonFontSize, setNeonFontSize] = useState(65);
   const [prevTextLength, setPrevTextLength] = useState(state.TextActions.value.length);
   const [textChanged, setTextChanged] = useState(false);
   const whiteSpace = 'pre-wrap';
@@ -59,7 +58,7 @@ const NeonText = forwardRef(({ parentElement }, ref) => {
 
       return elements;
     });
-  }, [state.TextActions.value, neonFontSize, createTextElement, createEmptyLineElement, createElementsForEmptyLines]);
+  }, [state.TextActions.value, neonFontSize]);
 
   const handleResize = (entries) => {
     const parentWidth = parentElement.current.getBoundingClientRect().width;
@@ -87,7 +86,7 @@ const NeonText = forwardRef(({ parentElement }, ref) => {
     return () => {
       observer.disconnect();
     };
-  }, [parentElement, state.TextActions.value, neonFontSize, textChanged, prevTextLength, handleResize]);
+  }, [parentElement, state.TextActions.value, neonFontSize, textChanged, prevTextLength]);
 
   return (
     <div ref={element} className="neon-text absolute top-12">
@@ -96,7 +95,5 @@ const NeonText = forwardRef(({ parentElement }, ref) => {
     </div>
   );
 });
-
-NeonText.displayName = 'NeonText';
 
 export default NeonText;
