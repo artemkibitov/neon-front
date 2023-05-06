@@ -40,10 +40,12 @@ class SizeActions extends AbstractActions {
     this.updateState(this._defaultKey, state, { option: this.option })
   }
 
-  calculateSize(state, { text }) {
-    const char = text.replace(/[\s\n]/g, "").length * cost;
-    const space = (text.match(/(?<=\S) (?=\S)/g) || []).length * (cost / 2);
-    const newLine = (text.match(/\n/g) || []).length * (cost * 0.15) * heightFactor;
+  calculateSize(state, { ...rest }) {
+    const text = this._textActions.getValue();
+
+    console.log(text);
+
+    return this.updateState(this._defaultKey, state);
   }
 
   initialState() {

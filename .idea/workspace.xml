@@ -2,15 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="df16b8f0-32e3-4efb-94c2-8bb40b2a5bc4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/Editor/RenderView/NeonLines/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Editor/RenderView/NeonLines/styles.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Editor/ControlPanel/SwitchingTabs/Text/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Editor/ControlPanel/SwitchingTabs/Text/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Editor/RenderView/NeonLines/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Editor/RenderView/NeonLines/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Editor/RenderView/NeonText/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Editor/RenderView/NeonText/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Editor/RenderView/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Editor/RenderView/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Editor/Size/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Editor/Size/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Editor/reducer/actions/instances/SizeActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Editor/reducer/actions/instances/SizeActions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Editor/reducer/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Editor/reducer/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -157,6 +153,7 @@
       <workItem from="1683196178861" duration="1860000" />
       <workItem from="1683209808796" duration="12901000" />
       <workItem from="1683313112384" duration="3823000" />
+      <workItem from="1683361208300" duration="1925000" />
     </task>
     <servers />
   </component>

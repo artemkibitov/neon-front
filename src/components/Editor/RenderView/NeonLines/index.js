@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState, useRef } from 'react';
+import React, { useContext, useEffect, useState, useRef, useCallback } from 'react';
 import EditorContext from "@/components/Editor/editorContext";
 import styles from "@/components/Editor/RenderView/NeonLines/styles";
 
@@ -7,7 +7,7 @@ const NeonLines = ({ neonTextRef }) => {
   const bottomLineRef = useRef();
   const rightLineRef = useRef();
 
-  const updateLines = () => {
+  const updateLines = useCallback(() => {
     const neonTextElement = neonTextRef.current;
     const bottomLineElement = bottomLineRef.current;
     const rightLineElement = rightLineRef.current;
@@ -19,9 +19,9 @@ const NeonLines = ({ neonTextRef }) => {
     const longestParagraph = [...paragraphs].reduce((max, p) => (p.offsetWidth > max.offsetWidth ? p : max), paragraphs[0]);
 
     const bottomLineLeft = longestParagraph.offsetLeft;
-    const bottomLineTop = lastParagraph.offsetTop + lastParagraph.offsetHeight + 10;
+    const bottomLineTop = lastParagraph.offsetTop + lastParagraph.offsetHeight + 25;
     const bottomLineWidth = longestParagraph.offsetWidth;
-    const rightLineLeft = longestParagraph.offsetLeft + longestParagraph.offsetWidth + 10;
+    const rightLineLeft = longestParagraph.offsetLeft + longestParagraph.offsetWidth + 25;
     const rightLineTop = longestParagraph.offsetTop;
     const rightLineHeight = neonTextElement.offsetHeight;
 
@@ -32,7 +32,7 @@ const NeonLines = ({ neonTextRef }) => {
     rightLineElement.style.left = `${rightLineLeft}px`;
     rightLineElement.style.top = `${rightLineTop}px`;
     rightLineElement.style.height = `${rightLineHeight}px`;
-  };
+  }, [neonTextRef]);
 
   useEffect(() => {
     const neonTextElement = neonTextRef.current;
@@ -40,17 +40,29 @@ const NeonLines = ({ neonTextRef }) => {
     if (!neonTextElement) return;
 
     const observer = new MutationObserver(updateLines);
-    observer.observe(neonTextElement, { childList: true, subtree: true, attributes: true, characterData: true });
+    observer.observe(neonTextElement, {
+      childList: true,
+      subtree: true,
+      characterData: true,
+    });
+
+    updateLines();
 
     return () => {
       observer.disconnect();
     };
-  }, [neonTextRef]);
+  }, [neonTextRef, updateLines]);
 
   return (
-    <div className="line-container absolute">
-      <div ref={bottomLineRef} className="line-bottom bg-gray-500 h-1" />
-      <div ref={rightLineRef} className="line-right bg-gray-500 w-1" />
+    <div>
+      <div
+        ref={bottomLineRef}
+        style={{ position: 'absolute', backgroundColor: 'red', height: '2px' }}
+      />
+      <div
+        ref={rightLineRef}
+        style={{ position: 'absolute', backgroundColor: 'red', width: '2px' }}
+      />
     </div>
   );
 };

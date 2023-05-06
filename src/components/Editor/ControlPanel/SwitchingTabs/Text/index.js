@@ -18,6 +18,7 @@ const Text = () => {
       value,
     });
 
+    dispatch({ type: "SizeActions_calculateSize" });
   };
 
   return (

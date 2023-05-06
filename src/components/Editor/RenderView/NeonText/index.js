@@ -6,6 +6,7 @@ const NeonText = forwardRef(({ parentElement }, ref) => {
   const { state } = useContext(EditorContext);
   const element = useRef();
   const [neonFontSize, setNeonFontSize] = useState(70);
+  console.log(state);
   const [prevTextLength, setPrevTextLength] = useState(state.TextActions.value.length);
   const [textChanged, setTextChanged] = useState(false);
   const whiteSpace = 'pre-wrap';
