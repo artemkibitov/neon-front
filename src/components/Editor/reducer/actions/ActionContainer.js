@@ -33,24 +33,22 @@ class ActionContainer {
     });
   }
 
-  addAction(actionName, ActionClass, dependencies = []) {
-    const paramNames = this._getParameterNames(ActionClass);
-    const requiresContainer = paramNames.includes('container');
-
+  addAction(actionName, ActionClass, dependencies = {}) {
     this._actions.set(actionName, {
       Class: ActionClass,
       dependencies,
-      requiresContainer,
     });
   }
 
   initActions() {
     this._actionInstances = {};
     for (const actionName of this._actions.keys()) {
-      const { Class, dependencies, requiresContainer } = this._actions.get(actionName);
-      const dependencyInstances = dependencies.map((dep) => this._actionInstances[dep]);
-      const args = requiresContainer ? [this, ...dependencyInstances] : dependencyInstances;
-      this._actionInstances[actionName] = new Class(...args);
+      const { Class, dependencies } = this._actions.get(actionName);
+      const dependencyInstances = {};
+      for (const [key, value] of Object.entries(dependencies)) {
+        dependencyInstances[key] = this._actionInstances[value];
+      }
+      this._actionInstances[actionName] = new Class({ container: this, ...dependencyInstances });
     }
   }
 

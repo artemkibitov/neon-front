@@ -2,11 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="df16b8f0-32e3-4efb-94c2-8bb40b2a5bc4" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/CustomPlugin.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Editor/ControlPanel/SwitchingTabs/Text/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Editor/ControlPanel/SwitchingTabs/Text/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Editor/RenderView/NeonLines/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Editor/RenderView/NeonLines/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/next.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Editor/RenderView/NeonText/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Editor/RenderView/NeonText/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Editor/reducer/actions/ActionContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Editor/reducer/actions/ActionContainer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Editor/reducer/actions/instances/PriceActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Editor/reducer/actions/instances/PriceActions.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Editor/reducer/actions/instances/SizeActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Editor/reducer/actions/instances/SizeActions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Editor/reducer/actions/instances/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Editor/reducer/actions/instances/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,26 +39,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/art/Code/_index.js&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;/home/art/Code/neon-calc/node_modules/eslint-config-next&quot;,
-    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
-    &quot;nodejs_interpreter_path&quot;: &quot;node&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;Errors&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/home/art/App/WebStorm-222.3739.57/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/home/art/Code/neon-calc",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.standard": "true",
+    "node.js.selected.package.eslint": "/home/art/Code/neon-calc/node_modules/eslint-config-next",
+    "node.js.selected.package.standard": "",
+    "nodejs_interpreter_path": "node",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "Errors",
+    "ts.external.directory.path": "/home/art/App/WebStorm-222.3739.57/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src/components/Editor/RenderView/NeonText" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -64,7 +70,7 @@
       <recent name="$PROJECT_DIR$/src/components/Editor/reducer/actions/actionClasses" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.build">
+  <component name="RunManager" selected="npm.npm start">
     <configuration name="Debug Application" type="JavascriptDebugType" uri="http://localhost:3000">
       <method v="2" />
     </configuration>
@@ -153,7 +159,7 @@
       <workItem from="1683196178861" duration="1860000" />
       <workItem from="1683209808796" duration="12901000" />
       <workItem from="1683313112384" duration="3823000" />
-      <workItem from="1683361208300" duration="1925000" />
+      <workItem from="1683361208300" duration="10274000" />
     </task>
     <servers />
   </component>

@@ -59,7 +59,7 @@ const NeonText = forwardRef(({ parentElement }, ref) => {
 
       return elements;
     });
-  }, [state.TextActions.value, neonFontSize]);
+  }, [state.TextActions.value, neonFontSize, createTextElement, createEmptyLineElement, createElementsForEmptyLines]);
 
   const handleResize = (entries) => {
     const parentWidth = parentElement.current.getBoundingClientRect().width;
@@ -87,7 +87,7 @@ const NeonText = forwardRef(({ parentElement }, ref) => {
     return () => {
       observer.disconnect();
     };
-  }, [parentElement, state.TextActions.value, neonFontSize, textChanged, prevTextLength]);
+  }, [parentElement, state.TextActions.value, neonFontSize, textChanged, prevTextLength, handleResize]);
 
   return (
     <div ref={element} className="neon-text absolute top-12">
@@ -96,5 +96,7 @@ const NeonText = forwardRef(({ parentElement }, ref) => {
     </div>
   );
 });
+
+NeonText.displayName = 'NeonText';
 
 export default NeonText;

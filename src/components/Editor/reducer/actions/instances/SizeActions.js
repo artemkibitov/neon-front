@@ -8,9 +8,9 @@ class SizeActions extends AbstractActions {
   _textActions;
 
   selected = null;
-  option = null;
+  option = {};
 
-  constructor(container, sizeFactory, textActions) {
+  constructor({ container, sizeFactory, textActions }) {
     super('SizeActions');
 
     this.container = container;
@@ -59,14 +59,16 @@ class SizeActions extends AbstractActions {
   }
 
   _createSizeOptions() {
-    const text = this.container.hasTextActions() ? this.container.getTextActions().getValue() : '';
+    console.log(this);
+    // const text = this.container.hasTextActions() ? this.container.getTextActions().getValue() : '';
+    this.setOption(this._sizeFactory.createDefaultValue());
 
-    this.setOption(this._sizeFactory.createDefaultValue(text))
-
+    console.log(this.getOption());
     return this;
   }
 
   _selectOption(key = 'm') {
+    console.log(this);
     if (!Object.hasOwn(this.getOption(), key)) throw new TypeError(`variants is not has key: ${key}`);
 
     this.setSelected(this.getOption()[key]);

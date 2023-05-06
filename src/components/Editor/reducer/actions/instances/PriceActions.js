@@ -5,7 +5,7 @@ class PriceActions extends AbstractActions {
   _textActions;
   _sizeFactory;
 
-  constructor(sizeActions, textActions) {
+  constructor({ sizeActions, textActions }) {
     super('PriceActions');
 
     this._sizeActions = sizeActions;

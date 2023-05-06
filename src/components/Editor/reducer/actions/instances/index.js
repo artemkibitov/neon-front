@@ -11,13 +11,17 @@ const createActions = () => {
   actionContainer.addAction("TextActions", TextActions);
 
   actionContainer.addAction("SizeFactory", SizeFactory);
+
   actionContainer.addAction(
     "SizeActions",
     SizeActions,
-    ["SizeFactory", "TextActions"]
+    {
+      sizeFactory: "SizeFactory",
+      textActions: "TextActions"
+    }
   );
 
-  actionContainer.addAction("PriceActions", PriceActions, ["SizeActions"]);
+  actionContainer.addAction("PriceActions", PriceActions, { sizeActions: "SizeActions" });
 
   actionContainer.initActions();
 
