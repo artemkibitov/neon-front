@@ -1,5 +1,5 @@
 'use strict';
-import TextActions from "@/components/Editor/reducer/actions/instances/TextActions";
+import TextActions from "@/components/Editor/reducer/actions/instances/Text/TextActions";
 import SizeActions from "@/components/Editor/reducer/actions/instances/SizeActions";
 import SizeFactory from "@/components/Editor/reducer/actions/instances/SizeFactory";
 import PriceActions from "@/components/Editor/reducer/actions/instances/PriceActions";

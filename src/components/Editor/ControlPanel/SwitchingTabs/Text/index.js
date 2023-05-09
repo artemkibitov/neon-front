@@ -11,15 +11,24 @@ const Text = () => {
 
   const resetPlaceholder = () => setAreaPlaceholder('');
 
+  const processText = (text) => {
+    const lines = text.split('\n').map(line => line.trim());
+    const processedLines = lines.map(line => line.replace(/\s{2,}/g, ' '));
+
+    return processedLines.join('\n');
+  };
+
   const changeText = (e) => {
     const { value } = e.target;
+    const processedText = processText(value);
 
     dispatch({
       type: "TextActions_changeValue",
-      value,
+      value: processedText,
     });
 
     dispatch({ type: "SizeActions_calculateSizeState" });
+    dispatch({ type: "PriceActions_textCost"});
 
     if (isFirstInput) {
       setIsFirstInput(false);
@@ -38,8 +47,6 @@ const Text = () => {
         id="neon-text-input"
         cols="30"
         rows="10"
-        value={isFirstInput ? '' : state.TextActions.value}
-
       />
     </div>
   );

@@ -21,6 +21,7 @@ const HorizontalLine = forwardRef(({ neonLength }, ref) => {
   );
 });
 
+
 const VerticalLine = forwardRef(({ averageVerticalPosition, neonHeight }, ref) => {
   const bgColor = 'bg-slate-300';
   const hLineCss = `h-line w-1 ${bgColor}`;
@@ -60,4 +61,8 @@ const VerticalLine = forwardRef(({ averageVerticalPosition, neonHeight }, ref) =
     </div>
   );
 });
+
+HorizontalLine.displayName = 'HorizontalLine';
+VerticalLine.displayName = 'VerticalLine';
+
 export { HorizontalLine, VerticalLine };
