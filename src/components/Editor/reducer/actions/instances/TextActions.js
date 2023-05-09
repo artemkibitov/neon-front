@@ -4,6 +4,11 @@ import AbstractActions from "@/components/Editor/reducer/actions/instances/Abstr
 class TextActions extends AbstractActions {
   value = 'твій надпис';
   position = 'left';
+  // charState = {
+  //   chars: 0,
+  //   spaces: 0,
+  //   newLines: 0,
+  // };
 
   constructor() {
     super('TextActions');
@@ -32,6 +37,35 @@ class TextActions extends AbstractActions {
       }
     );
   }
+
+  // setCharState({chars, spaces, newLines}) {
+  //
+  // }
+  //
+  // setCharStateChars(value) {
+  //   this.charState.chars = value || this.charState.chars;
+  //
+  //   return this;
+  // }
+  //
+  // setCharStateSpaces(value) {
+  //
+  // }
+  //
+  // countChars() {
+  //   const matches = this.value.match(/\S/g);
+  //   return matches ? matches.length : 0;
+  // }
+  //
+  // countSpaces() {
+  //   const matches = this.value.match(/ /g);
+  //   return matches ? matches.length : 0;
+  // }
+  //
+  // countNewLines() {
+  //   const matches = this.value.match(/\n/g);
+  //   return matches ? matches.length : 0;
+  // }
 
   initialState() {
     const [value, position] = [this.value, this.position]

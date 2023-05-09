@@ -16,12 +16,15 @@ const createActions = () => {
     "SizeActions",
     SizeActions,
     {
+      textActions: "TextActions",
       sizeFactory: "SizeFactory",
-      textActions: "TextActions"
     }
   );
 
-  actionContainer.addAction("PriceActions", PriceActions, { sizeActions: "SizeActions" });
+  actionContainer.addAction("PriceActions", PriceActions, {
+    sizeActions: "SizeActions",
+    textActions: "TextActions",
+  });
 
   actionContainer.initActions();
 

@@ -1,7 +1,4 @@
 'use strict';
-import TextActions from "@/components/Editor/reducer/actions/instances/TextActions";
-import SizeActions from "@/components/Editor/reducer/actions/instances/SizeActions";
-import actions from "@/components/Editor/reducer/actions/instances";
 import actionContainer from "@/components/Editor/reducer/actions/instances";
 
 const initialState = {

@@ -13,8 +13,18 @@ const ControlPanel = () => {
   const [activeTab, setActiveTab] = useState('text');
 
   const renderActiveComponent = () => {
-    const activeComp = components.find((comp) => comp.name === activeTab);
-    return activeComp ? activeComp.component : null;
+    return components.map((comp) => {
+      const isActive = activeTab === comp.name;
+      return (
+        <div
+          key={comp.name}
+          style={{ display: isActive ? "block" : "none" }}
+          className={'w-full'}
+        >
+          {comp.component}
+        </div>
+      );
+    });
   };
 
   return (

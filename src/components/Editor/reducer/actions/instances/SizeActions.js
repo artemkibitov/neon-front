@@ -1,8 +1,8 @@
 'use strict';
 import AbstractActions from "@/components/Editor/reducer/actions/instances/AbstractActions";
-import SizeFactory from "@/components/Editor/reducer/actions/instances/SizeFactory";
 
 class SizeActions extends AbstractActions {
+  _container;
   _sizeFactory;
   _priceActions;
   _textActions;
@@ -10,12 +10,13 @@ class SizeActions extends AbstractActions {
   selected = null;
   option = {};
 
-  constructor({ container, sizeFactory, textActions }) {
+  constructor({ container, sizeFactory, textActions, priceActions }) {
     super('SizeActions');
 
-    this.container = container;
+    this._container = container;
     this._sizeFactory = sizeFactory;
     this._textActions = textActions;
+    this._priceActions = priceActions;
   }
 
   selectSize(state, { type, key }) {
@@ -28,6 +29,16 @@ class SizeActions extends AbstractActions {
 
   calculateSizeState(state) {
     this._calculateSize();
+
+    if (!this._container.hasPriceActions()) {
+      return this._updateSizeState(state, { option: this.option });
+    }
+
+    const priceActions = this._container.getPriceActions();
+
+    for (const key in this.getOption()) {
+      priceActions.sizeTotal(this.getOption(key));
+    }
 
     return this._updateSizeState(state, { option: this.option });
   }
@@ -67,6 +78,7 @@ class SizeActions extends AbstractActions {
   }
 
   _calculateSize() {
+    try {
     const text = this._textActions.getValue();
     const lines = text.split('\n');
     const maxLineLength = lines.reduce((maxLength, line) => Math.max(maxLength, line.length), 0);
@@ -80,7 +92,10 @@ class SizeActions extends AbstractActions {
 
       this.writeOption(key, option);
     }
-
+    } catch (e) {
+      console.error('pizdec');
+      throw new Error(e);
+    }
     return this;
   }
 
@@ -89,6 +104,7 @@ class SizeActions extends AbstractActions {
   }
 
   _createSizeOptions() {
+    console.log(this);
     this.setOption(this._sizeFactory.createDefaultValue(this._textActions.getValue()));
 
     return this;
