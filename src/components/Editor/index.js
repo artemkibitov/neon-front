@@ -1,6 +1,6 @@
 'use strict';
 
-import React, {useReducer} from "react";
+import React, { useReducer } from "react";
 import editorReducer from "@/components/Editor/reducer";
 import EditorContext from "@/components/Editor/editorContext";
 import useWindowWidth from "@/components/Editor/useWindowWidth";
@@ -14,12 +14,11 @@ const Editor = () => {
   const isMobile = windowWidth < 768;
 
   return (
-    <EditorContext.Provider value={{state, dispatch}}>
-
+    <EditorContext.Provider value={{ state, dispatch }}>
       {isMobile ? <MobileStructure/> : <DekstopStructure/>}
-
     </EditorContext.Provider>
   )
 };
+
 
 export default Editor;

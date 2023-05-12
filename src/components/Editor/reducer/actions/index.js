@@ -1,22 +1,27 @@
 'use strict';
-import actionContainer from "./instances";
+import TextActions from "@/components/Editor/reducer/actions/Editor/Text/TextActions";
+import SizeActions from "@/components/Editor/reducer/actions/Editor/Size/SizeActions";
+import Container from "@/components/Editor/reducer/actions/Container";
+import { Text as TextModel } from "@/components/Editor/reducer/actions/Editor/Text/Model/Text";
+import { Size as SizeModel } from "@/components/Editor/reducer/actions/Editor/Size/Model/Size";
+import createOptionsFactory from "@/components/Editor/reducer/actions/Editor/SignOptions/OptionsFactory";
+import sizeOptionFactory from "@/components/Editor/reducer/actions/Editor/SignOptions/sizeOptionFactory";
+import { sizeOptionsData } from "@/components/Editor/reducer/actions/Editor/SignOptions/data";
+import OptionsFactory from "@/components/Editor/reducer/actions/Editor/SignOptions/OptionsFactory";
 
-const createActionHandler = (actionType) => {
-  const [category, method] = actionType.split('_');
-  const actionInstance = actionContainer.getAction(category);
+const createActions = () => {
+  const actionContainer = new Container();
 
-  if (actionInstance && typeof actionInstance[method] === 'function') {
-    return (state, action) => actionInstance[method](state, action, actionContainer);
-  }
+  actionContainer
+    .add("TextActions", TextActions, TextModel)
+    .add("SizeActions", SizeActions, SizeModel,
+      { textActions: "TextActions", optionFactory: OptionsFactory }
+    )
+    .init();
 
-  return null;
-}
+  return actionContainer;
+};
 
-const actionProxy = new Proxy(
-  actionContainer,
-  {
-    get: (_, actionType) => createActionHandler(actionType),
-  }
-);
+const actionContainer = createActions();
 
-export default actionProxy;
+export default actionContainer;

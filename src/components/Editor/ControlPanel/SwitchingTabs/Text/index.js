@@ -23,14 +23,17 @@ const Text = () => {
     const processedText = processText(value);
 
     dispatch({
-      type: "TextActions_changeValue",
-      value: processedText,
+      type: 'TextActions',
+      method: 'setValue',
+      payload: { processedText },
     });
 
-    dispatch({ type: "SizeActions_calculateSizeState" });
-    dispatch({ type: "PriceActions_textCost"});
+    dispatch({
+      type: 'SizeActions',
+      method: 'calculate',
+    });
 
-    if (isFirstInput) {
+    if (isFirstInput && !value.length) {
       setIsFirstInput(false);
     }
   };

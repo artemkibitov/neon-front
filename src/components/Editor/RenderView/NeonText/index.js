@@ -6,7 +6,7 @@ const NeonText = ({ parentElement }) => {
   const { state } = useContext(EditorContext);
   const element = useRef();
   const [neonFontSize, setNeonFontSize] = useState(65);
-  const [prevTextLength, setPrevTextLength] = useState(state.TextActions.value.length);
+  const [prevTextLength, setPrevTextLength] = useState(state.TextModel.value.length);
   const [textChanged, setTextChanged] = useState(false);
   const whiteSpace = 'pre-wrap';
 
@@ -43,7 +43,7 @@ const NeonText = ({ parentElement }) => {
   };
 
   const formattedText = useMemo(() => {
-    const lines = state.TextActions.value.split('\n');
+    const lines = state.TextModel.value.split('\n');
 
     return lines.flatMap((line, i, arr) => {
       const hasText = line.length > 0;
@@ -58,7 +58,7 @@ const NeonText = ({ parentElement }) => {
 
       return elements;
     });
-  }, [state.TextActions.value, neonFontSize]);
+  }, [state.TextModel.value, neonFontSize]);
 
   const handleResize = (entries) => {
     const parentWidth = parentElement.current.getBoundingClientRect().width;
@@ -77,7 +77,7 @@ const NeonText = ({ parentElement }) => {
     const observer = new ResizeObserver(handleResize);
     observer.observe(element.current);
 
-    const currentTextLength = state.TextActions.value.length;
+    const currentTextLength = state.TextModel.value.length;
 
     if (currentTextLength !== prevTextLength) {
       setTextChanged(currentTextLength > prevTextLength);
@@ -87,7 +87,7 @@ const NeonText = ({ parentElement }) => {
     return () => {
       observer.disconnect();
     };
-  }, [parentElement, state.TextActions.value, neonFontSize, textChanged, prevTextLength]);
+  }, [parentElement, state.TextModel.value, neonFontSize, textChanged, prevTextLength]);
 
   return (
     <div ref={element} className="neon-text absolute top-12">

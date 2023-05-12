@@ -1,16 +1,27 @@
 'use strict';
-import actionProxy from './actions';
+import initialState from "@/components/Editor/reducer/state";
+import actionContainer from "@/components/Editor/reducer/actions";
 
-const editorReducer = (state, action) => {
-  if (typeof actionProxy[action.type] === 'function') {
+const editorReducer = (state = initialState, action) => {
+  const modelName = action.type.replace("Actions", "Model");
+  const actionInstance = actionContainer.getAction(action.type);
+
+  if (!action.payload) action.payload = {};
+
+  if (actionInstance && typeof actionInstance[action.method] === 'function') {
     try {
-      return actionProxy[action.type](state, action);
+      const newState = actionInstance[action.method](...Object.values(action.payload));
+      return {
+        ...state,
+        [modelName]: newState,
+      };
     } catch (e) {
-      throw new Error(e)
+      throw new Error(e);
     }
   }
 
   return state;
 };
+
 
 export default editorReducer;
