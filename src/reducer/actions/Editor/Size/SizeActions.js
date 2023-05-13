@@ -1,5 +1,5 @@
 'use strict';
-import Actions from "@/components/Editor/reducer/actions/Actions";
+import Actions from "@/reducer/actions/Actions";
 
 class SizeActions extends Actions {
   _textActions = null;
@@ -34,22 +34,36 @@ class SizeActions extends Actions {
     return this.initialState();
   }
 
-  calculate() {
-    const textModel = this._textActions.initialState();
-    const sizeModel = this.initialState();
+  // calculate() {
+  //   const textModel = this._textActions.initialState();
+  //   const sizeModel = this.initialState();
+  //
+  //   const lines = textModel.getLines();
+  //   const maxLineLength = textModel.getMaxLineLength();
+  //
+  //   const emptyLines = textModel.getEmptyLines();
+  //   const nonEmptyLines = textModel.getNonEmptyLines();
+  //
+  //   sizeModel.getOption().forEach(value => {
+  //     const { width, height, space, lineSpace } = value;
+  //
+  //     let totalHeight = 0;
+  //
+  //     const nonEmptyLineHeight = nonEmptyLines > 1 ?
+  //       nonEmptyLines * height + (nonEmptyLines - 1) * lineSpace :
+  //       nonEmptyLines * height;
+  //
+  //     const emptyLineHeight = (emptyLines > 0) ? emptyLines * lineSpace : 0;
+  //
+  //     totalHeight = nonEmptyLineHeight + emptyLineHeight;
+  //
+  //     value.totalSize.width = Math.floor(maxLineLength * width + maxLineLength * space);
+  //     value.totalSize.height = totalHeight < 0 ? 0 : totalHeight;
+  //   });
+  //
+  //   return this.initialState();
+  // }
 
-    const lines = textModel.getLines() > 1 ? textModel.getLines() : 1;
-    const maxLineLength = textModel.getMaxLineLength();
-
-    sizeModel.getOption().forEach(value => {
-      const { width, height, space, lineSpace } = value;
-
-      value.totalSize.width = Math.floor(maxLineLength * width + maxLineLength * space);
-      value.totalSize.height = Math.floor(lines * height + (lines - 1) * lineSpace);
-    });
-
-    return this.initialState();
-  }
 
   //
   // _updateSizeState(state, updates) {

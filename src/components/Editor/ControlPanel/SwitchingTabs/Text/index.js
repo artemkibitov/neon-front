@@ -29,7 +29,7 @@ const Text = () => {
     });
 
     dispatch({
-      type: 'SizeActions',
+      type: 'SignActions',
       method: 'calculate',
     });
 

@@ -1,4 +1,4 @@
-import Model from "@/components/Editor/reducer/actions/Model";
+import Model from "@/reducer/actions/Model";
 
 export class Size extends Model {
   option = null;

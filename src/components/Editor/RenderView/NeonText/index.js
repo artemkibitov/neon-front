@@ -2,7 +2,7 @@ import React, { forwardRef, useContext, useEffect, useMemo, useRef, useState } f
 import EditorContext from "@/components/Editor/editorContext";
 import NeonLines from "@/components/Editor/RenderView/NeonLines/index";
 
-const NeonText = ({ parentElement }) => {
+const NeonText = forwardRef(({ parentElement }, ref) => {
   const { state } = useContext(EditorContext);
   const element = useRef();
   const [neonFontSize, setNeonFontSize] = useState(65);
@@ -43,7 +43,7 @@ const NeonText = ({ parentElement }) => {
   };
 
   const formattedText = useMemo(() => {
-    const lines = state.TextModel.value.split('\n');
+    const lines = state.TextModel.getOriginal().split('\n');
 
     return lines.flatMap((line, i, arr) => {
       const hasText = line.length > 0;
@@ -58,7 +58,7 @@ const NeonText = ({ parentElement }) => {
 
       return elements;
     });
-  }, [state.TextModel.value, neonFontSize]);
+  }, [state.TextModel.original, neonFontSize]);
 
   const handleResize = (entries) => {
     const parentWidth = parentElement.current.getBoundingClientRect().width;
@@ -95,6 +95,10 @@ const NeonText = ({ parentElement }) => {
       <NeonLines neonTextRef={element} />
     </div>
   );
-};
+});
 
-export default NeonText;
+NeonText.displayName = 'NeonText';
+
+const ForwardedNeonText = forwardRef((props, ref) => <NeonText {...props} ref={ref} />);
+ForwardedNeonText.displayName = 'ForwardedNeonText';
+export default ForwardedNeonText;

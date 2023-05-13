@@ -1,12 +1,12 @@
 'use strict';
 
 import React, { useReducer } from "react";
-import editorReducer from "@/components/Editor/reducer";
+import editorReducer from "@/reducer";
 import EditorContext from "@/components/Editor/editorContext";
 import useWindowWidth from "@/components/Editor/useWindowWidth";
 import DekstopStructure from "@/components/Editor/DekstopStructure";
 import MobileStructure from "@/components/Editor/MobileStructure";
-import initialState from "@/components/Editor/reducer/state";
+import initialState from "@/reducer/state";
 
 const Editor = () => {
   const [state, dispatch] = useReducer(editorReducer, initialState, () => initialState);

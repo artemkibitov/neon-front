@@ -1,4 +1,4 @@
-import { createProxyHandler } from "@/components/Editor/reducer/util";
+import { createProxyHandler } from "@/reducer/util";
 
 export default class Model {
   constructor() {

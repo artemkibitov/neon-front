@@ -1,6 +1,6 @@
 'use strict';
-import initialState from "@/components/Editor/reducer/state";
-import actionContainer from "@/components/Editor/reducer/actions";
+import initialState from "@/reducer/state";
+import actionContainer from "@/reducer/actions";
 
 const editorReducer = (state = initialState, action) => {
   const modelName = action.type.replace("Actions", "Model");

@@ -1,4 +1,4 @@
-import { allKeys } from "@/components/Editor/reducer/actions/Editor/SignOptions/data";
+import { allKeys } from "@/reducer/actions/Editor/Sign/data";
 
 const createOptionsFactory = (allKeys) => {
   return (optionsData) => {

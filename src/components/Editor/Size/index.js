@@ -4,19 +4,20 @@ import EditorContext from "@/components/Editor/editorContext";
 
 const Size = () => {
   const { state, dispatch } = useContext(EditorContext)
-  const { SizeModel } = state;
+  const { SignModel } = state;
 
   const selectOption = (key) => {
     dispatch({
-      type: 'SizeActions',
+      type: 'SignActions',
       method: 'selectOption',
       payload: { key },
     });
   }
+
   return (
     <section>
       {
-        Array.from(SizeModel.getOption()).map(([key, option]) => (
+        Array.from(SignModel.getSizeOption()).map(([key, option]) => (
           <div key={key} onClick={() => selectOption(key)}>
             {option.name}
           </div>
