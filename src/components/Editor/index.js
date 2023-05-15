@@ -15,8 +15,9 @@ const Editor = () => {
 
   return (
     <EditorContext.Provider value={{ state, dispatch }}>
-      {isMobile ? <MobileStructure/> : <DekstopStructure/>}
+        {isMobile ? <MobileStructure/> : <DekstopStructure/>}
     </EditorContext.Provider>
+
   )
 };
 

@@ -6,7 +6,7 @@ import { Text as TextModel } from "@/reducer/actions/Editor/Text/Model/Text";
 import { Sign as SignModel } from "@/reducer/actions/Editor/Sign/Model/Sign";
 import createOptionsFactory from "@/reducer/actions/Editor/Sign/Factory/OptionsFactory";
 import sizeOptionFactory from "@/reducer/actions/Editor/SignOptions/sizeOptionFactory";
-import { sizeOptionsData } from "@/reducer/actions/Editor/Sign/data";
+import { sizeOptionsData } from "@/reducer/actions/Editor/Sign/Data/OptionsData";
 import OptionsFactory from "@/reducer/actions/Editor/Sign/Factory/OptionsFactory";
 import SignActions from "@/reducer/actions/Editor/Sign/SignActions";
 

@@ -7,7 +7,7 @@ const MobileStructure = () => (
   <div className={"flex flex-col mt-8 lg:w-9/12 mx-auto shadow"}>
 
     <ControlPanel/>
-    <RenderView/>
+    <RenderView isMobile={true}/>
     <Size />
   </div>
 );

@@ -2,10 +2,10 @@ import React, { forwardRef, useContext, useEffect, useMemo, useRef, useState } f
 import EditorContext from "@/components/Editor/editorContext";
 import NeonLines from "@/components/Editor/RenderView/NeonLines/index";
 
-const NeonText = forwardRef(({ parentElement }, ref) => {
+const NeonText = forwardRef(({ parentElement, isMobile }, ref) => {
   const { state } = useContext(EditorContext);
   const element = useRef();
-  const [neonFontSize, setNeonFontSize] = useState(65);
+  const [neonFontSize, setNeonFontSize] = useState(isMobile ? 40 : 65);
   const [prevTextLength, setPrevTextLength] = useState(state.TextModel.value.length);
   const [textChanged, setTextChanged] = useState(false);
   const whiteSpace = 'pre-wrap';

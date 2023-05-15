@@ -13,9 +13,9 @@ class SignActions extends Actions {
     const sizeOption = this._optionFactory(sizeOptionData);
     const priceOption = this._optionFactory(priceOptionData);
 
-    signModel.setSizeOption(sizeOption);
-    signModel.setPriceOption(priceOption);
-    signModel.setSelected(selected);
+    signModel.setSizeOption(sizeOption)
+      .setPriceOption(priceOption)
+      .setSelected(selected);
 
     this.calculate();
 
@@ -23,7 +23,8 @@ class SignActions extends Actions {
   }
 
   calculate() {
-    const size = this.calculateSize();
+    this.calculateSize();
+    this.calculatePrice();
 
     return this.initialState();
   }
@@ -63,8 +64,26 @@ class SignActions extends Actions {
 
   calculatePrice() {
     const textModel = this._textActions.initialState();
+    const priceOption = this.initialState().getPriceOption();
 
+    const char = textModel.getChars();
+    const spaces = textModel.getSpaces();
+    const emptyLines = textModel.getEmptyLines();
+    const nonEmptyLines = textModel.getNonEmptyLines() - 1;
 
+    priceOption.forEach(value => {
+      const { cost, space, lineSpace } = value;
+
+      const charCost = char * cost;
+      const spaceCost = spaces * (cost / space);
+      const emptyLineCoast = emptyLines * (cost / lineSpace);
+      const nonEmptyLineCoast = nonEmptyLines * (cost / lineSpace);
+      const price = charCost + spaceCost + emptyLineCoast + nonEmptyLineCoast;
+
+      value.price = Math.round(price);
+    });
+
+    return this.initialState();
   }
 }
 

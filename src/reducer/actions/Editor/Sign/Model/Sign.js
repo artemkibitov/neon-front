@@ -4,6 +4,10 @@ export class Sign extends Model {
   sizeOption = null;
   priceOption = null;
   selected = '';
+  waterproof = false;
+  powerAdapter = null;
+  backboardForm = null;
+  backboardColor = null;
 
   getSelectedSizeOption() {
     return this.sizeOption.get(this.selected);

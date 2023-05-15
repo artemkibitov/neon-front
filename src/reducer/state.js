@@ -1,8 +1,7 @@
 'use strict';
 import actionContainer from "@/reducer/actions";
-import sizeOptionsData from "@/reducer/actions/Editor/Size/data";
 import defaultTextData from "@/reducer/actions/Editor/Text/data";
-import { priceOptionsData } from "@/reducer/actions/Editor/Sign/data";
+import { sizeOptionsData, priceOptionsData } from "@/reducer/actions/Editor/Sign/Data/OptionsData";
 
 const initialState = {
   TextModel: actionContainer.getAction("TextActions").init(defaultTextData()),

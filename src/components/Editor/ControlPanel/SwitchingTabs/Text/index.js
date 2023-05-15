@@ -7,7 +7,7 @@ const Text = () => {
   const [areaPlaceholder, setAreaPlaceholder] = useState(
     'Введи свій текст тут\nНатисніть Enter/Return для переходу до нового рядка'
   );
-  const [isFirstInput, setIsFirstInput] = useState(true);
+  const [isFirstInput, setIsFirstInput] = useState(false);
 
   const resetPlaceholder = () => setAreaPlaceholder('');
 
@@ -33,8 +33,14 @@ const Text = () => {
       method: 'calculate',
     });
 
-    if (isFirstInput && !value.length) {
-      setIsFirstInput(false);
+    if (value.length && !isFirstInput) {
+      setIsFirstInput(true);
+
+      dispatch({
+        type: 'TextActions',
+        method: 'firstInput',
+        payload: { value: true }
+      })
     }
   };
 

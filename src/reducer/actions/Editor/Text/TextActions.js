@@ -34,6 +34,12 @@ class TextActions extends Actions {
     return this.initialState();
   }
 
+  firstInput(value = true) {
+    this.initialState().setFirstInput(value);
+
+    return this.initialState();
+  }
+
   init(text = '') {
     this.setValue(text)
 
