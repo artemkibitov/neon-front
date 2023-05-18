@@ -7,15 +7,17 @@ class SignActions extends Actions {
     this._optionFactory = optionFactory;
   }
 
-  init(sizeOptionData, priceOptionData, selected = 'm') {
+  init(sizeOptionData, priceOptionData, powerAdapterData,selected = 'm') {
     const signModel = this.initialState();
 
     const sizeOption = this._optionFactory(sizeOptionData);
     const priceOption = this._optionFactory(priceOptionData);
+    const powerAdapter = this._optionFactory(powerAdapterData);
 
     signModel.setSizeOption(sizeOption)
       .setPriceOption(priceOption)
-      .setSelected(selected);
+      .setSelected(selected)
+      .setPowerAdapter(powerAdapter);
 
     this.calculate();
 
@@ -82,6 +84,12 @@ class SignActions extends Actions {
 
       value.price = Math.round(price);
     });
+
+    return this.initialState();
+  }
+
+  selectWaterproof(value = false) {
+    this.initialState().setWaterproof(value);
 
     return this.initialState();
   }

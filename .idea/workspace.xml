@@ -2,26 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="df16b8f0-32e3-4efb-94c2-8bb40b2a5bc4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/Editor/Size/SizeBtn.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Editor/Size/usePrice.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Editor/Size/useSizeOptions.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Editor/PowerAdapter/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Editor/Waterproof/WaterProofBtn.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Editor/Waterproof/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/SelectButton/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Editor/ControlPanel/SwitchingTabs/Text/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Editor/ControlPanel/SwitchingTabs/Text/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Editor/DekstopStructure.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Editor/DekstopStructure.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Editor/MobileStructure.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Editor/MobileStructure.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Editor/RenderView/NeonText/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Editor/RenderView/NeonText/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Editor/RenderView/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Editor/RenderView/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Editor/Size/SizeBtn.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Editor/Size/SizeBtn.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Editor/Size/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Editor/Size/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Editor/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Editor/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducer/actions/Editor/Sign/Factory/OptionsFactory.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducer/actions/Editor/Sign/Factory/OptionsFactory.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducer/actions/Editor/Sign/Model/Sign.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducer/actions/Editor/Sign/Model/Sign.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducer/actions/Editor/Sign/Data/OptionsData.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducer/actions/Editor/Sign/Data/OptionsData.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/reducer/actions/Editor/Sign/SignActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducer/actions/Editor/Sign/SignActions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducer/actions/Editor/Sign/data.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducer/actions/Editor/Sign/Data/OptionsData.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducer/actions/Editor/Size/data.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducer/actions/Editor/Size/data.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducer/actions/Editor/Text/Model/Text.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducer/actions/Editor/Text/Model/Text.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducer/actions/Editor/Text/TextActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducer/actions/Editor/Text/TextActions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducer/actions/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducer/actions/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/reducer/state.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducer/state.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -39,6 +29,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="reduce-model" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -191,6 +186,9 @@
       <workItem from="1684074706455" duration="4747000" />
       <workItem from="1684097066664" duration="3268000" />
       <workItem from="1684164484987" duration="4762000" />
+      <workItem from="1684333167181" duration="459000" />
+      <workItem from="1684427277712" duration="3159000" />
+      <workItem from="1684450471989" duration="316000" />
     </task>
     <servers />
   </component>

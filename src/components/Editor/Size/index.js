@@ -4,6 +4,7 @@ import SizeBtn from './SizeBtn';
 import useSizeOptions from './useSizeOptions';
 import usePrice from './usePrice';
 import EditorContext from "@/components/Editor/editorContext";
+import ButtonWrapper from "@/components/SelectButton";
 
 const Size = () => {
   const { state, dispatch } = useContext(EditorContext);
@@ -25,18 +26,19 @@ const Size = () => {
       <p className={'font-bold text-gray-700'}>Виберіть свої варіанти</p>
       <div className="flex flex-wrap">
         {sizeOptions.map(([key, option], index) => (
-          <div key={key + index}
-               className={`w-1/2 pr-2 pb-2`}
+          <ButtonWrapper
+            key={key + index}
+            className={`w-1/2 pr-2 pb-2`}
+            selected={SignModel.getSelected() === key}
+            onClick={() => selectOption(key)}
           >
             <SizeBtn
-              selected={SignModel.getSelected() === key}
               name={option.name}
               price={getPrice(key)}
               length={option.totalSize.width}
               height={option.totalSize.height}
-              onClick={() => selectOption(key)}
             />
-          </div>
+          </ButtonWrapper>
         ))}
       </div>
       <div className={'flex flex-row text-sm text-gray-600'}>
