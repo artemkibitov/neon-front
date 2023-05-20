@@ -1,6 +1,6 @@
 ﻿'use strict';
 
-import Actions from "@/reducer/actions/Actions";
+import Actions from "@/reducer/Core/Actions/Actions";
 
 class TextActions extends Actions {
   trimLeadingEmptyLines(value) {

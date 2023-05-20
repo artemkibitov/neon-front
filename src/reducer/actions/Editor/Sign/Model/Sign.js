@@ -1,4 +1,4 @@
-import Model from "@/reducer/actions/Model";
+import Model from "@/reducer/Core/Model/Model";
 
 export class Sign extends Model {
   sizeOption = null;

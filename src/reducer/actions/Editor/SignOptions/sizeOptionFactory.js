@@ -1,6 +1,6 @@
 import createOptionsFactory, {
   calculateOptionSize
-} from "@/reducer/actions/Editor/Sign/Factory/OptionsFactory";
+} from "@/reducer/Core/Factory/OptionsFactory";
 
 const sizeOptionFactory = createOptionsFactory(
   ["key", "name", "width", "height", "space", "lineSpace", "totalSize"]

@@ -1,16 +1,3 @@
-const allKeys = [
-  'key',
-  'name',
-  'width',
-  'height',
-  'space',
-  'lineSpace',
-  'totalSize',
-  'cost',
-  'price',
-  'adapter'
-];
-
 const sizeOptionsData = {
   s: { key: "s", name: "міні", width: 5, height: 7, space: 1, lineSpace: 2, totalSize: { width: 0, height: 0 } },
   m: { key: "m", name: "середній", width: 8, height: 15, space: 2, lineSpace: 2.5, totalSize: { width: 0, height: 0 } },
@@ -31,4 +18,4 @@ const powerAdapterData = {
   l: {key: 'l', adapter: 300},
   xl: {key: 'xl', adapter: 400},
 }
-export { allKeys, sizeOptionsData, priceOptionsData, powerAdapterData };
+export { sizeOptionsData, priceOptionsData, powerAdapterData };

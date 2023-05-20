@@ -1,6 +1,6 @@
 import { allKeys } from "@/reducer/actions/Editor/Sign/Data/OptionsData";
 
-const createOptionsFactory = (allKeys) => {
+const OptionsFactory = (allKeys) => {
   return (optionsData) => {
     const optionsMap = new Map();
 
@@ -20,6 +20,5 @@ const createOptionsFactory = (allKeys) => {
   };
 }
 
-const OptionFactory = createOptionsFactory(allKeys);
 
-export default OptionFactory;
+export default OptionsFactory;

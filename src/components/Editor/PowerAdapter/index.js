@@ -12,11 +12,11 @@ const PowerAdapter = () => {
   }
 
   return (
-    <div className={'flex flex-row justify-around items-center mt-4'}>
-      <div>
+    <div className={'flex flex-row justify-between items-center mt-4 mx-2'}>
+      <div className={'text-sm font-bold'}>
         <p>Потужність блоку живлення</p>
       </div>
-      <div className={'bg-gray-100 w-1/3 text-center py-1'}>
+      <div className={'bg-gray-100 w-1/2 text-center py-1'}>
         <p>{selectedAdapter()}W</p>
       </div>
     </div>

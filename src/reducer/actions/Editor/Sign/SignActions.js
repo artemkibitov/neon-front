@@ -1,4 +1,4 @@
-import Actions from "@/reducer/actions/Actions";
+import Actions from "@/reducer/Core/Actions/Actions";
 
 class SignActions extends Actions {
   constructor(signModel, { textActions, optionFactory, container }) {
@@ -7,7 +7,7 @@ class SignActions extends Actions {
     this._optionFactory = optionFactory;
   }
 
-  init(sizeOptionData, priceOptionData, powerAdapterData,selected = 'm') {
+  init(sizeOptionData, priceOptionData, powerAdapterData, selected = 'm') {
     const signModel = this.initialState();
 
     const sizeOption = this._optionFactory(sizeOptionData);
