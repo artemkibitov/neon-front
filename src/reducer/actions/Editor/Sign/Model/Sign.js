@@ -3,8 +3,11 @@ import Model from "@/reducer/Core/Model/Model";
 export class Sign extends Model {
   sizeOption = null;
   priceOption = null;
+  lightOption = null;
   selected = '';
+  selectedLight = '';
   waterproof = false;
+  waterproofPrice = 0;
   powerAdapter = null;
   backboardForm = null;
   backboardColor = null;
@@ -15,5 +18,9 @@ export class Sign extends Model {
 
   getSelectedPriceOption() {
     return this.priceOption.get(this.selected);
+  }
+
+  getSelectedLightOption() {
+    return this.lightOption.get(this.selectedLight);
   }
 }

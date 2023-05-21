@@ -9,11 +9,18 @@ const BackboardColor = ({ BackboardModel, dispatch }) => {
   const selectedBackboardColors = BackboardModel.getSelectedColor();
   const colorBorder = (key) => key === selectedBackboardColors.key ? 'border-pink-300' : 'border-black'
 
-  const selectColor = (key) => dispatch({
-    type: 'BackboardActions',
-    method: 'selectColor',
-    payload: { key }
-  });
+  const selectColor = (key) => {
+    dispatch({
+      type: 'BackboardActions',
+      method: 'selectColor',
+      payload: { key }
+    });
+
+    dispatch({
+      type: 'OrderActions',
+      method: 'calculateTotal',
+    });
+  }
 
   const handleOpenModal = () => {
     setIsModalOpen(true);

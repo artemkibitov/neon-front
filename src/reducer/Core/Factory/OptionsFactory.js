@@ -1,5 +1,3 @@
-import { allKeys } from "@/reducer/actions/Editor/Sign/Data/OptionsData";
-
 const OptionsFactory = (allKeys) => {
   return (optionsData) => {
     const optionsMap = new Map();

@@ -4,9 +4,13 @@ import NeonLines from "@/components/Editor/RenderView/NeonLines/index";
 
 const NeonText = forwardRef(({ parentElement, isMobile }, ref) => {
   const { state } = useContext(EditorContext);
+  const { SignModel } = state;
   const element = useRef();
-  const [neonFontSize, setNeonFontSize] = useState(isMobile ? 40 : 65);
+  const defaultSize = isMobile ?  45 : 65
+  const [neonFontSize, setNeonFontSize] = useState(defaultSize);
+  const [lineHeight, setLineHeight] = useState(100);
   const [prevTextLength, setPrevTextLength] = useState(state.TextModel.value.length);
+  const textLightShadow = SignModel.getSelectedLightOption();
   const [textChanged, setTextChanged] = useState(false);
   const whiteSpace = 'pre-wrap';
 
@@ -14,7 +18,7 @@ const NeonText = forwardRef(({ parentElement, isMobile }, ref) => {
     text: {
       fontSize: neonFontSize,
       whiteSpace,
-      lineHeight: '95%',
+      lineHeight: lineHeight + '%',
     },
     emptyLine: {
       whiteSpace,
@@ -22,8 +26,9 @@ const NeonText = forwardRef(({ parentElement, isMobile }, ref) => {
     },
   };
 
+
   const createTextElement = (key, line) => (
-    <p key={key} style={styles.text} className={'neon-sign'}>{line}</p>
+    <p key={key} style={{ textShadow: textLightShadow.value ,...styles.text }} className={'neon-sign'}>{line}</p>
   );
 
   const createEmptyLineElement = (key) => (
@@ -58,7 +63,7 @@ const NeonText = forwardRef(({ parentElement, isMobile }, ref) => {
 
       return elements;
     });
-  }, [state.TextModel.original, neonFontSize]);
+  }, [state.TextModel.original, neonFontSize, textLightShadow]);
 
   const handleResize = (entries) => {
     const parentWidth = parentElement.current.getBoundingClientRect().width;
@@ -68,9 +73,12 @@ const NeonText = forwardRef(({ parentElement, isMobile }, ref) => {
     const widthRatioPercent = (childWidth / parentWidth) * 100;
     const heightRatioPercent = (childHeight / parentHeight) * 100;
 
-    if (textChanged && (widthRatioPercent >= 65 || heightRatioPercent >= 60) && neonFontSize > 10) {
-      setNeonFontSize(neonFontSize - 5);
+    if (textChanged && (widthRatioPercent >= 68 || heightRatioPercent >= 70) && neonFontSize > 10) {
+      if (neonFontSize < 35 && lineHeight < 120) setLineHeight(120);
+      const index = state.TextModel.chars % 2 === 0 ? 3 : 4
+      setNeonFontSize(neonFontSize - index);
     }
+    if (textChanged && (state.TextModel.chars < 20 && neonFontSize < 25)) setNeonFontSize(defaultSize);
   };
 
   useEffect(() => {
@@ -90,7 +98,7 @@ const NeonText = forwardRef(({ parentElement, isMobile }, ref) => {
   }, [parentElement, state.TextModel.value, neonFontSize, textChanged, prevTextLength]);
 
   return (
-    <div ref={element} className="neon-cyan neon-text text-white absolute top-12">
+    <div ref={element} className="neon-text text-white absolute top-12">
       {formattedText}
       <NeonLines neonTextRef={element} />
     </div>

@@ -1,11 +1,13 @@
 import Actions from "@/reducer/Core/Actions/Actions";
 
 class BackboardActions extends Actions {
-  _optionFactory = null;
+  _optionFactory;
+  _orderActions;
 
-  constructor(backboardModel, { optionFactory, container }) {
+  constructor(backboardModel, { OrderActions, optionFactory, container }) {
     super(backboardModel, container);
     this._optionFactory = optionFactory;
+    this._orderActions = OrderActions;
   }
 
   init(stylesData, colorsData) {

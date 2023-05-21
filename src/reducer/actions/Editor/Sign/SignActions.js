@@ -1,23 +1,34 @@
 import Actions from "@/reducer/Core/Actions/Actions";
 
 class SignActions extends Actions {
-  constructor(signModel, { textActions, optionFactory, container }) {
+  constructor(signModel, { textActions, optionFactory, OrderActions ,container }) {
     super(signModel, container);
     this._textActions = textActions;
     this._optionFactory = optionFactory;
+    this._orderActions = OrderActions;
   }
 
-  init(sizeOptionData, priceOptionData, powerAdapterData, selected = 'm') {
+  init(
+    sizeOptionData,
+    priceOptionData,
+    powerAdapterData,
+    lightOptionData,
+    selected = 'm',
+    selectedLight = 'cyan'
+  ) {
     const signModel = this.initialState();
 
     const sizeOption = this._optionFactory(sizeOptionData);
     const priceOption = this._optionFactory(priceOptionData);
     const powerAdapter = this._optionFactory(powerAdapterData);
+    const lightOption = this._optionFactory(lightOptionData);
 
     signModel.setSizeOption(sizeOption)
       .setPriceOption(priceOption)
       .setSelected(selected)
-      .setPowerAdapter(powerAdapter);
+      .setPowerAdapter(powerAdapter)
+      .setLightOption(lightOption)
+      .setSelectedLight(selectedLight);
 
     this.calculate();
 
@@ -29,6 +40,15 @@ class SignActions extends Actions {
     this.calculatePrice();
 
     return this.initialState();
+  }
+
+  selectLight(key) {
+    const signModel = this.initialState();
+
+    if (signModel.getLightOption().has(key)) signModel.setSelectedLight(key);
+
+    return this.initialState();
+
   }
 
   calculateSize() {
@@ -60,6 +80,8 @@ class SignActions extends Actions {
     const signModel = this.initialState();
 
     if (signModel.getSizeOption().has(key)) signModel.setSelected(key)
+    this.waterproofPrice();
+    this._orderActions.calculateTotal()
 
     return this.initialState();
   }
@@ -85,11 +107,23 @@ class SignActions extends Actions {
       value.price = Math.round(price);
     });
 
+    this.waterproofPrice();
+
+    return this.initialState();
+  }
+
+  waterproofPrice(percent = 20) {
+    const { price } = this.initialState().getSelectedPriceOption();
+
+    this.initialState()
+      .setWaterproofPrice(Math.round(price * percent / 100));
+
     return this.initialState();
   }
 
   selectWaterproof(value = false) {
     this.initialState().setWaterproof(value);
+    this._orderActions.calculateTotal();
 
     return this.initialState();
   }

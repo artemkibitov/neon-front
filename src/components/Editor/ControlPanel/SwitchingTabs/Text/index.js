@@ -33,6 +33,11 @@ const Text = () => {
       method: 'calculate',
     });
 
+    dispatch({
+      type: 'OrderActions',
+      method: 'calculateTotal'
+    });
+
     if (value.length && !isFirstInput) {
       setIsFirstInput(true);
 
@@ -50,7 +55,7 @@ const Text = () => {
         className="resize-none text-center w-full h-full bg-gray-300 rounded-xl px-8 py-8
         scrollbar-thin scrollbar-thumb-gray-300 border border-gray-500 overflow-x-clip overflow-y-auto scrollbar-track-gray-100 text-gray-100"
         name="neon-text"
-        placeholder={isFirstInput ? areaPlaceholder : ''}
+        placeholder={!isFirstInput ? areaPlaceholder : ''}
         onChange={changeText}
         onClick={resetPlaceholder}
         id="neon-text-input"

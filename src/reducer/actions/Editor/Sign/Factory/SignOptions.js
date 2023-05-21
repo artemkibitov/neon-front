@@ -10,7 +10,11 @@ const allKeys = [
   'totalSize',
   'cost',
   'price',
-  'adapter'
+  'adapter',
+  'value',
+  'title',
+  'background',
+  'textColor'
 ];
 
 const SignOptions = OptionsFactory(allKeys);

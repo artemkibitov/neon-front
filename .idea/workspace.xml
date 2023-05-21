@@ -2,18 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="df16b8f0-32e3-4efb-94c2-8bb40b2a5bc4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/reducer/actions/Editor/Order/OrderActions.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/next.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecosystem.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/ecosystem.config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Editor/Backboard/backboardColor.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Editor/Backboard/backboardColor.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Editor/ControlPanel/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Editor/ControlPanel/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Editor/MobileStructure.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Editor/MobileStructure.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Editor/Backboard/backboardStyle.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Editor/Backboard/backboardStyle.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Editor/ControlPanel/SwitchingTabs/Color/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Editor/ControlPanel/SwitchingTabs/Color/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Editor/ControlPanel/SwitchingTabs/Text/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Editor/ControlPanel/SwitchingTabs/Text/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Editor/PriceForm/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Editor/PriceForm/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Editor/RenderView/NeonText/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Editor/RenderView/NeonText/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducer/actions/Editor/Price/Model/Price.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducer/actions/Editor/Order/Model/Order.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducer/actions/Editor/Price/PriceActions.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Editor/Size/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Editor/Size/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Editor/Waterproof/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Editor/Waterproof/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducer/Core/Factory/OptionsFactory.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducer/Core/Factory/OptionsFactory.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducer/actions/Editor/Backboard/BackboardActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducer/actions/Editor/Backboard/BackboardActions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducer/actions/Editor/Order/Model/Order.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducer/actions/Editor/Order/Model/Order.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducer/actions/Editor/Order/OrderActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducer/actions/Editor/Order/OrderActions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducer/actions/Editor/Sign/Data/OptionsData.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducer/actions/Editor/Sign/Data/OptionsData.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducer/actions/Editor/Sign/Factory/SignOptions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducer/actions/Editor/Sign/Factory/SignOptions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducer/actions/Editor/Sign/Model/Sign.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducer/actions/Editor/Sign/Model/Sign.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducer/actions/Editor/Sign/SignActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducer/actions/Editor/Sign/SignActions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducer/actions/Editor/SignOptions/_OptionsFactory.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducer/actions/Editor/SignOptions/sizeOptionFactory.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducer/actions/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducer/actions/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducer/state.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducer/state.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +91,7 @@
       <recent name="$PROJECT_DIR$/src/reducer/actions" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.build">
+  <component name="RunManager" selected="npm.dev (1)">
     <configuration name="Debug Application" type="JavascriptDebugType" uri="http://localhost:3000">
       <method v="2" />
     </configuration>
@@ -126,8 +137,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.build" />
         <item itemvalue="npm.dev (1)" />
+        <item itemvalue="npm.build" />
         <item itemvalue="npm.dev" />
       </list>
     </recent_temporary>
@@ -195,7 +206,8 @@
       <workItem from="1684566746427" duration="13505000" />
       <workItem from="1684594573099" duration="12810000" />
       <workItem from="1684619958707" duration="2809000" />
-      <workItem from="1684652740810" duration="684000" />
+      <workItem from="1684652740810" duration="13808000" />
+      <workItem from="1684680209507" duration="9539000" />
     </task>
     <servers />
   </component>

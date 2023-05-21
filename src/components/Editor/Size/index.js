@@ -23,7 +23,9 @@ const Size = () => {
 
   return (
     <section className={'mt-4 px-2'}>
-      <p className={'font-bold text-gray-700'}>Виберіть свої варіанти</p>
+      <p className={'font-bold text-gray-700'}>
+        Обери свій розмір
+      </p>
       <div className="flex flex-wrap">
         {sizeOptions.map(([key, option], index) => (
           <ButtonWrapper

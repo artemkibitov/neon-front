@@ -7,7 +7,6 @@ import usePrice from "@/components/Editor/Size/usePrice";
 const Waterproof = () => {
   const { state, dispatch } = useContext(EditorContext);
   const { SignModel, TextModel } = state;
-  const getPrice = usePrice(SignModel, TextModel);
 
   const setWaterProof = (value = false) => dispatch({
     type: 'SignActions',
@@ -15,11 +14,6 @@ const Waterproof = () => {
     payload: { value }
   });
 
-  const waterProofCoast = (percent) => {
-    const selectedKey = SignModel.getSelected();
-
-    return (getPrice(selectedKey) * percent) / 100;
-  }
 
   return (
     <section className={'flex flex-col'}>
@@ -39,7 +33,9 @@ const Waterproof = () => {
           <WaterProofBtn
             text={'Водонепроникна технологія IP67*'}
           >
-            <span className={'font-bold pt-1'}>+{waterProofCoast(20)}</span>
+            <span className={'font-bold pt-1'}>
+              + {SignModel.getWaterproofPrice()}
+            </span>
           </WaterProofBtn>
         </ButtonWrapper>
       </div>

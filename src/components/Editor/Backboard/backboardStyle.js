@@ -16,6 +16,11 @@ const BackboardStyle = ({ BackboardModel, dispatch}) => {
       payload: { key }
     });
 
+    dispatch({
+      type: 'OrderActions',
+      method: 'calculateTotal',
+    })
+
     setIsOpen(false);
   };
 
