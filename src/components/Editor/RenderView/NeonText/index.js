@@ -90,7 +90,7 @@ const NeonText = forwardRef(({ parentElement, isMobile }, ref) => {
   }, [parentElement, state.TextModel.value, neonFontSize, textChanged, prevTextLength]);
 
   return (
-    <div ref={element} className="neon-text absolute top-12">
+    <div ref={element} className="neon-cyan neon-text text-white absolute top-12">
       {formattedText}
       <NeonLines neonTextRef={element} />
     </div>

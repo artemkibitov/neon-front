@@ -12,7 +12,7 @@ module.exports = {
         config.optimization.minimizer[terserPluginIndex] = new TerserPlugin({
           terserOptions: {
             compress: {
-              drop_console: false,
+              drop_console: true,
             },
             keep_fnames: true, // Добавьте это свойство, чтобы сохранить имена функций и классов
           },

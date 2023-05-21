@@ -2,34 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="df16b8f0-32e3-4efb-94c2-8bb40b2a5bc4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/Editor/Backboard/backboardColor.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Editor/Backboard/backboardStyle.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Editor/Backboard/priceFormat.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ModalImage/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/reducer/actions/Editor/Backboard/BackboardActions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/reducer/actions/Editor/Backboard/Data/BackboardData.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/reducer/actions/Editor/Backboard/Factory/BackboardOptions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/reducer/actions/Editor/Backboard/Model/Backboard.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/reducer/actions/Editor/Sign/Factory/SignOptions.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/reducer/actions/Editor/Order/OrderActions.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Editor/Backboard/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Editor/Backboard/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/next.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Editor/Backboard/backboardColor.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Editor/Backboard/backboardColor.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Editor/ControlPanel/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Editor/ControlPanel/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Editor/MobileStructure.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Editor/MobileStructure.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Editor/PowerAdapter/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Editor/PowerAdapter/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducer/actions/Actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducer/Core/Actions/Actions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducer/actions/Container.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducer/Core/Container/Container.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducer/actions/Editor/Price/Model/Price.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducer/actions/Editor/Price/Model/Price.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducer/actions/Editor/Sign/Data/OptionsData.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducer/actions/Editor/Sign/Data/OptionsData.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducer/actions/Editor/Sign/Factory/OptionsFactory.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducer/Core/Factory/OptionsFactory.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducer/actions/Editor/Sign/Model/Sign.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducer/actions/Editor/Sign/Model/Sign.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducer/actions/Editor/Sign/SignActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducer/actions/Editor/Sign/SignActions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducer/actions/Editor/SignOptions/sizeOptionFactory.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducer/actions/Editor/SignOptions/sizeOptionFactory.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducer/actions/Editor/Size/Model/Size.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducer/actions/Editor/Size/Model/Size.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducer/actions/Editor/Size/SizeActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducer/actions/Editor/Size/SizeActions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducer/actions/Editor/Text/Model/Text.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducer/actions/Editor/Text/Model/Text.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducer/actions/Editor/Text/TextActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducer/actions/Editor/Text/TextActions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducer/actions/Model.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducer/Core/Model/Model.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducer/actions/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducer/actions/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducer/state.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducer/state.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Editor/PriceForm/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Editor/PriceForm/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Editor/RenderView/NeonText/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Editor/RenderView/NeonText/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducer/actions/Editor/Price/Model/Price.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducer/actions/Editor/Order/Model/Order.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducer/actions/Editor/Price/PriceActions.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/styles/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/main.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -97,7 +80,7 @@
       <recent name="$PROJECT_DIR$/src/reducer/actions" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.npm start">
+  <component name="RunManager" selected="npm.build">
     <configuration name="Debug Application" type="JavascriptDebugType" uri="http://localhost:3000">
       <method v="2" />
     </configuration>
@@ -210,7 +193,9 @@
       <workItem from="1684450471989" duration="1832000" />
       <workItem from="1684533387071" duration="2274000" />
       <workItem from="1684566746427" duration="13505000" />
-      <workItem from="1684594573099" duration="7114000" />
+      <workItem from="1684594573099" duration="12810000" />
+      <workItem from="1684619958707" duration="2809000" />
+      <workItem from="1684652740810" duration="684000" />
     </task>
     <servers />
   </component>

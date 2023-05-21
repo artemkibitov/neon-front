@@ -31,7 +31,7 @@ const ControlPanel = () => {
     <>
       <div className="flex flex-col items-center space-y-4 p-2 lg:w-1/3 shadow">
         <div
-          className="w-full flex flex-1 text-center border rounded-t-lg border-indigo-600"
+          className="w-full flex flex-1 text-center border rounded-t-lg border-blue-800"
         >
           {renderButtons(activeTab, setActiveTab)}
         </div>
@@ -52,7 +52,7 @@ function renderButtons(activeTab, setActiveTab) {
     const buttonClassName = [
       isNotFirst ? '-ml-px' : 'rounded-tl-lg',
       'flex-1 -ml-px px-4 py-2 relative uppercase font-bold',
-      isActiveTab ? 'bg-indigo-500 text-white' : 'text-indigo-700',
+      isActiveTab ? 'bg-blue-600 text-white' : 'text-blue-700',
       activeSwitchTab,
       isNotLast ? '' : 'rounded-tr-lg'
     ].join(' ');
@@ -61,7 +61,7 @@ function renderButtons(activeTab, setActiveTab) {
       <button
         key={index}
         onClick={() => setActiveTab(name)}
-        className={buttonClassName}
+        className={buttonClassName + 'transition-colors duration-500'}
       >
         {label}
       </button>

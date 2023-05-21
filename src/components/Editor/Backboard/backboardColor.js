@@ -23,8 +23,6 @@ const BackboardColor = ({ BackboardModel, dispatch }) => {
     setIsModalOpen(false);
   };
 
-  console.log(selectedBackboardColors);
-
   return (
     <div className={'flex flex-col py-2'}>
       <p className={'font-bold'}>Виберіть колір акрилової дошки</p>
