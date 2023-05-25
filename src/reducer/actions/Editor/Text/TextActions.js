@@ -11,7 +11,7 @@ class TextActions extends Actions {
     return lines.join('\n');
   }
 
-  setValue(value) {
+  setValue(value, hash = '') {
     const textModel = this.initialState();
 
     const trimmedValue = this.trimLeadingEmptyLines(value);
@@ -29,7 +29,8 @@ class TextActions extends Actions {
       .setEmptyLines(emptyLines)
       .setNonEmptyLines(nonEmptyLines)
       .setSpaces(space)
-      .setMaxLineLength(maxLineLength);
+      .setMaxLineLength(maxLineLength)
+  console.log(hash);
 
     return this.initialState();
   }
@@ -42,6 +43,12 @@ class TextActions extends Actions {
 
   init(text = '') {
     this.setValue(text)
+
+    return this.initialState();
+  }
+
+  setRef(ref) {
+    this.initialState().setRef(ref);
 
     return this.initialState();
   }

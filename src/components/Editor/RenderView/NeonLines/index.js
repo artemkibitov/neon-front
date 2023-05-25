@@ -14,19 +14,18 @@ const NeonLines = ({ neonTextRef }) => {
   const averageVerticalPosition = useLineUpdate(neonTextRef, bottomLineRef, rightLineRef);
 
   return (
-      <>
-        <HorizontalLine ref={bottomLineRef} neonLength={width} width left={0} bottom={0} />
-        <VerticalLine
-          ref={rightLineRef}
-          height={height}
-          top={0}
-          right={0}
-          averageVerticalPosition={averageVerticalPosition}
-          neonHeight={height}
-        />
-      </>
+    <>
+      <HorizontalLine ref={bottomLineRef} neonLength={width} width left={0} bottom={0} />
+      <VerticalLine
+        ref={rightLineRef}
+        height={height}
+        top={0}
+        right={0}
+        averageVerticalPosition={averageVerticalPosition}
+        neonHeight={height}
+      />
+    </>
   );
 };
 
 export default NeonLines;
-

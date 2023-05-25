@@ -10,4 +10,5 @@ export class Text extends Model {
   emptyLines = 0;
   nonEmptyLines = 0;
   firstInput = false;
+  ref = null;
 }

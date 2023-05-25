@@ -2,29 +2,38 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="df16b8f0-32e3-4efb-94c2-8bb40b2a5bc4" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/Checkout/Form/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/CheckoutLink/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/MyBtn/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/OrderButton/hook/useOrder.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/OrderButton/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/OrderButton/util/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/TextImageGenerator/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/hooks/useCreateUserHash.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/hooks/usePostApi.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/checkout.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecosystem.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/ecosystem.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Editor/Backboard/backboardColor.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Editor/Backboard/backboardColor.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Editor/Backboard/backboardStyle.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Editor/Backboard/backboardStyle.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Editor/ControlPanel/SwitchingTabs/Color/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Editor/ControlPanel/SwitchingTabs/Color/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Editor/ControlPanel/SwitchingTabs/Text/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Editor/ControlPanel/SwitchingTabs/Text/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/next.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Checkout/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Checkout/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Editor/PriceForm/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Editor/PriceForm/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Editor/RenderView/NeonLines/_index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Editor/RenderView/NeonLines/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Editor/RenderView/NeonLines/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Editor/RenderView/NeonLines/styles.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Editor/RenderView/NeonLines/util/updateLines.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Editor/RenderView/NeonLines/util/updateLines.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Editor/RenderView/NeonText/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Editor/RenderView/NeonText/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Editor/Size/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Editor/Size/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Editor/Waterproof/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Editor/Waterproof/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducer/Core/Factory/OptionsFactory.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducer/Core/Factory/OptionsFactory.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducer/actions/Editor/Backboard/BackboardActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducer/actions/Editor/Backboard/BackboardActions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Editor/RenderView/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Editor/RenderView/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Editor/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Editor/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/_app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/_app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/home.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/reducer/actions/Editor/Order/Model/Order.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducer/actions/Editor/Order/Model/Order.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducer/actions/Editor/Order/OrderActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducer/actions/Editor/Order/OrderActions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducer/actions/Editor/Sign/Data/OptionsData.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducer/actions/Editor/Sign/Data/OptionsData.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducer/actions/Editor/Sign/Factory/SignOptions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducer/actions/Editor/Sign/Factory/SignOptions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducer/actions/Editor/Sign/Model/Sign.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducer/actions/Editor/Sign/Model/Sign.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducer/actions/Editor/Sign/SignActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducer/actions/Editor/Sign/SignActions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducer/actions/Editor/SignOptions/_OptionsFactory.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducer/actions/Editor/SignOptions/sizeOptionFactory.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducer/actions/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducer/actions/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducer/actions/Editor/Text/Model/Text.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducer/actions/Editor/Text/Model/Text.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducer/actions/Editor/Text/TextActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducer/actions/Editor/Text/TextActions.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/reducer/state.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducer/state.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducer/util/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducer/util/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/main.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +52,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="reduce-model" />
+        <entry key="$PROJECT_DIR$" value="checkout" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -62,7 +71,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/art/Code/neon-calc/public&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/art/Code/neon-back&quot;,
     &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
@@ -84,11 +93,11 @@
       <recent name="$PROJECT_DIR$/src/components/Editor/RenderView/NeonText" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components/Editor/RenderView/NeonText/util" />
+      <recent name="$PROJECT_DIR$/src/components/OrderButton/hook" />
+      <recent name="$PROJECT_DIR$/src/components/Checkout/Form" />
       <recent name="$PROJECT_DIR$/src/reducer/Core" />
       <recent name="$PROJECT_DIR$/src/reducer/Core/Container" />
-      <recent name="$PROJECT_DIR$/src/reducer/Core/Model" />
-      <recent name="$PROJECT_DIR$/src/reducer/Core/Actions" />
-      <recent name="$PROJECT_DIR$/src/reducer/actions" />
     </key>
   </component>
   <component name="RunManager" selected="npm.dev (1)">
@@ -139,6 +148,8 @@
       <list>
         <item itemvalue="npm.dev (1)" />
         <item itemvalue="npm.build" />
+        <item itemvalue="npm.dev" />
+        <item itemvalue="npm.dev (1)" />
         <item itemvalue="npm.dev" />
       </list>
     </recent_temporary>
@@ -208,6 +219,14 @@
       <workItem from="1684619958707" duration="2809000" />
       <workItem from="1684652740810" duration="13808000" />
       <workItem from="1684680209507" duration="9539000" />
+      <workItem from="1684737141434" duration="3177000" />
+      <workItem from="1684882927674" duration="1676000" />
+      <workItem from="1684911180779" duration="1328000" />
+      <workItem from="1684920422609" duration="18532000" />
+      <workItem from="1684958122991" duration="8154000" />
+      <workItem from="1684970515362" duration="1483000" />
+      <workItem from="1684994914250" duration="24311000" />
+      <workItem from="1685046366049" duration="611000" />
     </task>
     <servers />
   </component>

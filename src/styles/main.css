@@ -9,11 +9,11 @@
     src: url(./fonts/Neonscript.ttf);
 }
 
-.f-oswald {
+h1, h2, h3, h4, .f-oswald {
     font-family: 'Oswald', sans-serif;
 }
 
-.f-roboto {
+p {
     font-family: 'Roboto', sans-serif;
 }
 

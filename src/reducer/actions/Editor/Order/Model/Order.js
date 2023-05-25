@@ -6,5 +6,6 @@ export class Order extends Model {
   phone = '';
   city = '';
   total = 0;
-  individual = false;
+  custom = false;
+  hash = '';
 }

@@ -66,6 +66,10 @@ const NeonText = forwardRef(({ parentElement, isMobile }, ref) => {
   }, [state.TextModel.original, neonFontSize, textLightShadow]);
 
   const handleResize = (entries) => {
+    if (!parentElement || !parentElement.current) {
+      return;
+    }
+
     const parentWidth = parentElement.current.getBoundingClientRect().width;
     const parentHeight = parentElement.current.getBoundingClientRect().height;
     const childWidth = entries[0]?.contentRect.width || 0;
@@ -98,7 +102,7 @@ const NeonText = forwardRef(({ parentElement, isMobile }, ref) => {
   }, [parentElement, state.TextModel.value, neonFontSize, textChanged, prevTextLength]);
 
   return (
-    <div ref={element} className="neon-text text-white absolute top-12">
+    <div ref={element} className="neon-text text-white absolute top-12 translate-x-16">
       {formattedText}
       <NeonLines neonTextRef={element} />
     </div>

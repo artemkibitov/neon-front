@@ -8,7 +8,9 @@ import {
   lightColorData
 } from "@/reducer/actions/Editor/Sign/Data/OptionsData";
 import {backboardStyle, backboardColor} from "@/reducer/actions/Editor/Backboard/Data/BackboardData";
+import { createUserHash } from "@/reducer/util";
 
+const getUserHash = async () => await createUserHash();
 const initialState = {
   TextModel: actionContainer.getAction("TextActions").init(defaultTextData()),
   SignModel: actionContainer.getAction("SignActions")

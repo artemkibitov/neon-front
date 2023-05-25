@@ -19,7 +19,7 @@ const useLineUpdate = (neonTextRef, bottomLineRef, rightLineRef) => {
     const bottomLineLeft = longestParagraph.offsetLeft;
     const bottomLineWidth = longestParagraph.offsetWidth;
 
-    const rightLineLeft = longestParagraph.offsetLeft + longestParagraph.offsetWidth + 25;
+    const rightLineLeft = longestParagraph.offsetLeft + longestParagraph.offsetWidth + 2;
     const rightLineTop = longestParagraph.offsetTop;
     const rightLineHeight = neonTextElement.offsetHeight;
     const avgVerticalPosition = rightLineTop + rightLineHeight / 2;
