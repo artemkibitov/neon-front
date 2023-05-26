@@ -5,7 +5,6 @@ import EditorContext from "@/components/Editor/editorContext";
 import editorReducer from "@/reducer";
 import initialState from "@/reducer/state";
 import Head from "next/head";
-import useCreateUserHash from "@/components/hooks/useCreateUserHash";
 
 const App = ({ Component, pageProps }) => {
   const [state, dispatch] = useReducer(editorReducer, initialState, () => initialState);

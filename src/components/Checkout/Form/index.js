@@ -8,6 +8,7 @@ const Form = () => {
     lastName: '',
     phone: ''
   });
+
   const [phoneValid, setPhoneValid] = useState(false);
   const [phoneDigits, setPhoneDigits] = useState(false);
 
@@ -17,7 +18,6 @@ const Form = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Действия при отправке формы
     if (isValidPhone)
     console.log(formData);
   };
@@ -35,7 +35,7 @@ const Form = () => {
       <div className={'flex flex-col md:flex-row justify-around'}>
         <div className="mb-4">
           <label htmlFor="name" className="block text-gray-700 text-sm font-bold mb-2">
-            Имя
+            Ім
           </label>
           <input
             type="text"
@@ -44,13 +44,13 @@ const Form = () => {
             value={formData.name}
             onChange={handleChange}
             className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-            placeholder="Введите ваше имя"
+            placeholder="Введите ваше Введіть ваше ім'я"
             required
           />
         </div>
         <div className="mb-4">
           <label htmlFor="lastName" className="block text-gray-700 text-sm font-bold mb-2">
-            Фамилия
+            Прізвище
           </label>
           <input
             type="text"
@@ -59,7 +59,22 @@ const Form = () => {
             value={formData.lastName}
             onChange={handleChange}
             className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-            placeholder="Введите вашу фамилию"
+            placeholder="Введіть ваше прізвище"
+            required
+          />
+        </div>
+        <div className="mb-4">
+          <label htmlFor="lastName" className="block text-gray-700 text-sm font-bold mb-2">
+            Місто
+          </label>
+          <input
+            type="text"
+            id="lastName"
+            name="lastName"
+            value={formData.lastName}
+            onChange={handleChange}
+            className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            placeholder="Введіть ваше місто"
             required
           />
         </div>
@@ -79,7 +94,7 @@ const Form = () => {
             value={formData.phone}
             onChange={handleChange}
             className="appearance-none border rounded-r w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-            placeholder="Введите ваш номер телефона"
+            placeholder="Введіть ваш номер телефону"
             required
           />
         </div>

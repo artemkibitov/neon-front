@@ -3,7 +3,7 @@ const path = require('node:path');
 
 module.exports = (phase, { defaultConfig }) => {
   const isDev = phase === 'phase-development-server';
-  const apiHost = isDev ? process.env.API_HOST : '';
+  const apiHost = isDev ? process.env.API_HOST : '/api';
 
   console.log(apiHost);
   return {

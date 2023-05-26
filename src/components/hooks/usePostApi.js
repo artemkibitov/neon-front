@@ -1,35 +1,31 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
-const usePostApi = (path, data) => {
+const usePostApi = () => {
   const [response, setResponse] = useState(null);
   const [error, setError] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
 
-  useEffect(() => {
-    const fetchData = async () => {
-      setIsLoading(true);
-      try {
-        const res = await fetch(`${path}`, {
-          method: "POST",
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(data),
-        });
-        const json = await res.json();
-        setResponse(json);
-        setIsLoading(false);
-      } catch (err) {
-        setError(err);
-        setIsLoading(false);
-      }
-    };
-    console.log(1);
+  const fetchData = async (path, data) => {
+    path = process.env.API_HOST + path;
+    setIsLoading(true);
+    try {
+      const res = await fetch(path, {
+        method: "POST",
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
+      const json = await res.json();
+      setResponse(json);
+      setIsLoading(false);
+    } catch (err) {
+      setError(err);
+      setIsLoading(false);
+    }
+  };
 
-    fetchData();
-  }, [path, data]);
-
-  return { response, error, isLoading };
+  return { response, error, isLoading, postData: fetchData };
 };
 
 export default usePostApi;

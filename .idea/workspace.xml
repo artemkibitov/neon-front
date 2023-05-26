@@ -2,38 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="df16b8f0-32e3-4efb-94c2-8bb40b2a5bc4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/Checkout/Form/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/CheckoutLink/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/MyBtn/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/OrderButton/hook/useOrder.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/OrderButton/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/OrderButton/util/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/TextImageGenerator/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/hooks/useCreateUserHash.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/hooks/usePostApi.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/checkout.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Checkout/Form/InputField/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/next.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Checkout/Form/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Checkout/Form/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Checkout/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Checkout/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/CheckoutLink/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CheckoutLink/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Editor/PriceForm/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Editor/PriceForm/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Editor/RenderView/NeonLines/_index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Editor/RenderView/NeonLines/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Editor/RenderView/NeonLines/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Editor/RenderView/NeonLines/styles.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Editor/RenderView/NeonLines/util/updateLines.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Editor/RenderView/NeonLines/util/updateLines.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Editor/RenderView/NeonText/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Editor/RenderView/NeonText/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Editor/RenderView/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Editor/RenderView/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Editor/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Editor/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MyBtn/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MyBtn/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/hooks/useCreateUserHash.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/hooks/usePostApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/hooks/usePostApi.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/_app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/_app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/home.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducer/actions/Editor/Order/Model/Order.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducer/actions/Editor/Order/Model/Order.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducer/actions/Editor/Text/Model/Text.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducer/actions/Editor/Text/Model/Text.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducer/actions/Editor/Text/TextActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducer/actions/Editor/Text/TextActions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducer/state.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducer/state.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducer/util/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducer/util/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/main.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -226,7 +205,8 @@
       <workItem from="1684958122991" duration="8154000" />
       <workItem from="1684970515362" duration="1483000" />
       <workItem from="1684994914250" duration="24311000" />
-      <workItem from="1685046366049" duration="611000" />
+      <workItem from="1685046366049" duration="11460000" />
+      <workItem from="1685085304802" duration="2020000" />
     </task>
     <servers />
   </component>

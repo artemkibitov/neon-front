@@ -1,16 +1,16 @@
-import React, { useContext, useState, useEffect } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import EditorContext from "@/components/Editor/editorContext";
-import Link from "next/link";
 import html2canvas from "html2canvas";
 import CheckoutLink from "@/components/CheckoutLink";
+import usePostApi from "@/components/hooks/usePostApi";
 
 const PriceForm = () => {
   const { state } = useContext(EditorContext);
+  const postApi = usePostApi();
   const { OrderModel } = state;
-  const [imageSaved, setImageSaved] = useState(false);
 
-  const handleLinkClick = async (hash) => {
-    const wrapElement = document.getElementById('render')
+  const handleSaveImage = async (hash, router, href) => {
+    const wrapElement = document.getElementById('render');
     const clone = await wrapElement.cloneNode(true);
     clone.style.position = 'absolute';
     clone.style.zIndex = 1;
@@ -20,34 +20,14 @@ const PriceForm = () => {
     clone.querySelector(".bottom-handle")?.remove();
     clone.querySelector(".right-handle")?.remove();
 
-    if (!OrderModel.getHash().length) OrderModel.setHash();
-
-    if (!imageSaved) {
-      html2canvas(clone).then(async canvas => {
-        const img = canvas.toDataURL('image/png', 1.0);
-
-        fetch(process.env.API_HOST + '/api/image/save', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify({
-            data: img,
-            hash,
-          })
-        })
-          .then(res => console.log(res))
-          .catch(e => console.error(e));
-
-        // const image = canvas.toDataURL("image/png");
-        // localStorage.setItem('snapshotImage', image);
-        // setImageSaved(true);
-        // Выполнение перехода по ссылке после сохранения фотографии
-        // window.location.href = '/checkout';
-      });
-    } else {
-      // Если фотография уже сохранена, выполняем переход по ссылке
-      // window.location.href = '/checkout';
+    try {
+    const canvas = await html2canvas(clone);
+    const img = canvas.toDataURL('image/png', 1.0);
+    const path = '/image/save';
+    const payload = { data: img, hash: OrderModel.getHash() };
+     return await postApi.postData(path, payload);
+    } catch (e) {
+      console.log(e);
     }
   };
 
@@ -62,7 +42,7 @@ const PriceForm = () => {
       </div>
 
       <div className={'bg-indigo-600 text-white font-bold text-2xl text-center rounded-md p-4 my-2'}>
-        <CheckoutLink OrderModel={OrderModel} callback={handleLinkClick} href="/checkout">
+        <CheckoutLink href="/checkout" callback={handleSaveImage} OrderModel={OrderModel}>
           <span>Замовити</span>
         </CheckoutLink>
       </div>

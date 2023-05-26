@@ -1,44 +1,37 @@
-import React from 'react';
+import React, { useContext, useEffect } from 'react';
+import usePostApi from "@/components/hooks/usePostApi";
+import EditorContext from "@/components/Editor/editorContext";
 
 const MyButton = () => {
-  const handleClick = async () => {
-    try {
-      // const orderData = {
-      //   name: 'Jon',
-      //   lastname: 'Doe',
-      //   phone_number: '097777777777',
-      //   total: 10000,
-      //   img: 'image_url',
-      //   light_color: 'red',
-      //   size: 'medium',
-      //   width: 10.5,
-      //   height: 20.5,
-      //   waterproof: true,
-      //   backboard_style: 'style1',
-      //   backboard_color: 'black',
-      //   processed: false,
-      //   ip: '127.0.0.1'
-      // };
-      // const request = JSON.stringify(orderData);
-      const response = await fetch('/api/users/hash', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({ data: '' }),
-      });
+  const { state } = useContext(EditorContext);
+  const postApi = usePostApi();
 
-      const data = await response.json();
-      console.log(data);
-    } catch (error) {
-      console.error(error);
-    }
+  const handleClick = async () => {
+    postApi.postData('/image/get', { hash: state.OrderModel.getHash() });
   };
 
-  return <button onClick={handleClick}>Test Request</button>;
+  // Используйте этот эффект для обработки ответа, когда он меняется
+  useEffect(() => {
+    if (postApi.response) {
+      // обработайте ответ здесь
+      console.log('Обработанный ответ:', postApi.response);
+    }
+  }, [postApi.response]);
+
+  return (
+    <div>
+      <button onClick={handleClick}>Test Request</button>
+      {postApi.isLoading ? (
+        <div>Loading...</div>
+      ) : postApi.error ? (
+        <div>Error: {postApi.error.message}</div>
+      ) : postApi.response ? (
+        <div className={'h-24'}>
+          <img src={`data:image/jpeg;base64,${postApi.response}`}/>
+        </div>
+      ) : null}
+    </div>
+  );
 };
 
 export default MyButton;
-
-
-

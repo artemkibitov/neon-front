@@ -1,37 +1,32 @@
-import React, { useContext, useEffect, useState } from "react";
+import { useContext, useEffect } from "react";
 import EditorContext from "@/components/Editor/editorContext";
-import TextImageGenerator from "@/components/TextImageGenerator";
-import html2canvas from "html2canvas";
-import Form from "@/components/Checkout/Form";
 import usePostApi from "@/components/hooks/usePostApi";
+import Form from "@/components/Checkout/Form";
 
 const Checkout = () => {
   const { state } = useContext(EditorContext);
-  const [image, setImage] = useState(null);
-
-  const { response, isLoading } = usePostApi(
-    process.env.API_HOST + "/api/image/get",
-    { hash: state.OrderModel.getHash() }
-  );
+  const postApi = usePostApi();
 
   useEffect(() => {
-    if (response) {
-      setImage(response);
-    }
-    console.log(1);
-
+    postApi.postData('/image/get', { hash: state.OrderModel.getHash() })
   }, []);
 
   return (
     <>
       <Form/>
-      <div className="w-full h-32">
-        {image && (
-          <div
-            className="w-full h-full bg-contain bg-no-repeat bg-center p-40"
-            style={{ backgroundImage: `url(${image})` }}
-          />
-        )}
+      <div className={'pt-2'}>
+        {postApi.isLoading ? (
+          <div>Loading...</div>
+        ) : postApi.error ? (
+          <div>Error: {postApi.error.message}</div>
+        ) : postApi.response ? (
+          <div className={'h-24'}>
+            <div
+              className={'p-40 bg-no-repeat bg-contain bg-center'}
+              style={{ backgroundImage: `url(data:image/png;base64,${postApi.response})` }}
+            />
+          </div>
+        ) : null}
       </div>
     </>
   );
