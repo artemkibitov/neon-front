@@ -3,26 +3,28 @@ import { useEffect } from "react";
 import Link from "next/link";
 import usePostApi from "@/components/hooks/usePostApi";
 
-const CheckoutLink = ({ href, callback, children, OrderModel }) => {
+const CheckoutLink = ({ href, callback, children, OrderModel, isCustom = false }) => {
   const router = useRouter();
   const postApi = usePostApi();
 
   const handleClick = async (e) => {
     e.preventDefault();
-    await postApi.postData('/users/hash', {data: null});
+    await postApi.postData('/users/hash', { data: null });
   }
 
   useEffect(() => {
+    console.log(postApi);
+
     if (postApi.response) {
       const hash = postApi.response;
 
       if (hash && !OrderModel.getHash().length) {
         const setHashAndRedirect = async () => {
           await OrderModel.setHash(hash);
-          if (callback) callback(hash, router, href).then(res => {
-            router.push(href);
-          });
+          OrderModel.setCustom(isCustom);
+          if (callback) callback(hash, router, href).then(() => router.push(href));
         }
+
         setHashAndRedirect();
       }
     }
@@ -30,7 +32,11 @@ const CheckoutLink = ({ href, callback, children, OrderModel }) => {
 
   return (
     <Link href={href} passHref>
-      <p onClick={handleClick}>{children}</p>
+      {
+        postApi.isLoading ?
+          <div className='spinner mx-auto'></div> :
+          <p onClick={handleClick}>{children}</p>
+      }
     </Link>
   )
 };

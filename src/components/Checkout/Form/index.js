@@ -1,122 +1,80 @@
-import { useState, useContext } from "react";
+import React, { useContext } from "react";
 import EditorContext from "@/components/Editor/editorContext";
+import InputField from "./InputField";
+import { useForm } from "react-hook-form";
 
 const Form = () => {
-  const { state, dispatch } = useContext(EditorContext);
-  const [formData, setFormData] = useState({
-    name: '',
-    lastName: '',
-    phone: ''
+  const { state } = useContext(EditorContext);
+  const { OrderModel } = state;
+  const { register, handleSubmit, formState: { errors } } = useForm();
+
+  const textValidation = () => ({
+    required: 'Обов\'язкове поле',
+    pattern: {
+      value: /^[A-Za-zА-Яа-яЁё\s]+$/i,
+      message: 'Не повинен містити цифр або спеціальних символів'
+    }
   });
 
-  const [phoneValid, setPhoneValid] = useState(false);
-  const [phoneDigits, setPhoneDigits] = useState(false);
+  const onSubmit = (data) => {
+    Object.keys(data).forEach(
+      value => OrderModel['set' + value.slice(0, 1).toUpperCase() + value.slice(1)](data[value]),
+    );
 
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (isValidPhone)
-    console.log(formData);
-  };
-
-  const isValidPhone = (phone) => {
-    setPhoneValid(/^0\d{9}$/.test(phone));
-  };
-
-  const hasOnlyDigits = (value) => {
-    setPhoneDigits(/^\d+$/.test(value));
+    console.log(OrderModel.getName());
   };
 
   return (
-    <form onSubmit={handleSubmit} className="m-2">
-      <div className={'flex flex-col md:flex-row justify-around'}>
-        <div className="mb-4">
-          <label htmlFor="name" className="block text-gray-700 text-sm font-bold mb-2">
-            Ім
-          </label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
-            className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-            placeholder="Введите ваше Введіть ваше ім'я"
-            required
-          />
-        </div>
-        <div className="mb-4">
-          <label htmlFor="lastName" className="block text-gray-700 text-sm font-bold mb-2">
-            Прізвище
-          </label>
-          <input
-            type="text"
-            id="lastName"
-            name="lastName"
-            value={formData.lastName}
-            onChange={handleChange}
-            className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-            placeholder="Введіть ваше прізвище"
-            required
-          />
-        </div>
-        <div className="mb-4">
-          <label htmlFor="lastName" className="block text-gray-700 text-sm font-bold mb-2">
-            Місто
-          </label>
-          <input
-            type="text"
-            id="lastName"
-            name="lastName"
-            value={formData.lastName}
-            onChange={handleChange}
-            className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-            placeholder="Введіть ваше місто"
-            required
-          />
-        </div>
-      </div>
-      <div className="mb-4">
-        <label htmlFor="phone" className="block text-gray-700 text-sm font-bold mb-2">
-          Телефон
-        </label>
-        <div className="flex">
-          <div className="flex items-center bg-gray-200 rounded-l px-3">
-            +38
-          </div>
-          <input
-            type="tel"
-            id="phone"
-            name="phone"
-            value={formData.phone}
-            onChange={handleChange}
-            className="appearance-none border rounded-r w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-            placeholder="Введіть ваш номер телефону"
-            required
-          />
-        </div>
-        {formData.phone.length === 10 && !isValidPhone(formData.phone) && (
-          <p className="text-red-500 text-xs italic">Введите корректный номер</p>
-        )}
-        {formData.phone && !hasOnlyDigits(formData.phone) && (
-          <p className="text-red-500 text-xs italic">Номер не должен содержать букв</p>
-        )}
-      </div>
-      <div className={'flex flex-row justify-between my-2 p-2 bg-gray-300'}>
-        <p className={'capitalize'}>сума замовлення:</p>
-        <p className={'font-bold'}>{state.OrderModel.total}</p>
-      </div>
-      <div className="flex justify-center">
-        <button
-          type="submit"
-          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-        >
-          Зробити замовлення
-        </button>
-      </div>
+    <form onSubmit={handleSubmit(onSubmit)} className="m-2">
+      <InputField
+        label="Ім'я"
+        placeholder="Введіть ваше ім'я"
+        fieldName="name"
+        type="text"
+        register={register}
+        validation={textValidation()}
+        error={errors.name}
+      />
+      <InputField
+        label="Прізвище"
+        placeholder="Введіть ваше прізвище"
+        fieldName="lastName"
+        type="text"
+        register={register}
+        validation={textValidation()}
+        error={errors.lastName}
+      />
+      <InputField
+        label="Місто"
+        placeholder="Введіть ваше місто"
+        fieldName="city"
+        type="text"
+        register={register}
+        validation={textValidation()}
+        error={errors.city}
+      />
+      <InputField
+        label="Телефон"
+        placeholder="Введіть ваш номер телефону"
+        fieldName="phone"
+        type="tel"
+        register={register}
+        validation={{
+          required: 'Введіть коректний номер',
+          pattern: {
+            value: /^0\d{9}$/,
+            message: 'Некоректний номер'
+          }
+        }}
+        error={errors.phone}
+      />
+      <button
+        type="submit"
+        className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+      >
+        Зробити замовлення
+      </button>
+      <p>0961133221</p>
     </form>
   );
 };

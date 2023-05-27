@@ -15,18 +15,20 @@ const Checkout = () => {
     <>
       <Form/>
       <div className={'pt-2'}>
-        {postApi.isLoading ? (
-          <div>Loading...</div>
-        ) : postApi.error ? (
-          <div>Error: {postApi.error.message}</div>
-        ) : postApi.response ? (
-          <div className={'h-24'}>
-            <div
-              className={'p-40 bg-no-repeat bg-contain bg-center'}
-              style={{ backgroundImage: `url(data:image/png;base64,${postApi.response})` }}
-            />
-          </div>
-        ) : null}
+        {state.OrderModel.custom ? <div>Круто</div> :
+            postApi.isLoading ? (
+              <div>Loading...</div>
+            ) : postApi.error ? (
+              <div>Error: {postApi.error.message}</div>
+            ) : postApi.response ? (
+              <div className={'h-24'}>
+                <div
+                  className={'p-40 bg-no-repeat bg-contain bg-center'}
+                  style={{ backgroundImage: `url(data:image/png;base64,${postApi.response})` }}
+                />
+              </div>
+            ) : null
+        }
       </div>
     </>
   );

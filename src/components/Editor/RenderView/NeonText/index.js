@@ -6,7 +6,7 @@ const NeonText = forwardRef(({ parentElement, isMobile }, ref) => {
   const { state } = useContext(EditorContext);
   const { SignModel } = state;
   const element = useRef();
-  const defaultSize = isMobile ?  45 : 65
+  const defaultSize = isMobile ?  32 : 50
   const [neonFontSize, setNeonFontSize] = useState(defaultSize);
   const [lineHeight, setLineHeight] = useState(100);
   const [prevTextLength, setPrevTextLength] = useState(state.TextModel.value.length);
@@ -102,7 +102,7 @@ const NeonText = forwardRef(({ parentElement, isMobile }, ref) => {
   }, [parentElement, state.TextModel.value, neonFontSize, textChanged, prevTextLength]);
 
   return (
-    <div ref={element} className="neon-text text-white absolute top-12 translate-x-16">
+    <div ref={element} className="neon-text text-white absolute top-12 translate-x-6 md:translate-x-24 lg:translate-x-12">
       {formattedText}
       <NeonLines neonTextRef={element} />
     </div>

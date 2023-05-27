@@ -8,8 +8,10 @@ const PriceForm = () => {
   const { state } = useContext(EditorContext);
   const postApi = usePostApi();
   const { OrderModel } = state;
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleSaveImage = async (hash, router, href) => {
+    setIsLoading(true)
     const wrapElement = document.getElementById('render');
     const clone = await wrapElement.cloneNode(true);
     clone.style.position = 'absolute';
@@ -21,12 +23,13 @@ const PriceForm = () => {
     clone.querySelector(".right-handle")?.remove();
 
     try {
-    const canvas = await html2canvas(clone);
-    const img = canvas.toDataURL('image/png', 1.0);
-    const path = '/image/save';
-    const payload = { data: img, hash: OrderModel.getHash() };
-     return await postApi.postData(path, payload);
+      const canvas = await html2canvas(clone);
+      const img = canvas.toDataURL('image/jpeg', 1.0);
+      const path = '/image/save';
+      const payload = { data: img, hash: OrderModel.getHash() };
+      return await postApi.postData(path, payload);
     } catch (e) {
+      setIsLoading(false);
       console.log(e);
     }
   };
@@ -42,9 +45,13 @@ const PriceForm = () => {
       </div>
 
       <div className={'bg-indigo-600 text-white font-bold text-2xl text-center rounded-md p-4 my-2'}>
-        <CheckoutLink href="/checkout" callback={handleSaveImage} OrderModel={OrderModel}>
-          <span>Замовити</span>
-        </CheckoutLink>
+        {
+          isLoading ?
+            <div className='spinner mx-auto'></div> :
+            <CheckoutLink href="/checkout" callback={handleSaveImage} OrderModel={OrderModel}>
+              <span>Замовити</span>
+            </CheckoutLink>
+        }
       </div>
     </div>
   )

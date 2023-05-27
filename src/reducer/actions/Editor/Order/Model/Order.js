@@ -7,5 +7,6 @@ export class Order extends Model {
   city = '';
   total = 0;
   custom = false;
+  productImage = null;
   hash = '';
 }
