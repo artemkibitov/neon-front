@@ -14,7 +14,8 @@ const allKeys = [
   'value',
   'title',
   'background',
-  'textColor'
+  'textColor',
+  'textShadow',
 ];
 
 const SignOptions = OptionsFactory(allKeys);

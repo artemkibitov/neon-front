@@ -14,7 +14,7 @@ class SignActions extends Actions {
     powerAdapterData,
     lightOptionData,
     selected = 'm',
-    selectedLight = 'cyan'
+    selectedLight = 'blue'
   ) {
     const signModel = this.initialState();
 
@@ -112,11 +112,13 @@ class SignActions extends Actions {
     return this.initialState();
   }
 
-  waterproofPrice(percent = 20) {
+  waterproofPrice(value = 750) {
     const { price } = this.initialState().getSelectedPriceOption();
 
-    this.initialState()
-      .setWaterproofPrice(Math.round(price * percent / 100));
+    // this.initialState()
+    //   .setWaterproofPrice(Math.round(price * percent / 100));
+
+    this.initialState().setWaterproofPrice(value);
 
     return this.initialState();
   }

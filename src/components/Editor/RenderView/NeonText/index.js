@@ -6,7 +6,7 @@ import TextElements from "@/components/Editor/RenderView/NeonText/TextElement";
 const NeonText = forwardRef(({ parentElement, isMobile }, ref) => {
   const { state } = useContext(EditorContext);
   const { SignModel } = state;
-  const defaultSize = isMobile ? 32 : 50
+  const defaultSize = isMobile ? 42 : 80
   const [neonFontSize, setNeonFontSize] = useState(defaultSize);
   const [lineHeight, setLineHeight] = useState(100);
   const [prevTextLength, setPrevTextLength] = useState(state.TextModel.value.length);
@@ -68,7 +68,7 @@ const NeonText = forwardRef(({ parentElement, isMobile }, ref) => {
   const formattedText = useMemo(() => {
     const lines = state.TextModel.getOriginal().split('\n');
     return <TextElements lines={lines} textLightShadow={textLightShadow} styles={styles}/>;
-  }, [state.TextModel.original, neonFontSize, textLightShadow]);
+  }, [state.TextModel.original, neonFontSize, textLightShadow, SignModel.getSelectedLightOption()]);
 
   return (
     <div ref={element} className="neon-text text-white absolute top-12">

@@ -1,6 +1,7 @@
 'use strict';
 import React, { useContext } from "react";
 import EditorContext from "@/components/Editor/editorContext";
+import SvgLight from "@/components/Editor/ControlPanel/SwitchingTabs/Color/SvgLight";
 
 const Color = () => {
   const { state, dispatch } = useContext(EditorContext);
@@ -13,22 +14,38 @@ const Color = () => {
     method: 'selectLight',
     payload: { key },
   })
-
   return (
-    <div className={'flex flex-row flex-wrap justify-center text-sm text-center font-bold'}>
-      {
-        lightOption.map(([i, { key, background, title, textColor }]) => (
-          <div
-            className={'w-28 h-12 p-1 mx-0.5 rounded-md flex flex-row items-center my-1 justify-center transition-colors duration-300'}
-            key={key}
-            onClick={() => selectColor(key)}
-            style={{
-              backgroundColor: key === selected.key ? 'transparent' : background,
-              boxShadow: key === selected.key ? background + ' 0px 0px 10px' : 'none'
-            }}>
-            <span className={'capitalize ' + (key === selected.key ? 'text-neutral-900' : textColor)}>{title}</span>
+    <div className="flex flex-wrap justify-around bg-slate-800 text-sm p-2 rounded-xl text-center font-bold">
+      {lightOption.map(([i, { key, background, title, value, textShadow }]) => (
+        <div
+          className="flex flex-col items-center justify-center cursor-pointer w-1/4 text-xs rounded-md font-md text-stone-50
+           transition-colors duration-300"
+          key={key}
+          onClick={() => selectColor(key)}
+          style={{
+            // backgroundColor: key === selected.key ? 'transparent' : background,
+            // boxShadow: key === selected.key ? `${background} 0px 0px 10px` : 'none'
+          }}
+        >
+          <SvgLight color={background} shadow={textShadow} isActive={selected.key === key} />
+          <div className="w-full h-12 text-center">
+            <p
+              className="capitalize f-montse pt-4"
+              style={{ fontSize: '10px' }}
+            >
+              {title}
+            </p>
           </div>
-        ))
+        </div>
+      ))}
+      {/* Add empty placeholders to fill the remaining spaces */}
+      {lightOption.length % 4 !== 0 &&
+        Array.from(
+          { length: (4 - (lightOption.length % 4)) },
+          (_, index) => (
+            <div key={`placeholder-${index}`} className="w-1/4"></div>
+          )
+        )
       }
     </div>
   );

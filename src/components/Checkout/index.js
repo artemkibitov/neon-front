@@ -21,14 +21,14 @@ const Checkout = () => {
     if (!sendImageRef.current && !state.OrderModel.getCustom()) {
       sendImageF();
     }
-  }, []);
+  }, [sendImageF, state.OrderModel]);
 
   return (
     <>
       <Form/>
       {state.OrderModel.getCustom() ?
         <div className={'mx-2'}>
-          <p>заповніть, будь ласка, форму, щоб ми знали як до вас звертатися і могли зв'язатися з вами для уточнення
+          <p>заповніть, будь ласка, форму, щоб ми знали як до вас звертатися і могли зв&apos;язатися з вами для уточнення
             деталей</p>
         </div>
         :
