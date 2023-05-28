@@ -12,7 +12,7 @@ const Backboard = () => {
 
   return (
     <>
-      <div className={'mt-4 mx-2'}>
+      <div className={'mt-4 mx-2 text-slate-800'}>
         <BackboardStyle BackboardModel={BackboardModel} dispatch={dispatch}/>
         <BackboardColor BackboardModel={BackboardModel} dispatch={dispatch}/>
       </div>

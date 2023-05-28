@@ -39,10 +39,10 @@ const BackboardStyle = ({ BackboardModel, dispatch}) => {
 
   return (
     <>
-      <p className={'font-bold text-gray-700'}>ОБЕРИ ДОШКУ ДЛЯ НЕОНУ:</p>
+      <p className={'font-bold'}>ОБЕРИ ДОШКУ ДЛЯ НЕОНУ:</p>
       <div ref={dropdownRef} className={'relative'}>
-        <div className={'flex flex-row items-center justify-center bg-gray-100 mx-2 rounded-lg'}>
-          <div className={'flex flex-row items-center justify-center w-1/2'} onClick={toggleOpen}>
+        <div className={'flex flex-row items-center justify-center bg-slate-800 mx-2 rounded-lg'}>
+          <div className={'flex flex-row items-center justify-center w-1/2 cursor-pointer'} onClick={toggleOpen}>
             <div className={'flex flex-col items-center bg-contain bg-no-repeat bg-center p-24'}
                  style={{ backgroundImage: `url(${selectedStyle.background})` }}>
               <span className={'absolute bottom-0'}>{priceFormat(selectedStyle.price)}</span>
@@ -56,7 +56,7 @@ const BackboardStyle = ({ BackboardModel, dispatch}) => {
         >
           {Array.from(backboardStyles).map(([index, { key, title, description, price }]) => (
               <div className={'flex flex-col p-2'} key={key} onClick={() => setSelectedStyle(key)}>
-                <div className={'flex flex-row justify-between ' + (key === selectedStyle.key ? 'text-pink-400' : '')}>
+                <div className={'flex flex-row justify-between ' + (key === selectedStyle.key ? 'text-emerald-500' : '')}>
                   <p>{title}</p>
                   <p>{priceFormat(price)}</p>
                 </div>

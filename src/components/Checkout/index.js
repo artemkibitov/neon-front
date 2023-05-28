@@ -9,7 +9,7 @@ const Checkout = () => {
   const sendImageRef = useRef(false); // замените useState на useRef
 
   const sendImageF = async () => {
-    sendImageRef.current = true; // замените setSendImage на обновление current
+    sendImageRef.current = true;
 
     return await postApi.postData('/image/save', {
       image: state.OrderModel.getProductImage(),
@@ -18,7 +18,7 @@ const Checkout = () => {
   }
 
   useEffect(() => {
-    if (!sendImageRef.current) { // используйте sendImageRef.current вместо sendImage
+    if (!sendImageRef.current && !state.OrderModel.getCustom()) {
       sendImageF();
     }
   }, []);
@@ -27,9 +27,9 @@ const Checkout = () => {
     <>
       <Form/>
       {state.OrderModel.getCustom() ?
-        <div>
-          <p>заповніть форму та отримайте консультацію в найближчі кілька хвилин, з обговоренням вашого особистого
-            дизайну вивіски</p>
+        <div className={'mx-2'}>
+          <p>заповніть, будь ласка, форму, щоб ми знали як до вас звертатися і могли зв'язатися з вами для уточнення
+            деталей</p>
         </div>
         :
         <div

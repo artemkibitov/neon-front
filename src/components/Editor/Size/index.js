@@ -22,8 +22,8 @@ const Size = () => {
   };
 
   return (
-    <section className={'mt-4 px-2'}>
-      <p className={'font-bold text-gray-700'}>
+    <section className={'mt-4 px-2 text-slate-800'}>
+      <p className={'font-bold'}>
         Обери свій розмір
       </p>
       <div className="flex flex-wrap">
@@ -43,7 +43,7 @@ const Size = () => {
           </ButtonWrapper>
         ))}
       </div>
-      <div className={'flex flex-row text-sm text-gray-600'}>
+      <div className={'flex flex-row text-sm'}>
         <span className={'pr-0.5'}>*</span>
         <p>
           Кожен знак виготовляється індивідуально, а зазначені розміри будуть точними в межах 2 або 5 сантиметрів.

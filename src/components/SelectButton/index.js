@@ -1,5 +1,5 @@
 const ButtonWrapper = ({ children, selected, onClick, ...rest }) => {
-  const bgClassName = selected ? 'border-pink-300 bg-white': 'border-gray-100 bg-gray-100';
+  const bgClassName = selected ? 'border-emerald-500 bg-white text-slate-800': 'border-stone-50 text-stone-50 bg-slate-800';
 
   return (
     <div className={`w-full`} onClick={onClick} {...rest}>

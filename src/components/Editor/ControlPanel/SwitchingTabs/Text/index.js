@@ -52,8 +52,8 @@ const Text = () => {
   return (
     <div className={"w-full h-36 box-content"}>
       <textarea
-        className="resize-none text-center w-full h-full bg-gray-300 rounded-xl px-8 py-8
-        scrollbar-thin scrollbar-thumb-gray-300 border border-gray-500 overflow-x-clip overflow-y-auto scrollbar-track-gray-100 text-gray-100"
+        className="resize-none text-center w-full h-full bg-slate-400 rounded-xl px-8 py-8
+        scrollbar-thin scrollbar-thumb-gray-300 border border-gray-500 overflow-x-clip overflow-y-auto scrollbar-track-gray-100 text-gray-50"
         name="neon-text"
         placeholder={!isFirstInput ? areaPlaceholder : ''}
         onChange={changeText}

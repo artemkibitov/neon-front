@@ -7,7 +7,7 @@ const BackboardColor = ({ BackboardModel, dispatch }) => {
 
   const backboardColors = BackboardModel.getColors();
   const selectedBackboardColors = BackboardModel.getSelectedColor();
-  const colorBorder = (key) => key === selectedBackboardColors.key ? 'border-pink-300' : 'border-black'
+  const colorBorder = (key) => key === selectedBackboardColors.key ? 'border-emerald-500' : 'border-black'
 
   const selectColor = (key) => {
     dispatch({
@@ -35,12 +35,12 @@ const BackboardColor = ({ BackboardModel, dispatch }) => {
       <p className={'font-bold'}>Виберіть колір акрилової дошки</p>
       <div className={'flex flex-row text-sm justify-between w-full py-2'}>
         <p>
-          {selectedBackboardColors.price === 0 ? '' : '+' + selectedBackboardColors.price + ': '}
+          <span className={'text-emerald-500 text-lg font-bold'}>{selectedBackboardColors.price === 0 ? ' ' : '+' + selectedBackboardColors.price + ' '}</span>
           {selectedBackboardColors.title}
           {selectedBackboardColors.description}
         </p>
-        <p className={'text-pink-400'}
-           onClick={handleOpenModal}>
+        <p className={'underline text-blue-500 cursor-pointer'}
+          onClick={handleOpenModal}>
           Дивитися фото
         </p>
         <ModalImage isOpen={isModalOpen} onClose={handleCloseModal} src={selectedBackboardColors.image}/>
@@ -50,7 +50,7 @@ const BackboardColor = ({ BackboardModel, dispatch }) => {
           Array.from(backboardColors).map(([key, value]) => (
             <div
               key={value.key}
-              className={`border border-2 rounded-md transition-colors ${colorBorder(value.key)}`}
+              className={`border border-2 cursor-pointer rounded-md transition-colors ${colorBorder(value.key)}`}
               onClick={() => selectColor(value.key)}
             >
               <div className={'p-6 rounded-sm'} style={{ background: value.background }}></div>

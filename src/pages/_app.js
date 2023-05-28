@@ -16,7 +16,9 @@ const App = ({ Component, pageProps }) => {
           <title>Кастомний неон твоєї мрії</title>
           <meta name="description" content="Your page's concise summary"/>
         </Head>
-        <Component {...pageProps} />
+        <div className={'bg-stone-50'}>
+          <Component {...pageProps} />
+        </div>
       </EditorContext.Provider>
     </StrictMode>
   )

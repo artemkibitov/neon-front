@@ -4,14 +4,26 @@ const path = require('node:path');
 module.exports = (phase, { defaultConfig }) => {
   const isDev = phase === 'phase-development-server';
   const apiHost = isDev ? process.env.API_HOST : '/api';
-
-  console.log(apiHost);
   return {
     basePath: '',
     env: {
       API_HOST: apiHost,
     },
+    async rewrites() {
+      return [
+        {
+          source: '/image/:path*',
+          destination: '/image-page/:path*',
+        }
+      ]
+    },
     webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
+      config.module.rules.push({
+        test: /\.svg$/,
+        issuer: { and: [/\.[jt]sx?$/] },
+        use: ['@svgr/webpack'],
+      });
+
       if (!dev) {
         const terserPluginIndex = config.optimization.minimizer.findIndex(
           (minimizer) => minimizer.constructor.name === 'TerserPlugin'

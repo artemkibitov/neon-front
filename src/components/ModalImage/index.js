@@ -10,7 +10,7 @@ function ModalImage({ isOpen, onClose, src }) {
           className="bg-center bg-cover h-64 w-64"
           style={{ backgroundImage: `url(${src})` }}
         />
-        <button onClick={onClose} className="mt-4 px-4 py-2 bg-red-500 text-white rounded-md">Закрыть</button>
+        <button onClick={onClose} className="mt-4 px-4 py-2 bg-red-500 text-white rounded-md">Закрити</button>
       </div>
     </div>
   );

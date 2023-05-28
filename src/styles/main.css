@@ -1,25 +1,31 @@
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&family=Roboto:wght@300;400;700&family=Exo+2:ital,wght@0,100;0,300;1,300&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 
 @font-face {
     font-family: Neonscript;
     src: url(./fonts/Neonscript.ttf);
 }
 
-h1, h2, h3, h4, .f-oswald {
-    font-family: 'Oswald', sans-serif;
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
 }
 
-p {
-    font-family: 'Roboto', sans-serif;
+p, span, div {
+    font-family: 'Raleway', sans-serif;
+}
+.f-montse {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.f-raleway {
+    font-family: 'Raleway', sans-serif;
 }
 
 .neon-bg {
     background-image: url("/bg.jpg");
-    padding-top: 92%;
+    padding-top: 80%;
     background-size: 100%;
 }
 
@@ -35,12 +41,13 @@ p {
     width: 2px;
     height: 10px;
 }
+
 .neon-text {
     font-variant-ligatures: no-common-ligatures;
     font-size: 60px;
     white-space: nowrap;
-    padding: 0 30px 0 60px;
-    margin: 15px 0 180px 0;
+    /*padding: 0 30px 0 60px;*/
+    /*margin: 15px 0 180px 0;*/
 }
 
 .neon-pink {
@@ -74,7 +81,11 @@ p {
     height: 12px;
     border-left: 5px solid transparent;
     border-right: 5px solid transparent;
-    border-top: 5px solid black;
+    border-top: 5px solid white;
+}
+
+#neon-text-input::placeholder {
+    color: white;
 }
 
 .switch-tab-active::after {
@@ -90,7 +101,7 @@ p {
     margin-top: -20px;
     left: 100%;
     z-index: 2;
-    @apply border-l-blue-600
+    @apply border-l-blue-400
 }
 
 .spinner {
@@ -103,6 +114,10 @@ p {
 }
 
 @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }

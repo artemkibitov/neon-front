@@ -2,12 +2,46 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="df16b8f0-32e3-4efb-94c2-8bb40b2a5bc4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/hooks/useOrder.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/util/createOrderData.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Editor/RenderView/NeonText/TextElement.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/SVG/SVGImage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/SVG/svg-ellips.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/SVG/svg-h-line-red.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/SVG/svg-h-line-yellow-400.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/SVG/svg-v-line.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/_document.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/image-page.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/image-page/[hash].js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/image-page/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/next.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Checkout/Form/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Checkout/Form/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Checkout/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Checkout/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/CheckoutLink/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CheckoutLink/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Editor/Backboard/backboardColor.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Editor/Backboard/backboardColor.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Editor/Backboard/backboardStyle.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Editor/Backboard/backboardStyle.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Editor/Backboard/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Editor/Backboard/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Editor/ControlPanel/SwitchingTabs/Text/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Editor/ControlPanel/SwitchingTabs/Text/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Editor/ControlPanel/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Editor/ControlPanel/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Editor/DekstopStructure.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Editor/DekstopStructure.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Editor/MobileStructure.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Editor/MobileStructure.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Editor/PowerAdapter/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Editor/PowerAdapter/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Editor/PriceForm/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Editor/PriceForm/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Editor/RenderView/NeonText/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Editor/RenderView/NeonText/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Editor/RenderView/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Editor/RenderView/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Editor/Size/SizeBtn.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Editor/Size/SizeBtn.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Editor/Size/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Editor/Size/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Editor/Waterproof/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Editor/Waterproof/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Editor/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Editor/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ModalImage/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ModalImage/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/SelectButton/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SelectButton/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/hooks/useOrder.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/hooks/useOrder.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/util/createOrderData.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/util/createOrderData.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/_app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/_app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducer/actions/Editor/Order/Model/Order.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducer/actions/Editor/Order/Model/Order.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducer/state.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducer/state.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/main.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,10 +95,10 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/public" />
+      <recent name="$PROJECT_DIR$/src/components/SVG" />
       <recent name="$PROJECT_DIR$/src/components/Editor/reducer/actions/Editor/SignOptions" />
       <recent name="$PROJECT_DIR$/src/components/Editor/reducer/actions" />
       <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/src/components/Editor/RenderView/NeonText" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/components/Editor/RenderView/NeonText/util" />
@@ -205,7 +239,9 @@
       <workItem from="1685175318902" duration="1898000" />
       <workItem from="1685180999969" duration="318000" />
       <workItem from="1685181326926" duration="14168000" />
-      <workItem from="1685226809326" duration="4207000" />
+      <workItem from="1685226809326" duration="8852000" />
+      <workItem from="1685261550570" duration="15917000" />
+      <workItem from="1685285829165" duration="11096000" />
     </task>
     <servers />
   </component>

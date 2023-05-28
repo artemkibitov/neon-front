@@ -2,11 +2,15 @@ import React, { useContext } from "react";
 import EditorContext from "@/components/Editor/editorContext";
 import InputField from "./InputField";
 import { useForm } from "react-hook-form";
+import useOrder from "@/components/hooks/useOrder";
+import usePostApi from "@/components/hooks/usePostApi";
 
 const Form = () => {
   const { state } = useContext(EditorContext);
   const { OrderModel } = state;
   const { register, handleSubmit, formState: { errors } } = useForm();
+  const order = useOrder(EditorContext)
+  const postApi = usePostApi();
 
   const textValidation = () => ({
     required: 'Обов\'язкове поле',
@@ -16,13 +20,20 @@ const Form = () => {
     }
   });
 
+
   const onSubmit = (data) => {
     Object.keys(data).forEach(
       value => OrderModel['set' + value.slice(0, 1).toUpperCase() + value.slice(1)](data[value]),
     );
+    if (!OrderModel.getHash().length) {
+      postApi.postData('/users/hash', {data: null}).then(() => {
+        console.log(postApi.response)
+      })
+    }
 
-    console.log(OrderModel.getName());
+    // console.log(order.sendOrder('/orders/create'));
   };
+
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="m-2">

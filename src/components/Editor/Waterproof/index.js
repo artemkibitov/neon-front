@@ -16,7 +16,7 @@ const Waterproof = () => {
 
 
   return (
-    <section className={'flex flex-col'}>
+    <section className={'flex flex-col text-slate-800'}>
       <div className={'mt-4 mx-2 flex flex-row'}>
         <ButtonWrapper
           className={'pr-2 w-full'}
@@ -39,7 +39,7 @@ const Waterproof = () => {
           </WaterProofBtn>
         </ButtonWrapper>
       </div>
-      <div className={'flex flex-row text-sm text-gray-600 px-2'}>
+      <div className={'flex flex-row px-2 mt-2'}>
         <div className={state.SignModel.getWaterproof() ? 'hidden' : 'inline-block'}>
           <p>
             Внутрішні знаки не підходять для використання на вулиці або в місцях, де вони можуть намокнути. Неналежне
@@ -48,8 +48,7 @@ const Waterproof = () => {
         </div>
         <div className={!state.SignModel.getWaterproof() ? 'hidden' : 'inline-block'}>
           <p>
-            <span className={'pr-0.5'}>*</span>
-            <span className={'text-indigo-600'}>Custom Neon®</span>
+            <span className={'text-red-400 bg-slate-800 p-1 my-8'}>*Neoner®</span>
             пропонує широкий асортимент зовнішніх вивісок із захистом від води IP67. Вони можуть бути виконані
             в тій же кольоровій гамі, що і наші вивіски для приміщень, і є ідеальним рішенням для зовнішнього
             використання.
