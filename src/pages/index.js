@@ -25,6 +25,19 @@ export default function Index() {
           <p className={"f-montse text-blue-400 text-2xl font-medium font-medium mt-2"}>
             А про якість подбаємо ми
           </p>
+          <div>
+            <p>слідкуйте за нами в соціальних мережах</p>
+            {/*<div className={'flex flex-row justify-center mx-auto items-center w-1/3'}>*/}
+            {/*  <div style={{backgroundColor: '#009ee2'}}>*/}
+            {/*    <div className={'p-12 bg-no-repeat bg-cover'}*/}
+            {/*         style={{ backgroundImage: 'url(/th-349437498.jpg)' }}></div>*/}
+            {/*  </div>*/}
+            {/*  <div>*/}
+            {/*    <div className={'p-12 bg-no-repeat bg-cover'}*/}
+            {/*         style={{ backgroundImage: 'url(/th-4240280022.jpg)' }}></div>*/}
+            {/*  </div>*/}
+            {/*</div>*/}
+          </div>
           {/*<SvgHLineRed width={100} height={100} position={'absolute'} left={-35} rotate={90} top={100} zIndex={-1}/>*/}
         </section>
 

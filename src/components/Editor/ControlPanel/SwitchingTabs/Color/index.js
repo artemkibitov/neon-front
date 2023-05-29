@@ -22,12 +22,8 @@ const Color = () => {
            transition-colors duration-300"
           key={key}
           onClick={() => selectColor(key)}
-          style={{
-            // backgroundColor: key === selected.key ? 'transparent' : background,
-            // boxShadow: key === selected.key ? `${background} 0px 0px 10px` : 'none'
-          }}
         >
-          <SvgLight color={background} shadow={textShadow} isActive={selected.key === key} />
+          <SvgLight color={background} shadow={textShadow} isActive={selected.key === key}/>
           <div className="w-full h-12 text-center">
             <p
               className="capitalize f-montse pt-4"

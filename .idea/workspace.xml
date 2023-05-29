@@ -2,19 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="df16b8f0-32e3-4efb-94c2-8bb40b2a5bc4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/Editor/ControlPanel/SwitchingTabs/Color/SvgLight.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Checkout/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Checkout/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Editor/ControlPanel/SwitchingTabs/Color/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Editor/ControlPanel/SwitchingTabs/Color/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Editor/RenderView/NeonLines/util/updateLines.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Editor/RenderView/NeonLines/util/updateLines.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Editor/RenderView/NeonText/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Editor/RenderView/NeonText/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Editor/RenderView/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Editor/RenderView/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/_document.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/_document.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/reducer/actions/Editor/Sign/Data/OptionsData.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducer/actions/Editor/Sign/Data/OptionsData.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducer/actions/Editor/Sign/Factory/SignOptions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducer/actions/Editor/Sign/Factory/SignOptions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducer/actions/Editor/Sign/SignActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducer/actions/Editor/Sign/SignActions.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,7 +73,7 @@
       <recent name="$PROJECT_DIR$/src/reducer/Core/Container" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.npm start">
+  <component name="RunManager" selected="npm.dev (1)">
     <configuration name="Debug Application" type="JavascriptDebugType" uri="http://localhost:3000">
       <method v="2" />
     </configuration>
@@ -127,8 +119,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.build" />
         <item itemvalue="npm.dev (1)" />
+        <item itemvalue="npm.build" />
         <item itemvalue="npm.dev" />
         <item itemvalue="npm.dev (1)" />
         <item itemvalue="npm.dev" />
@@ -215,7 +207,7 @@
       <workItem from="1685226809326" duration="8852000" />
       <workItem from="1685261550570" duration="15917000" />
       <workItem from="1685285829165" duration="24012000" />
-      <workItem from="1685313632739" duration="2212000" />
+      <workItem from="1685313632739" duration="5627000" />
     </task>
     <servers />
   </component>

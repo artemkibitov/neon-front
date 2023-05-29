@@ -28,7 +28,7 @@ const lightColorData = {
     textColor: 'text-neutral-900',
     background: 'rgb(255, 253, 207)',
     textShadow: 'rgb(255, 255, 255) 0px 0px 2px, rgb(255, 255, 255) 0px 0px 4px, rgb(255, 253, 207) 0px 0px 8px, rgb(255, 253, 207) 0px 0px 12px, rgb(255, 253, 207) 0px 0px 16px, rgb(255, 253, 207) 0px 0px 22px, rgb(255, 253, 207) 0px 0px 30px',
-    value: colorBase + 'rgb(255, 253, 207) 0px 0px 8px, rgb(255, 253, 207) 0px 0px 12px, rgb(255, 253, 207) 0px 0px 16px, rgb(255, 253, 207) 0px 0px 22px, rgb(255, 253, 207) 0px 0px 30px'
+    value: colorBase + ' rgb(255, 253, 207) 0px 0px 20px, rgb(255, 253, 207) 0px 0px 30px, rgb(255, 253, 207) 0px 0px 40px, rgb(255, 253, 207) 0px 0px 55px, rgb(255, 253, 207) 0px 0px 75px'
   },
   white: {
     key: 'white',
@@ -36,7 +36,7 @@ const lightColorData = {
     textColor: 'text-neutral-900',
     background: 'rgb(225, 227, 230)',
     textShadow: 'rgb(255, 255, 255) 0px 0px 2px, rgb(255, 255, 255) 0px 0px 4px, rgb(225, 227, 230) 0px 0px 8px, rgb(225, 227, 230) 0px 0px 12px, rgb(225, 227, 230) 0px 0px 16px, rgb(225, 227, 230) 0px 0px 22px, rgb(225, 227, 230) 0px 0px 30px',
-    value: colorBase + 'rgb(225, 227, 230) 0px 0px 8px, rgb(225, 227, 230) 0px 0px 12px, rgb(225, 227, 230) 0px 0px 16px, rgb(225, 227, 230) 0px 0px 22px, rgb(225, 227, 230) 0px 0px 30px'
+    value: colorBase + ' rgb(225, 227, 230) 0px 0px 20px, rgb(225, 227, 230) 0px 0px 30px, rgb(225, 227, 230) 0px 0px 40px, rgb(225, 227, 230) 0px 0px 55px, rgb(225, 227, 230) 0px 0px 75px'
   },
   red: {
     key: 'red',
@@ -62,8 +62,7 @@ const lightColorData = {
     textColor: 'text-neutral-50',
     background: 'rgb(255, 249, 124)',
     textShadow: 'rgb(255, 255, 255) 0px 0px 2px, rgb(255, 255, 255) 0px 0px 4px, rgb(255, 249, 124) 0px 0px 8px, rgb(255, 249, 124) 0px 0px 12px, rgb(255, 249, 124) 0px 0px 16px, rgb(255, 249, 124) 0px 0px 22px, rgb(255, 249, 124) 0px 0px 30px',
-    value: colorBase + 'rgb(255, 249, 124) 0px 0px 8px, rgb(255, 249, 124) 0px 0px 12px, rgb(255, 249, 124)' +
-      ' 0px 0px 16px, rgb(255, 249, 124) 0px 0px 22px, rgb(255, 249, 124) 0px 0px 30px'
+    value: colorBase + ' rgb(255, 249, 124) 0px 0px 20px, rgb(255, 249, 124) 0px 0px 30px, rgb(255, 249, 124) 0px 0px 40px, rgb(255, 249, 124) 0px 0px 55px, rgb(255, 249, 124) 0px 0px 75px'
   },
   goldenYellow: {
     key: 'goldenYellow',
@@ -71,7 +70,7 @@ const lightColorData = {
     textColor: 'text-neutral-900',
     background: '#ffd62e',
     textShadow: 'rgb(255, 255, 255) 0px 0px 2px, rgb(255, 255, 255) 0px 0px 4px, rgb(255, 214, 46) 0px 0px 8px, rgb(255, 214, 46) 0px 0px 12px, rgb(255, 214, 46) 0px 0px 16px, rgb(255, 214, 46) 0px 0px 22px, rgb(255, 214, 46) 0px 0px 30px',
-    value: colorBase + 'rgb(255, 214, 46) 0px 0px 20px, rgb(255, 214, 46) 0px 0px 30px, rgb(255, 214, 46) 0px 0px 40px,' +
+    value: colorBase + ' rgb(255, 214, 46) 0px 0px 20px, rgb(255, 214, 46) 0px 0px 30px, rgb(255, 214, 46) 0px 0px 40px,' +
       ' rgb(255, 214, 46) 0px 0px 55px, rgb(255, 214, 46) 0px 0px 75px'
   },
   orange: {
@@ -89,8 +88,7 @@ const lightColorData = {
     textColor: 'text-neutral-900',
     background: 'rgb(133, 255, 170)',
     textShadow: 'rgb(255, 255, 255) 0px 0px 2px, rgb(255, 255, 255) 0px 0px 4px, rgb(133, 255, 170) 0px 0px 8px, rgb(133, 255, 170) 0px 0px 12px, rgb(133, 255, 170) 0px 0px 16px, rgb(133, 255, 170) 0px 0px 22px, rgb(133, 255, 170) 0px 0px 30px',
-    value: colorBase + ' rgb(133, 255, 170) 0px 0px 8px, rgb(133, 255, 170) 0px 0px 12px, rgb(133, 255, 170) ' +
-      '0px 0px 16px, rgb(133, 255, 170) 0px 0px 22px, rgb(133, 255, 170) 0px 0px 30px'
+    value: colorBase + ' rgb(133, 255, 170) 0px 0px 20px, rgb(133, 255, 170) 0px 0px 30px, rgb(133, 255, 170) 0px 0px 40px, rgb(133, 255, 170) 0px 0px 55px, rgb(133, 255, 170) 0px 0px 75px'
   },
   blue: {
     key: 'blue',
@@ -98,8 +96,7 @@ const lightColorData = {
     textColor: 'text-neutral-50',
     background: 'rgb(2, 116, 252)',
     textShadow: 'rgb(255, 255, 255) 0px 0px 2px, rgb(255, 255, 255) 0px 0px 4px, rgb(2, 116, 252) 0px 0px 8px, rgb(2, 116, 252) 0px 0px 12px, rgb(2, 116, 252) 0px 0px 16px, rgb(2, 116, 252) 0px 0px 22px, rgb(2, 116, 252) 0px 0px 30px',
-    value: colorBase + ' rgb(2, 116, 252) 0px 0px 8px, rgb(2, 116, 252) 0px 0px 12px, rgb(2, 116, 252) 0px 0px 16px,' +
-      ' rgb(2, 116, 252) 0px 0px 22px, rgb(2, 116, 252) 0px 0px 30px'
+    value: colorBase + ' rgb(2, 116, 252) 0px 0px 20px, rgb(2, 116, 252) 0px 0px 30px, rgb(2, 116, 252) 0px 0px 40px, rgb(2, 116, 252) 0px 0px 55px, rgb(2, 116, 252) 0px 0px 75px'
   },
   iceBlue: {
     key: 'iceBlue',
@@ -107,8 +104,7 @@ const lightColorData = {
     textColor: 'text-neutral-50',
     background: 'rgb(144, 220, 255)',
     textShadow: 'rgb(255, 255, 255) 0px 0px 2px, rgb(255, 255, 255) 0px 0px 4px, rgb(144, 220, 255) 0px 0px 8px, rgb(144, 220, 255) 0px 0px 12px, rgb(144, 220, 255) 0px 0px 16px, rgb(144, 220, 255) 0px 0px 22px, rgb(144, 220, 255) 0px 0px 30px',
-    value: colorBase + 'rgb(144, 220, 255) 0px 0px 8px, rgb(144, 220, 255) 0px 0px 12px, rgb(144, 220, 255)' +
-      ' 0px 0px 16px, rgb(144, 220, 255) 0px 0px 22px, rgb(144, 220, 255) 0px 0px 30px'
+    value: colorBase + ' rgb(144, 220, 255) 0px 0px 20px, rgb(144, 220, 255) 0px 0px 30px, rgb(144, 220, 255) 0px 0px 40px, rgb(144, 220, 255) 0px 0px 55px, rgb(144, 220, 255) 0px 0px 75px'
   },
   purple: {
     key: 'purple',
@@ -116,7 +112,7 @@ const lightColorData = {
     textColor: 'text-neutral-50',
     background: '#8c59ff',
     textShadow: 'rgb(255, 255, 255) 0px 0px 2px, rgb(255, 255, 255) 0px 0px 4px, rgb(140, 89, 255) 0px 0px 8px, rgb(140, 89, 255) 0px 0px 12px, rgb(140, 89, 255) 0px 0px 16px, rgb(140, 89, 255) 0px 0px 22px, rgb(140, 89, 255) 0px 0px 30px',
-    value: colorBase + 'rgb(140, 89, 255) 0px 0px 20px, rgb(140, 89, 255) 0px 0px 30px, ' +
+    value: colorBase + ' rgb(140, 89, 255) 0px 0px 20px, rgb(140, 89, 255) 0px 0px 30px, ' +
       'rgb(140, 89, 255) 0px 0px 40px, rgb(140, 89, 255) 0px 0px 55px, rgb(140, 89, 255) 0px 0px 75px'
   },
 };
