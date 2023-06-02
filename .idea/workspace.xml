@@ -73,7 +73,7 @@
       <recent name="$PROJECT_DIR$/src/reducer/Core/Container" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.dev (1)">
+  <component name="RunManager" selected="npm.build">
     <configuration name="Debug Application" type="JavascriptDebugType" uri="http://localhost:3000">
       <method v="2" />
     </configuration>
@@ -119,8 +119,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.dev (1)" />
         <item itemvalue="npm.build" />
+        <item itemvalue="npm.dev (1)" />
         <item itemvalue="npm.dev" />
         <item itemvalue="npm.dev (1)" />
         <item itemvalue="npm.dev" />
@@ -208,6 +208,7 @@
       <workItem from="1685261550570" duration="15917000" />
       <workItem from="1685285829165" duration="24012000" />
       <workItem from="1685313632739" duration="5627000" />
+      <workItem from="1685343342872" duration="806000" />
     </task>
     <servers />
   </component>
