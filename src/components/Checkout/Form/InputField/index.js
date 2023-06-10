@@ -10,7 +10,7 @@ const InputField = ({ label, placeholder, fieldName, type, register, validation,
       type={type}
       id={fieldName}
       {...register(fieldName, validation)}
-      className={`appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ${error && 'border-red-500'}`}
+      className={`appearance-none border w-full rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ${error && 'border-red-500'}`}
       placeholder={placeholder}
     />
     {error && <p className="text-red-500 text-xs italic">{error.message}</p>}

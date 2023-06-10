@@ -10,7 +10,7 @@ import initialState from "@/reducer/state";
 
 const Editor = () => {
   const windowWidth = useWindowWidth();
-  const isMobile = windowWidth < 821;
+  const isMobile = windowWidth < 1024;
 
   return (
     <>

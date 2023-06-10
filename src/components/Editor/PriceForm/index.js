@@ -43,7 +43,7 @@ const PriceForm = ({isMobile = true}) => {
     <div className={'mt-4 mx-2 text-stone-50 relative'}>
       <div className={'relative z-10'}>
         <div className={'bg-slate-800 p-1 rounded-md text-center my-1 overflow-hidden'}>
-          <p className={'text-red-400 font-bold relative z-10'}>Термінове замовлення доступна при оформленні</p>
+          <p className={'text-red-400 font-bold relative z-10'}>Термінове замовлення доступне при оформленні</p>
         </div>
         <div className={'flex flex-row font-bold justify-center items-center px-2 py-3 rounded-md bg-slate-800'}>
           <SvgHLineYellow400 width={100} height={100} zIndex={1} top={isMobile ? 0 : 15} left={isMobile ? 0 : -5} rotate={isMobile ? 0 : -15} position={'absolute'}/>

@@ -3,16 +3,18 @@ import EditorContext from "@/components/Editor/editorContext";
 import Checkout from "@/components/Checkout";
 
 const CheckoutPage = () => {
-
   return (
-    <div className={'container'}>
-      <section className={'mx-2'}>
-        <h1 className={'text-4xl my-2 font-bold f-roboto text-center'}>Company Name</h1>
-        <p>уже найближчим часом вивіска за вашим дизайном прикрашатиме ваш затишок або бізнес</p>
-      </section>
-      <Checkout/>
-    </div>
-  )
-}
+    <>
+      <div className={'relative z-20'}>
+        <div className={'bg-slate-800 w-full py-2 relative z-10'}>
+          <h1 className={'text-white f-montse font-bold text-stone-50 text-4xl text-center'}>Neoner</h1>
+        </div>
+      </div>
+      <div className={'container overflow-hidden mx-auto'}>
+        <Checkout />
+      </div>
+    </>
+  );
+};
 
 export default CheckoutPage;

@@ -2,19 +2,43 @@
 @tailwind components;
 @tailwind utilities;
 
-
-@font-face {
-    font-family: Neonscript;
-    src: url(./fonts/Neonscript.ttf);
+body {
+    @apply bg-stone-50;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: 'Montserrat', sans-serif;
 }
 
-p, span, div {
+.social-media-icon {
+    background-image: url('/society.jpg');
+    background-size: 300%;
+    background-repeat: no-repeat;
+}
+
+.social-icon-telegram {
+    background-position: 50% 10%;
+}
+
+.social-icon-instagram {
+    background-position: 102% 10%;
+}
+
+.social-icon-tiktok {
+    background-position: -2% 10%;
+}
+
+p,
+span,
+div {
     font-family: 'Raleway', sans-serif;
 }
+
 .f-montse {
     font-family: 'Montserrat', sans-serif;
 }
@@ -52,22 +76,22 @@ p, span, div {
 
 .neon-pink {
     text-shadow: rgb(255, 255, 255) 0 0 5px,
-    rgb(255, 255, 255) 0 0 10px,
-    rgb(255, 144, 255) 0 0 20px,
-    rgb(255, 144, 255) 0 0 30px,
-    rgb(255, 144, 255) 0 0 40px,
-    rgb(255, 144, 255) 0 0 55px,
-    rgb(255, 144, 255) 0 0 75px;
+        rgb(255, 255, 255) 0 0 10px,
+        rgb(255, 144, 255) 0 0 20px,
+        rgb(255, 144, 255) 0 0 30px,
+        rgb(255, 144, 255) 0 0 40px,
+        rgb(255, 144, 255) 0 0 55px,
+        rgb(255, 144, 255) 0 0 75px;
 }
 
 .neon-cyan {
     text-shadow: rgb(255, 255, 255) 0px 0px 5px,
-    rgb(255, 255, 255) 0px 0px 10px,
-    rgb(36, 183, 222) 0px 0px 20px,
-    rgb(36, 183, 222) 0px 0px 30px,
-    rgb(36, 183, 222) 0px 0px 40px,
-    rgb(36, 183, 222) 0px 0px 55px,
-    rgb(36, 183, 222) 0px 0px 75px;
+        rgb(255, 255, 255) 0px 0px 10px,
+        rgb(36, 183, 222) 0px 0px 20px,
+        rgb(36, 183, 222) 0px 0px 30px,
+        rgb(36, 183, 222) 0px 0px 40px,
+        rgb(36, 183, 222) 0px 0px 55px,
+        rgb(36, 183, 222) 0px 0px 75px;
 }
 
 .neon-sign {
@@ -101,23 +125,56 @@ p, span, div {
     margin-top: -20px;
     left: 100%;
     z-index: 2;
-    @apply border-l-blue-400
+    @apply border-l-blue-400;
 }
 
 .spinner {
-    border: 6px solid #f3f3f3; /* Light grey */
-    border-top: 6px solid #3498db; /* Blue */
+    border: 6px solid #f3f3f3;
+    /* Light grey */
+    border-top: 6px solid #3498db;
+    /* Blue */
     border-radius: 50%;
     width: 20px;
     height: 20px;
     animation: spin 2s linear infinite;
 }
 
+.neon-works {
+    animation: neon 55s linear infinite;
+    background-size: cover;
+    /* background-repeat: repeat-x; */
+}
+
+@keyframes neon {
+    0% {
+        background-position-x: 0;
+        /* background-color: transparent; */
+    }
+
+    100% {
+        background-position-x: 1456px;
+    }
+}
+
+
 @keyframes spin {
     0% {
         transform: rotate(0deg);
     }
+
     100% {
         transform: rotate(360deg);
+    }
+}
+
+@media screen and (max-width: 992px) {
+    @keyframes neon {
+        0% {
+            background-position-x: 0;
+        }
+    
+        100% {
+            background-position-x: 1456px;
+        }
     }
 }

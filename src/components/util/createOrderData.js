@@ -3,7 +3,7 @@ export const createOrderData = ({ OrderModel, BackboardModel, SignModel }) => {
     width: SignModel.getSelectedSizeOption().totalSize.width,
     height: SignModel.getSelectedSizeOption().totalSize.height,
     light_color: SignModel.getSelectedLightOption().title,
-    size: SignModel.getSelectedSizeOption().key.toUpperCase(),
+    size: SignModel.getSelectedSizeOption().name,
     waterproof: SignModel.getWaterproof() ? SignModel.getWaterproofPrice() : 0,
   };
   const backboard = {

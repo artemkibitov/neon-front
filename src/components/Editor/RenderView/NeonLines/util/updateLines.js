@@ -20,7 +20,7 @@ const useLineUpdate = (neonTextRef, bottomLineRef, rightLineRef) => {
     const bottomLineWidth = longestParagraph.offsetWidth;
 
     const rightLineLeft = longestParagraph.offsetLeft + longestParagraph.offsetWidth + 2;
-    const rightLineTop = longestParagraph.offsetTop;
+    const rightLineTop = longestParagraph.offsetTop - 2;
     const rightLineHeight = neonTextElement.clientHeight;
     const avgVerticalPosition = rightLineTop + rightLineHeight / 2;
 
@@ -46,10 +46,15 @@ const useLineUpdate = (neonTextRef, bottomLineRef, rightLineRef) => {
       characterData: true,
     });
 
-    updateLines();
+    const timer = setTimeout(() => {
+      if (neonTextRef.current) {
+        updateLines();
+      }
+    }, 750);
 
     return () => {
       observer.disconnect();
+      clearTimeout(timer);
     };
   }, [neonTextRef, updateLines]);
 

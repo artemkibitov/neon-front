@@ -8,8 +8,8 @@ import Backboard from "@/components/Editor/Backboard";
 import PriceForm from "@/components/Editor/PriceForm";
 
 const DekstopStructure = () => (
-  <div className={"flex lg:flex-row flex-col mt-8 mx-auto shadow"}>
-    <div className={'flex flex-col w-1/2'}>
+  <div className={"flex lg:flex-row justify-around flex-col mt-8 mx-auto"}>
+    <div className={'flex flex-col w-2/5 xl:w-2/6 ml-2 shadow-xl shadow-slate-800'}>
       <ControlPanel/>
       <Size/>
       <Waterproof/>
@@ -17,7 +17,7 @@ const DekstopStructure = () => (
       <Backboard/>
       <PriceForm isMobile={false}/>
     </div>
-    <div className={'h-80 w-full'}>
+    <div className={'h-96 w-full lg:w-7/12'}>
       <RenderView isMobile={false}/>
     </div>
   </div>

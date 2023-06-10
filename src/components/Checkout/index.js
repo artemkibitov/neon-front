@@ -1,12 +1,13 @@
-import { useContext, useEffect, useRef } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import EditorContext from "@/components/Editor/editorContext";
 import usePostApi from "@/components/hooks/usePostApi";
 import Form from "@/components/Checkout/Form";
+import OrderData from './OrderData';
 
 const Checkout = () => {
   const { state } = useContext(EditorContext);
   const postApi = usePostApi();
-  const sendImageRef = useRef(false); // замените useState на useRef
+  const sendImageRef = useRef(false);
 
   const sendImageF = async () => {
     sendImageRef.current = true;
@@ -20,24 +21,24 @@ const Checkout = () => {
   useEffect(() => {
     if (!sendImageRef.current && !state.OrderModel.getCustom()) {
       sendImageF();
-    }
+    };
   }, [sendImageF, state.OrderModel]);
 
   return (
-    <>
-      <Form/>
-      {state.OrderModel.getCustom() ?
-        <div className={'mx-2'}>
-          <p>заповніть, будь ласка, форму, щоб ми знали як до вас звертатися і могли зв&apos;язатися з вами для уточнення
-            деталей</p>
+    <div className='flex flex-col lg:flex-row mt-2 bg-stone-100 py-4 px-2'>
+      <div className='md:w-4/6'>
+        <OrderData />
+      </div>
+      <div className='px-2 flex flex-col justify-center items-center lg:w-4/6'>
+        <div className='w-full lg:w-4/6'>
+          <p>
+            Заповніть, будь ласка, форму, щоб ми знали як до вас звертатися і могли зв&apos;язатися з вами для уточнення
+            деталей
+          </p>
         </div>
-        :
-        <div
-          className={'p-40 bg-no-repeat bg-contain bg-center'}
-          style={{ backgroundImage: `url(${state.OrderModel.getProductImage()})` }}
-        />
-      }
-    </>
+        <Form />
+      </div>
+    </div>
   );
 };
 
