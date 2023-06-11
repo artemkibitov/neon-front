@@ -9,7 +9,7 @@ const NeonText = forwardRef(({ parentElement, isMobile }, ref) => {
 
   const defaultSize = isMobile ? 42 : 75
   const [neonFontSize, setNeonFontSize] = useState(defaultSize);
-  const [lightColor, setLightColor] = useState(state.SignModel.selectedLight)
+  const [key, setKey] = useState(0);
   const [lineHeight, setLineHeight] = useState(100);
   const [prevTextLength, setPrevTextLength] = useState(TextModel.value.length);
   const [textChanged, setTextChanged] = useState(false);
@@ -47,20 +47,19 @@ const NeonText = forwardRef(({ parentElement, isMobile }, ref) => {
     }
 
     // const selectedLightOption = SignModel.getSelectedLightOption();
-    if (lightColor !== SignModel.selectedLight) {
-      setNeonFontSize(neonFontSize => neonFontSize + 0.1);
-      setLightColor(SignModel.selectedLight);
-      setNeonFontSize(neonFontSize => neonFontSize - 0.1);
-    }
 
     return () => {
       observer.disconnect();
     };
-  }, [parentElement, TextModel.value, neonFontSize, textChanged, prevTextLength, SignModel.getSelectedLightOption(), lineHeight, TextModel.chars]);
+  }, [parentElement, TextModel.value, neonFontSize, textChanged, prevTextLength, lineHeight, TextModel.chars]);
 
+  useEffect(()=> {
+    setKey(Math.random());
+  }, SignModel.getSelectedLightOption());
   return (
     <div ref={element} className="neon-text text-white absolute top-12">
       <TextElements
+        key={}
         lines={TextModel.getOriginal().split('\n')}
         textLightShadow={SignModel.getSelectedLightOption()}
         styles={{
