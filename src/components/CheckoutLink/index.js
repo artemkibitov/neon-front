@@ -22,6 +22,7 @@ const CheckoutLink = ({ href, callback, children, OrderModel }) => {
         const setHashAndRedirect = async () => {
           await state.OrderModel.setHash(hash);
           if (callback) callback(hash, router, href).then(() => router.push(href));
+          else router.push(href);
         }
 
         setHashAndRedirect();
