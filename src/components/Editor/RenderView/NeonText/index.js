@@ -45,6 +45,11 @@ const NeonText = forwardRef(({ parentElement, isMobile }, ref) => {
       setPrevTextLength(currentTextLength);
     }
 
+    const selectedLightOption = SignModel.getSelectedLightOption();
+    if (selectedLightOption) {
+      setNeonFontSize(neonFontSize => neonFontSize + 0);  // This is a hack to force rerender
+    }
+
     return () => {
       observer.disconnect();
     };

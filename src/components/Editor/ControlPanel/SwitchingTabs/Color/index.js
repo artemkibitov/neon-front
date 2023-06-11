@@ -34,7 +34,6 @@ const Color = () => {
           </div>
         </div>
       ))}
-      {/* Add empty placeholders to fill the remaining spaces */}
       {lightOption.length % 4 !== 0 &&
         Array.from(
           { length: (4 - (lightOption.length % 4)) },
