@@ -71,9 +71,11 @@ export default function Index() {
                 <span className='my-0.5 block'>(логітип вашого бренду, складного малюнка, тощо)</span>
                 та втілити будь-яке ваше бачення.
               </p>
-              <div className={'bg-blue-600 w-80 drop-shadow-xl text-white my-2 px-2 p-1 flex items-center justify-center  h-24 rounded-md'}>
-                <h4 className='font-bold text-center text-xl'>Тисни для замовлення <span className='inline-block'>особистого дизайну</span></h4>
-              </div>
+              <CheckoutLink href='/checkout'>
+                <div className={'bg-blue-600 w-80 drop-shadow-xl text-white my-2 px-2 p-1 flex items-center justify-center  h-24 rounded-md'}>
+                  <h4 className='font-bold text-center text-xl'>Замовити дизаiн за властним прототипом</h4>
+                </div>
+              </CheckoutLink>
             </div>
             <div className='w-full h-full absolute left-0 top-0 z-1'>
               <div className='absolute neon-works bg-cover bg-repeat-x w-full h-full z-1' style={{ backgroundImage: 'url(/bg2-min.jpg)' }} />
