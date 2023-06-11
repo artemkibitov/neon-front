@@ -35,7 +35,6 @@ const NeonText = forwardRef(({ parentElement, isMobile }, ref) => {
   };
 
   useEffect(() => {
-    console.log(SignModel.selectedLight)
     const observer = new ResizeObserver(handleResize);
     observer.observe(element.current);
 

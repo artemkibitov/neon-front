@@ -10,13 +10,12 @@ const MyButton = () => {
     postApi.postData('/image/get', { hash: state.OrderModel.getHash() });
   };
 
-  // Используйте этот эффект для обработки ответа, когда он меняется
-  useEffect(() => {
-    if (postApi.response) {
-      // обработайте ответ здесь
-      console.log('Обработанный ответ:', postApi.response);
-    }
-  }, [postApi.response]);
+  // useEffect(() => {
+  //   if (postApi.response) {
+  //     // обработайте ответ здесь
+  //     console.log('Обработанный ответ:', postApi.response);
+  //   }
+  // }, [postApi.response]);
 
   return (
     <div>

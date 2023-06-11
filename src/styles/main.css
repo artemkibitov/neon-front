@@ -167,12 +167,22 @@ div {
     }
 }
 
+#phone-field::before {
+    content: "+38";
+    position: absolute;
+    background-color: #ccc;
+    padding: 5px;
+    left: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
 @media screen and (max-width: 992px) {
     @keyframes neon {
         0% {
             background-position-x: 0;
         }
-    
+
         100% {
             background-position-x: 1456px;
         }

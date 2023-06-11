@@ -35,7 +35,6 @@ const PriceForm = ({isMobile = true}) => {
       });
     } catch (e) {
       setIsLoading(false);
-      console.log(e);
     }
   };
 

@@ -19,16 +19,10 @@ const Checkout = () => {
   }
 
   useEffect(() => {
-    if (!sendImageRef.current && !state.OrderModel.getCustom()) {
-      sendImageF();
-    };
   }, [sendImageF, state.OrderModel]);
 
   return (
     <div className='flex flex-col lg:flex-row mt-2 bg-stone-100 py-4 px-2'>
-      <div className='md:w-4/6'>
-        <OrderData />
-      </div>
       <div className='px-2 flex flex-col justify-center items-center lg:w-4/6'>
         <div className='w-full lg:w-4/6'>
           <p>
@@ -37,6 +31,9 @@ const Checkout = () => {
           </p>
         </div>
         <Form />
+      </div>
+      <div className='md:w-4/6'>
+        <OrderData />
       </div>
     </div>
   );

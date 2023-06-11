@@ -11,10 +11,8 @@ const useOrder = (context) => {
       createCustomOrder({ ...state }) :
       createOrderData({ ...state });
 
-    console.log(data);
-    // Use postData to send the order data
     await postData(path, data);
-  }, [state, postData]); // Add postData to the dependency array
+  }, [state, postData]); 
 
   return { sendOrder };
 };

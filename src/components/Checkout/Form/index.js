@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import EditorContext from "@/components/Editor/editorContext";
-import InputField from "./InputField";
+import { InputField, PhoneField } from "./InputField";
 import { useForm } from "react-hook-form";
 import useOrder from "@/components/hooks/useOrder";
 import usePostApi from "@/components/hooks/usePostApi";
@@ -20,15 +20,18 @@ const Form = () => {
     }
   });
 
+  const validatePhoneNumber = (number) => {
+    const cleanedNumber = number.replace(/\D/g, ''); // убираем все нецифровые символы
+    const pattern = /^(?:380|0)\d{9}$/; // наш паттерн
+    return pattern.test(cleanedNumber); // проверяем совпадает ли номер с паттерном
+  }
 
   const onSubmit = (data) => {
     Object.keys(data).forEach(
       value => OrderModel['set' + value.slice(0, 1).toUpperCase() + value.slice(1)](data[value]),
     );
     if (!OrderModel.getHash().length) {
-      postApi.postData('/users/hash', { data: null }).then(() => {
-        console.log(postApi.response)
-      })
+      postApi.postData('/users/hash', { data: null });
     }
   };
 
@@ -36,24 +39,24 @@ const Form = () => {
   return (
     <div className='flex flex-col justify-center align-center w-11/12 items-center lg:w-4/6 mx-2'>
       <form onSubmit={handleSubmit(onSubmit)} className="my-2 mx-2 md:mx-auto w-full">
-          <InputField
-            label="Ім'я"
-            placeholder="Введіть ваше ім'я"
-            fieldName="name"
-            type="text"
-            register={register}
-            validation={textValidation()}
-            error={errors.name}
-          />
-          <InputField
-            label="Прізвище"
-            placeholder="Введіть ваше прізвище"
-            fieldName="lastName"
-            type="text"
-            register={register}
-            validation={textValidation()}
-            error={errors.lastName}
-          />
+        <InputField
+          label="Ім'я"
+          placeholder="Введіть ваше ім'я"
+          fieldName="name"
+          type="text"
+          register={register}
+          validation={textValidation()}
+          error={errors.name}
+        />
+        <InputField
+          label="Прізвище"
+          placeholder="Введіть ваше прізвище"
+          fieldName="lastName"
+          type="text"
+          register={register}
+          validation={textValidation()}
+          error={errors.lastName}
+        />
         <InputField
           label="Місто"
           placeholder="Введіть ваше місто"
@@ -63,7 +66,7 @@ const Form = () => {
           validation={textValidation()}
           error={errors.city}
         />
-        <InputField
+        <PhoneField
           label="Телефон"
           placeholder="Введіть ваш номер телефону"
           fieldName="phone"
@@ -71,12 +74,14 @@ const Form = () => {
           register={register}
           validation={{
             required: 'Введіть коректний номер',
-            pattern: {
-              value: /^0\d{9}$/,
-              message: 'Некоректний номер'
-            }
+            validate: validatePhoneNumber,
           }}
-          error={errors.phone}
+            // pattern: {
+            //   value: /^0\d{9}$/,
+            //   message: 'Некоректний номер'
+            // }
+          
+        error={errors.phone}
         />
         <div className='flex justify-center'>
           <button

@@ -30,7 +30,6 @@ class TextActions extends Actions {
       .setNonEmptyLines(nonEmptyLines)
       .setSpaces(space)
       .setMaxLineLength(maxLineLength)
-  console.log(hash);
 
     return this.initialState();
   }

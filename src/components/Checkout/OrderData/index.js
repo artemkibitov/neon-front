@@ -20,12 +20,6 @@ const OrderData = () => {
     'Сума вашого замовлення': OrderModel.getTotal()
   };
 
-  useEffect(() => {
-    //test data
-    console.log(selectedSign.key);
-    state.OrderModel.setCustom(false);
-  });
-
   if (state.OrderModel.getCustom()) {
     return (
       <div className='relative'>
@@ -43,14 +37,14 @@ const OrderData = () => {
     return (
       <div>
         <div className='flex justify-center'>
-          <div className='p-32 bg-slate-900' />
+          <div className='p-32 bg-slate-900' style={{backgroundImage: `url(${OrderModel.productImage})`}} />
         </div>
         <div className='bg-stone-200 rounded-lg md:p-2 md:mt-2'>
           <p className='text-center text-xl'>Параметри вашого замовлення</p>
           <div className='flex flex-col py-2'>
             {Object.keys(data).map((item, index) => (
               <div key={index} className={`flex align-center py-1`}>
-                <span>{item}:</span><span className='pl-2'>{data[item]}</span>
+                <p className='text-slate-950'><span>{item}:</span><span className='pl-2'>{data[item]}</span></p>
               </div>
             ))}
           </div>
