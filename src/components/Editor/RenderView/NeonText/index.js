@@ -57,7 +57,7 @@ const NeonText = forwardRef(({ parentElement, isMobile }, ref) => {
     setKey(Math.random());
   }, SignModel.getSelectedLightOption());
   return (
-    <div ref={element} className="neon-text text-white absolute top-12">
+    <div key={key} ref={element} className="neon-text text-white absolute top-12">
       <TextElements
         className='relative z-20'
         lines={TextModel.getOriginal().split('\n')}
