@@ -19,7 +19,12 @@ const Checkout = () => {
   }
 
   useEffect(() => {
-  }, [sendImageF, state.OrderModel]);
+    if (!sendImageRef){
+    sendImageF();
+  }
+  console.log('response:', postApi.response)
+
+  }, [sendImageF, state.OrderModel, postApi.response]);
 
   return (
     <div className='flex flex-col lg:flex-row mt-2 bg-stone-100 py-4 px-2'>
