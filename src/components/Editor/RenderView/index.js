@@ -24,7 +24,7 @@ const RenderView = ({ isMobile }) => {
             <span className='my-0.5 block'>(логітип вашого бренду, складного малюнка, тощо)</span>
             та втілити будь-яке ваше бачення.
           </p>
-          <CheckoutLink href='/chekout' className={'bg-blue-600 w-80 drop-shadow-xl text-white my-2 px-2 p-1 flex items-center justify-center  h-24 rounded-md'}>
+          <CheckoutLink href='/checkout' className={'bg-blue-600 w-80 drop-shadow-xl text-white my-2 px-2 p-1 flex items-center justify-center  h-24 rounded-md'}>
             <h4 className='font-bold text-center text-xl'>Замовити дизаiн за властним прототипом</h4>
           </CheckoutLink>
         </div>

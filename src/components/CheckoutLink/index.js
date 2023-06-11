@@ -32,7 +32,7 @@ const CheckoutLink = ({ href, callback, children, OrderModel }) => {
       {
         postApi.isLoading ?
           <div className='spinner mx-auto'></div> :
-          <p onClick={handleClick}>{children}</p>
+          <div onClick={handleClick}>{children}</div>
       }
     </Link>
   )
