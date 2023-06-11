@@ -59,7 +59,7 @@ const NeonText = forwardRef(({ parentElement, isMobile }, ref) => {
   return (
     <div ref={element} className="neon-text text-white absolute top-12">
       <TextElements
-        key={}
+        className='relative z-20'
         lines={TextModel.getOriginal().split('\n')}
         textLightShadow={SignModel.getSelectedLightOption()}
         styles={{
@@ -74,7 +74,7 @@ const NeonText = forwardRef(({ parentElement, isMobile }, ref) => {
           },
         }}
       />
-      <NeonLines neonTextRef={element}/>
+      <NeonLines className='relative z-0' neonTextRef={element}/>
     </div>
   );
 });
