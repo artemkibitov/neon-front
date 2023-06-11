@@ -21,7 +21,11 @@ const Checkout = () => {
 
   useEffect(() => {
     if (!state.OrderModel.custom && state.OrderModel.hash && !photoSend){
-    sendImageF().then(() => setPhotoSend(true));
+    sendImageF()
+    .then(() => setPhotoSend(true))
+    .catch(() => setPhotoSend(false));
+
+    setPhotoSend(true);
   }
 
   }, [sendImageF, state.OrderModel, setPhotoSend]);

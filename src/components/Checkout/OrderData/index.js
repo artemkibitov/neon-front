@@ -16,7 +16,7 @@ const OrderData = () => {
     'Потужність блоку живлення': SignModel.getPowerAdapter().get(selectedSign.key).adapter + ' ват\\г',
     'Стиль підкладки для неону': BackboardModel.getSelectedStyle().title,
     'Колір підкладки': BackboardModel.getSelectedColor().title,
-    'Тип використання': BackboardModel.getWaterProof() ? 'Для зовнішнього і всередині приміщення' : 'Лише всередині приміщення',
+    'Тип використання': BackboardModel.waterproof ? 'Для зовнішнього і всередині приміщення' : 'Лише всередині приміщення',
     'Сума вашого замовлення': OrderModel.getTotal()
   };
 
