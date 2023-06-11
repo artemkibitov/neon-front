@@ -4,6 +4,7 @@ import { InputField, PhoneField } from "./InputField";
 import { useForm } from "react-hook-form";
 import useOrder from "@/components/hooks/useOrder";
 import usePostApi from "@/components/hooks/usePostApi";
+import { createOrderData } from '@/components/util/createOrderData';
 
 const Form = () => {
   const { state } = useContext(EditorContext);
@@ -26,13 +27,15 @@ const Form = () => {
     return pattern.test(cleanedNumber); // проверяем совпадает ли номер с паттерном
   }
 
-  const onSubmit = (data) => {
+  const onSubmit = async (data) => {
     Object.keys(data).forEach(
       value => OrderModel['set' + value.slice(0, 1).toUpperCase() + value.slice(1)](data[value]),
     );
     if (!OrderModel.getHash().length) {
-      postApi.postData('/users/hash', { data: null });
-    }
+      await postApi.postData('/users/hash', { data: null });
+    };
+
+    postApi.postData('/orders/create', {data: createOrderData(...state)});
   };
 
 
