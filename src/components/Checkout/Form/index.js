@@ -35,7 +35,10 @@ const Form = () => {
       await postApi.postData('/users/hash', { data: null });
     };
 
-    postApi.postData('/orders/create', {data: createOrderData({...state})});
+    postApi.postData('/orders/create', {data: createOrderData({...state})})
+    .then((r) => {
+      console.log('response:', r);
+    });
   };
 
 
