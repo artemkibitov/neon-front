@@ -53,12 +53,14 @@ const NeonText = forwardRef(({ parentElement, isMobile }, ref) => {
     };
   }, [parentElement, TextModel.value, neonFontSize, textChanged, prevTextLength, lineHeight, TextModel.chars]);
 
-  useEffect(()=> {
+  useEffect(() => {
     setKey(Math.random());
-  }, SignModel.getSelectedLightOption());
+    console.log('yep');
+  }, [SignModel.getSelectedLightOption()]);
   return (
-    <div key={key} ref={element} className="neon-text text-white absolute top-12">
+    <div ref={element} className="neon-text text-white absolute top-12">
       <TextElements
+        key={key}
         className='relative z-20'
         lines={TextModel.getOriginal().split('\n')}
         textLightShadow={SignModel.getSelectedLightOption()}
@@ -74,7 +76,7 @@ const NeonText = forwardRef(({ parentElement, isMobile }, ref) => {
           },
         }}
       />
-      <NeonLines className='relative z-0' neonTextRef={element}/>
+      <NeonLines className='relative z-0' neonTextRef={element} />
     </div>
   );
 });
