@@ -9,6 +9,7 @@ const NeonText = forwardRef(({ parentElement, isMobile }, ref) => {
 
   const defaultSize = isMobile ? 42 : 75
   const [neonFontSize, setNeonFontSize] = useState(defaultSize);
+  const [lightColor, setLightColor] = useState(state.SignModel.selectedLight)
   const [lineHeight, setLineHeight] = useState(100);
   const [prevTextLength, setPrevTextLength] = useState(TextModel.value.length);
   const [textChanged, setTextChanged] = useState(false);
@@ -45,9 +46,10 @@ const NeonText = forwardRef(({ parentElement, isMobile }, ref) => {
       setPrevTextLength(currentTextLength);
     }
 
-    const selectedLightOption = SignModel.getSelectedLightOption();
-    if (selectedLightOption) {
-      setNeonFontSize(neonFontSize => neonFontSize + 1);  // This is a hack to force rerender
+    // const selectedLightOption = SignModel.getSelectedLightOption();
+    if (lightColor !== SignModel.selectedLight) {
+      setNeonFontSize(neonFontSize => neonFontSize + 0);
+      setLightColor(SignModel.selectedLight)  // This is a hack to force rerender
     }
 
     return () => {
