@@ -28,12 +28,14 @@ const Form = () => {
   }
 
   const onSubmit = async (data) => {
+    if (!OrderModel.getHash().length) {
+      const hash = await postApi.postData('/users/hash', { data: null });
+      data.hash = hash;
+    }
+
     Object.keys(data).forEach(
       value => OrderModel['set' + value.slice(0, 1).toUpperCase() + value.slice(1)](data[value]),
     );
-    if (!OrderModel.getHash().length) {
-      await postApi.postData('/users/hash', { data: null });
-    }
 
     postApi.postData('/orders/create', {data: createOrderData({...state})})
       .then()

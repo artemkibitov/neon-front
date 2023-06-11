@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useRef } from "react";
 import EditorContext from "@/components/Editor/editorContext";
 import NeonText from "@/components/Editor/RenderView/NeonText";
 import Link from 'next/link';
+import CheckoutLink from '@/components/CheckoutLink';
 
 const RenderView = ({ isMobile }) => {
   const wrapElementRef = useRef();
@@ -23,9 +24,9 @@ const RenderView = ({ isMobile }) => {
             <span className='my-0.5 block'>(логітип вашого бренду, складного малюнка, тощо)</span>
             та втілити будь-яке ваше бачення.
           </p>
-          <Link href={'/chekout'} className={'bg-blue-600 w-80 drop-shadow-xl text-white my-2 px-2 p-1 flex items-center justify-center  h-24 rounded-md'}>
+          <CheckoutLink href='/chekout' className={'bg-blue-600 w-80 drop-shadow-xl text-white my-2 px-2 p-1 flex items-center justify-center  h-24 rounded-md'}>
             <h4 className='font-bold text-center text-xl'>Замовити дизаiн за властним прототипом</h4>
-          </Link>
+          </CheckoutLink>
         </div>
         <div className='w-full h-full absolute top-0 z-1'>
           <div className='absolute neon-works  bg-repeat-x w-full h-full z-1' style={{ backgroundImage: 'url(/bg2-min.jpg)' }} />
