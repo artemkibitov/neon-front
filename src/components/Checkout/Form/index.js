@@ -33,9 +33,14 @@ const Form = () => {
     );
     if (!OrderModel.getHash().length) {
       await postApi.postData('/users/hash', { data: null });
-    };
+    }
 
-    postApi.postData('/orders/create', {data: createOrderData({...state})});
+    postApi.postData('/orders/create', {data: createOrderData({...state})})
+      .then((r) => {
+          console.log('r:', r);
+          console.log('postApiRes:', postApi.response);
+        }
+      );
   };
 
 
@@ -83,7 +88,7 @@ const Form = () => {
             //   value: /^0\d{9}$/,
             //   message: 'Некоректний номер'
             // }
-          
+
         error={errors.phone}
         />
         <div className='flex justify-center'>
