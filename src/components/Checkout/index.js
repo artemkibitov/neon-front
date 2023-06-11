@@ -19,10 +19,11 @@ const Checkout = () => {
   }
 
   useEffect(() => {
-    if (!sendImageRef){
-    sendImageF();
+    if (!state.OrderModel.custom && state.OrderModel.hash){
+    sendImageF().then(res => {
+      console.log(res);
+    });
   }
-  console.log('response:', postApi.response)
 
   }, [sendImageF, state.OrderModel, postApi.response]);
 
