@@ -37,7 +37,7 @@ const OrderData = () => {
     return (
       <div>
         <div className='flex justify-center'>
-          <div className='p-32 bg-slate-900' style={{backgroundImage: `url(${OrderModel.productImage})`}} />
+          <div className='p-40 bg-cover bg-no-repeat' style={{backgroundImage: `url(${OrderModel.productImage})`}} />
         </div>
         <div className='bg-stone-200 rounded-lg md:p-2 md:mt-2'>
           <p className='text-center text-xl'>Параметри вашого замовлення</p>

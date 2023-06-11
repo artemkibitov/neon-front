@@ -13,7 +13,7 @@ const Checkout = () => {
     sendImageRef.current = true;
 
     return await postApi.postData('/image/save', {
-      image: state.OrderModel.getProductImage(),
+      image: state.OrderModel.productImage,
       hash: state.OrderModel.getHash(),
     });
   }
