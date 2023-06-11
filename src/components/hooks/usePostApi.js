@@ -18,7 +18,6 @@ const usePostApi = () => {
       });
       const json = await res.json();
       setResponse(json);
-      console.log('json:',json);
       setIsLoading(false);
     } catch (err) {
       setError(err);

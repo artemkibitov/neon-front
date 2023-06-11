@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import EditorContext from "@/components/Editor/editorContext";
 import { InputField, PhoneField } from "./InputField";
 import { useForm } from "react-hook-form";
@@ -36,13 +36,15 @@ const Form = () => {
     }
 
     postApi.postData('/orders/create', {data: createOrderData({...state})})
-      .then((r) => {
-          console.log('r:', r);
-          console.log('postApiRes:', postApi.response);
-        }
-      );
+      .then()
+      .catch(err => console.log(err));
   };
 
+  useEffect(() => {
+    if (postApi.response) {
+      console.log(postApi.response);
+    }
+  }, [postApi.response]);
 
   return (
     <div className='flex flex-col justify-center align-center w-11/12 items-center lg:w-4/6 mx-2'>
@@ -84,13 +86,9 @@ const Form = () => {
             required: 'Введіть коректний номер',
             validate: validatePhoneNumber,
           }}
-            // pattern: {
-            //   value: /^0\d{9}$/,
-            //   message: 'Некоректний номер'
-            // }
-
         error={errors.phone}
         />
+
         <div className='flex justify-center'>
           <button
             type="submit"
