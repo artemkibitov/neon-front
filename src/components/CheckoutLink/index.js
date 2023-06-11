@@ -24,7 +24,9 @@ const CheckoutLink = ({ href, callback, children, OrderModel }) => {
           if (callback) callback(hash, router, href).then(() => router.push(href));
           else router.push(href);
         }
-
+        if (state.OrderModel.getHash().length) {
+          router.push(href);
+        }
         setHashAndRedirect();
       }
     }
