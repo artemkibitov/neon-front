@@ -8,6 +8,7 @@ const Checkout = () => {
   const { state } = useContext(EditorContext);
   const postApi = usePostApi();
   const sendImageRef = useRef(false);
+  const [photoSend, setPhotoSend] = useState(false);
 
   const sendImageF = async () => {
     sendImageRef.current = true;
@@ -19,13 +20,11 @@ const Checkout = () => {
   }
 
   useEffect(() => {
-    if (!state.OrderModel.custom && state.OrderModel.hash){
-    sendImageF().then(res => {
-      console.log(res);
-    });
+    if (!state.OrderModel.custom && state.OrderModel.hash && !photoSend){
+    sendImageF().then(() => setPhotoSend(true));
   }
 
-  }, [sendImageF, state.OrderModel, postApi.response]);
+  }, [sendImageF, state.OrderModel, setPhotoSend]);
 
   return (
     <div className='flex flex-col lg:flex-row mt-2 bg-stone-100 py-4 px-2'>
