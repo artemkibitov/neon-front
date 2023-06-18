@@ -4,6 +4,7 @@ import SvgHLineYellow400 from "@/components/SVG/svg-h-line-yellow-400";
 import SvgEllips from "@/components/SVG/svg-ellips";
 import SvgVLine from "@/components/SVG/svg-v-line";
 import SvgHLineRed from "@/components/SVG/svg-h-line-red";
+import CheckoutLink from "@/components/CheckoutLink";
 
 export default function Index() {
   return (
