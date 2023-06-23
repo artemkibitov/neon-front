@@ -4,7 +4,7 @@ import SvgHLineYellow400 from "@/components/SVG/svg-h-line-yellow-400";
 import SvgEllips from "@/components/SVG/svg-ellips";
 import SvgVLine from "@/components/SVG/svg-v-line";
 import SvgHLineRed from "@/components/SVG/svg-h-line-red";
-
+import CheckoutLink from '@/components/CheckoutLink';
 export default function Index() {
   return (
     <>
@@ -16,7 +16,7 @@ export default function Index() {
         <SvgVLine width={100} height={100} position={'absolute'} left={-15} top={5} rotate={190} zIndex={0} />
       </div>
       <div className={"container mx-auto overflow-hidden"}>
-        <section className={"mx-auto py-4 text-center tracking-wider relative z-10"}>
+        <section className={"mx-auto pt-4 pb-2 text-center tracking-wider relative z-10"}>
           <div className={'relative'}>
             <h2 className={"f-montse text-3xl font-bold text-red-400 f-oswald"}>
               Створи свою власну <span className={'inline-block'}>неонову вивіску</span>
@@ -40,15 +40,12 @@ export default function Index() {
           </div> */}
           <div>
             <p>Підписуйся на нас у соціальних мережах</p>
-            <div className='flex flex-row justify-center'>
-              <a href='https://www.instagram.com/'>
-                <div className='p-12 social-media-icon social-icon-telegram'></div>
+            <div className='flex flex-row justify-center w-full'>
+              <a href='https://www.instagram.com/' className='px-1 py-2 mx-1'>
+                <div className='p-8 social-media-icon social-icon-telegram'></div>
               </a>
-              <a href='https://www.instagram.com/'>
-                <div className='p-12 social-media-icon social-icon-instagram'></div>
-              </a>
-              <a href='https://www.instagram.com/'>
-                <div className='p-12 social-media-icon social-icon-tiktok'></div>
+              <a href='https://www.instagram.com/' className='px-1 py-2 mx-1'>
+                <div className='p-8 social-media-icon social-icon-instagram'></div>
               </a>
             </div>
           </div>

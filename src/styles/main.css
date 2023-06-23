@@ -17,12 +17,12 @@ h6 {
 
 .social-media-icon {
     background-image: url('/society.jpg');
-    background-size: 300%;
+    background-size: 200%;
     background-repeat: no-repeat;
 }
 
 .social-icon-telegram {
-    background-position: 50% 10%;
+    background-position: -5% 10%;
 }
 
 .social-icon-instagram {
